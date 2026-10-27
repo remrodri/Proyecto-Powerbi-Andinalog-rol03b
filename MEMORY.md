@@ -3,11 +3,11 @@
 ## Estado actual
 
 - Última actualización: 27 de octubre de 2026.
-- Fase: S01 cerrado con limitaciones documentadas el 2026-10-22. **S02 con Specify y Plan completados**: spec v0.4, plan v0.1 y tareas aprobados y guardados; Build pendiente de autorización.
+- Fase: S01 cerrado con limitaciones documentadas el 2026-10-22. **S02 con Specify y Plan completados; Build T01 y T02 completadas**: spec v0.4, plan v0.1 y tareas aprobados y guardados; T03–T10 pendientes de autorización.
 - Hito/spec de referencia: [specs/002-s02-architecture/spec.md](specs/002-s02-architecture/spec.md), S02, versión 0.4, aprobada el 2026-10-27; [plan.md](specs/002-s02-architecture/plan.md) v0.1 y [tasks.md](specs/002-s02-architecture/tasks.md) aprobados el 2026-10-27. S01 permanece en [specs/001-s01-inventory/spec.md](specs/001-s01-inventory/spec.md), versión 0.4, cerrada con limitaciones.
-- Alcance autorizado actual: S02 con Specify y Plan completados. Build, Audit, Fix y Close no están autorizados; T01–T13 permanecen sin ejecutar. Los pendientes trasladados a S02, S08 y S11 no se declaran resueltos.
+- Alcance autorizado actual: S02 con Specify y Plan completados y T01–T02 de Build ejecutadas. T03–T13 permanecen sin ejecutar; Audit, Fix y Close no están autorizados. Los pendientes trasladados a S02, S08 y S11 no se declaran resueltos.
 - Implementación Power BI: PBIP `powerbi/AndinaLog_03B.pbip` con `RutaSilver`, cinco tablas, 0 relaciones, 0 medidas y sin visuales. Ronda 02 verificó 13/13 huellas, la reconstrucción exacta de los TMDL históricos y el estado semántico; `cache.abf` es estado local volátil, no definición. T09 no modificó modelo ni datos.
-- Próximo paso: solicitar autorización independiente para Build T01–T10; no iniciar Build automáticamente. DUD-S02-07 queda registrada como ausencia documentada; el origen, los propietarios, la frecuencia de actualización y la validación empresarial del centro siguen pendientes.
+- Próximo paso: solicitar autorización para T03; no iniciarla automáticamente. T02 dejó el contrato de contenido validado en `work/S02/content.json` y `work/S02/content.md`. DUD-S02-07 queda registrada como ausencia documentada; el origen, los propietarios, la frecuencia de actualización y la validación empresarial del centro siguen pendientes.
 
 ## Cómo mantener esta memoria
 
@@ -61,7 +61,7 @@ S10 prescribe umbral térmico 0,3–0,8 °C en pasos de 0,1, predeterminado 0,5.
 
 ## Pendientes principales
 
-1. S01 cerrado con limitaciones documentadas el 2026-10-22. S02 tiene Specify y Plan completados: spec v0.4, plan v0.1 y tareas aprobados y guardados; Build pendiente de autorización y T01–T13 sin ejecutar. DUD-S02-07 se registra como ausencia documentada. Origen de los sistemas, propietarios de las fuentes, frecuencia de actualización y validación empresarial del centro siguen pendientes y se registran como «por acordar» (DEC-029, DEC-031, PEN-017 a PEN-019).
+1. S01 cerrado con limitaciones documentadas el 2026-10-22. S02 tiene Specify y Plan completados: spec v0.4, plan v0.1 y tareas aprobados y guardados; T01 y T02 completadas, y T03–T13 sin ejecutar. DUD-S02-07 se registra como ausencia documentada. Origen de los sistemas, propietarios de las fuentes, frecuencia de actualización y validación empresarial del centro siguen pendientes y se registran como «por acordar» (DEC-029, DEC-031, PEN-017 a PEN-019).
 2. .gitignore y los documentos iniciales están presentes. No se ha inicializado Git en esta colaboración. C4 quedó respaldado por DEC-026 mediante la lista complementaria de SRC-208 y la aprobación del usuario; la brecha A y el puntaje 1 siguen sujetos a auditoría y validación docente.
 3. Obtener rúbrica v4, posibles guías S12–S13 y lista completa de comisionamiento. La auditoría Bronze–Silver ya está registrada como DATA-006.
 4. Usuario, decisión, frecuencia y KPI candidatos definidos en DEC-016 y DEC-017; faltan selección final de KPI en S02, metas y umbrales en S08 y responsables empresariales en S11. El componente DCAM aplicable quedó resuelto como C4 en DEC-026.
@@ -324,3 +324,17 @@ S10 prescribe umbral térmico 0,3–0,8 °C en pasos de 0,1, predeterminado 0,5.
 - El plan adopta la vía PPT nativa: diapositiva 1 de ejemplo sin modificar, diapositiva 2 con el diagrama y diapositivas 3+ con el mapa como tabla editable de siete columnas; el PDF se exporta con PowerPoint COM desde una copia sin la diapositiva 1. WMS queda fuera de las cinco filas y solo puede constar en una nota de contraste.
 - Se registraron 13 tareas pendientes con gates separados: Build T01–T10, Audit T11, Fix T12 solo si hay hallazgos, nueva Audit T13.1 y Close T13.2. La aprobación del plan no autoriza iniciar Build.
 - DEC-033 registra la aprobación, la vía PPT nativa, las autorizaciones separadas y la calificación pendiente de COM en T01. No se crearon `AUDIT.md`, `evidence/S02/`, `validation/results/S02/`, `work/S02/` ni `deliverables/S02/`; no se modificaron Excel, PowerPoint, Power BI, referencias, Silver ni entregables.
+
+### 2026-10-27 - Build T01: huellas y calificación de COM
+
+- Se ejecutó únicamente T01. Se registraron las cuatro huellas obligatorias y el PBIP adicional en `validation/results/S02/initial_manifest.json`, con SHA-256 completo, tamaño y fecha de lectura.
+- V02A: PowerPoint COM 16.0 abrió la copia temporal, la guardó, renderizó la diapositiva 1 a PNG 1920×1080 y exportó un PDF de 2 páginas; los tres resultados se releyeron. V02B: Excel COM 16.0 abrió en solo lectura la copia del libro, recalculó y exportó `S02 Mapa Silver` (1 página) y `Fichas KPI` (8 páginas); la copia y el entregable conservaron su hash.
+- Ambas herramientas quedan **calificadas** por separado; la evidencia está en `evidence/S02/tooling.md` y los resultados temporales en `work/S02/`. No había procesos de Office al iniciar ni al terminar; solo se operaron copias temporales.
+- Integridad verificada: SRC-201 `0CCC4A53...D2DF30`, SRC-203 `36E4E9AE...F96516`, copia Excel `E7F09B0A...DB74F1`, spec S02 `A91958C3...626598A` y PBIP `F8712089...8A1CCE` sin cambios. No se creó `deliverables/S02/` ni `AUDIT.md`; no se inició T02.
+
+### 2026-10-27 - Build T02: contrato de contenido normativo
+
+- Se ejecutó únicamente T02. Se crearon [content.json](work/S02/content.json) y [content.md](work/S02/content.md) con la decisión semanal, 14 bloques de la diapositiva 2, cinco filas DATA-001 a DATA-005 con siete campos, cinco KPI tácticos, la medida de apoyo separada, merma por valor excluida, la brecha DCAM, 13 pendientes y la nota WMS separada.
+- Se creó [s02_content.py](validation/checks/s02_content.py); **26/26 controles pasan** y el resultado quedó en [content_checks.json](validation/results/S02/content_checks.json). El Markdown es la representación determinista del JSON y sus tablas de mapa, KPI y pendientes se compararon contra él.
+- Se preservaron literalmente `dias_en_almacen`, la frecuencia de inventario, el origen «No documentado / por acordar» y los pendientes sin respaldo. WMS no aparece en las cinco filas del mapa. No se afirmaron validación empresarial, sesión, DAX, RLS ni publicación ejecutadas.
+- Huellas: `content.json` `A7C3A75D...BF1C7882` y `content.md` `00109A5D...C427BC`. No se modificaron spec, plan, decisiones, Excel, PowerPoint, Power BI, Silver, referencias ni entregables. T03 no se inició.

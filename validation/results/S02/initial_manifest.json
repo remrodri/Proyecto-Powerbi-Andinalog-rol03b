@@ -1,0 +1,55 @@
+{
+  "task": "T01",
+  "scope": "S02 Build T01",
+  "root": "C:\\Users\\remrodri\\Github\\Proyecto-Powerbi-Andinalog-rol03b",
+  "executed_at_utc": "2026-10-27T20:33:11.960253Z",
+  "objects": [
+    {
+      "id": "SRC-201",
+      "role": "mandatory",
+      "path": "references/general/GIAD-M4_Plantillas_Proyecto_Integrador_v2.xlsx",
+      "sha256": "0ccc4a532c0b3091e6d9bd00857efdd6761d4e1d3855b49b8fe7a66220d2df30",
+      "size_bytes": 36907,
+      "modified_utc": "2026-10-19T19:55:21.240493Z",
+      "read_at_utc": "2026-10-27T20:33:11.956270Z"
+    },
+    {
+      "id": "SRC-203",
+      "role": "mandatory",
+      "path": "references/S02/GIAD-M4-S02_Plantilla_Diagrama_Arquitectura.pptx",
+      "sha256": "36e4e9ae273df191ccd05171f276697cb7a000698bbb3c523ea5c8a188f96516",
+      "size_bytes": 38618,
+      "modified_utc": "2026-10-20T19:07:24.367898Z",
+      "read_at_utc": "2026-10-27T20:33:11.957510Z"
+    },
+    {
+      "id": "TRACKING-XLSX",
+      "role": "mandatory",
+      "path": "deliverables/tracking/M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+      "sha256": "e7f09b0ac9ef786096640f6d2b751e372a65bfa41b1595b545b535b562db74f1",
+      "size_bytes": 33844,
+      "modified_utc": "2026-10-21T01:38:55.363409Z",
+      "read_at_utc": "2026-10-27T20:33:11.958563Z"
+    },
+    {
+      "id": "SPEC-S02",
+      "role": "mandatory",
+      "path": "specs/002-s02-architecture/spec.md",
+      "sha256": "a91958c34badcf6e5aaf3d0f063ac94c3fe458436a9c30af6ae1362fd626598a",
+      "size_bytes": 28474,
+      "modified_utc": "2026-10-27T19:52:06.559363Z",
+      "read_at_utc": "2026-10-27T20:33:11.959228Z"
+    },
+    {
+      "id": "PBIP",
+      "role": "additional_preserved",
+      "path": "powerbi/AndinaLog_03B.pbip",
+      "sha256": "f8712089dbb5bbf10c5de3655522c84540184101f5d8a96be6ea017afa8a1cce",
+      "size_bytes": 292,
+      "modified_utc": "2026-10-22T21:17:36.745969Z",
+      "read_at_utc": "2026-10-27T20:33:11.959907Z"
+    }
+  ],
+  "office_processes_at_start": [],
+  "note": "No habia procesos EXCEL/POWERPNT/WINWORD al iniciar T01."
+}

@@ -1,9 +1,9 @@
 # Tareas — S02 Decisión, arquitectura y mapa Silver
 
 Spec y plan aprobados: `specs/002-s02-architecture/spec.md` v0.4 (2026-10-27) y `specs/002-s02-architecture/plan.md` v0.1 (2026-10-27).
-Estado: **aprobado para ejecución futura; todas las tareas pendientes**. La aprobación no autoriza iniciar Build.
+Estado: **Build en curso. T01 y T02 completadas; T03–T13 pendientes.** Audit, Fix y Close no están autorizados.
 
-- [ ] **T01 — Inventario inicial, cuatro huellas y calificación separada de COM.**
+- [x] **T01 — Inventario inicial, cuatro huellas y calificación separada de COM.**
   - Requisitos: RNF-S02-03, RNF-S02-06, RNF-S02-07; base de RF-S02-08 y RF-S02-09; CA-S02-08 y CA-S02-09.
   - Depende de: autorización de Build.
   - Artefactos: `validation/results/S02/initial_manifest.json`, `evidence/S02/tooling.md`, archivos temporales en `work/S02/`.
@@ -18,15 +18,17 @@ Estado: **aprobado para ejecución futura; todas las tareas pendientes**. La apr
     - Calificar **PowerPoint COM**: copiar SRC-203 a `work/S02/com_ppt_test.pptx`; abrirla, guardarla, renderizar una diapositiva y exportar un PDF.
     - Calificar **Excel COM**: copiar el XLSX de seguimiento a `work/S02/com_excel_test.xlsx`; abrirlo, recalcularlo y exportar a PDF las hojas `S02 Mapa Silver` y `Fichas KPI`, sin guardar la copia.
   - Hecho cuando: 4/4 huellas registradas y verificadas; PowerPoint abre, guarda, renderiza y exporta sin reparación; Excel abre, recalcula y exporta sin reparación; los entregables conservan su hash. Si una calificación falla, se registra el fallo y se detiene solo la parte dependiente.
+  - Estado: **completada el 2026-10-27**. V02A y V02B calificadas; evidencia en `evidence/S02/tooling.md` y `validation/results/S02/initial_manifest.json`.
 
-- [ ] **T02 — Contrato de contenido normativo desde la spec.**
+- [x] **T02 — Contrato de contenido normativo desde la spec.**
   - Requisitos: RF-S02-01 a RF-S02-07 y RF-S02-11; RNF-S02-01, RNF-S02-02 y RNF-S02-04; CA-S02-01 a CA-S02-07 y CA-S02-10.
   - Depende de: T01.
-  - Artefactos: `work/S02/content.json`, `work/S02/content.md`, `validation/checks/s02_content.py`.
-  - Puede modificar: los tres archivos indicados.
+  - Artefactos: `work/S02/content.json`, `work/S02/content.md`, `validation/checks/s02_content.py`, `validation/results/S02/content_checks.json`.
+  - Puede modificar: los cuatro archivos indicados.
   - Debe preservar: spec, SRC-201/203, copia XLSX, Silver y referencias.
   - Verificación y evidencia: transcribir sin reinterpretar; marcar propuestas y referencias; incluir el riesgo DCAM con sus cuatro componentes aprobados; ejecutar el validador.
   - Hecho cuando: el validador confirma 5 filas de mapa, 5 KPI tácticos, frecuencia exacta de inventario, `dias_en_almacen`, origen «no documentado», pendientes «por acordar» y **WMS ausente de las cinco filas del mapa**. WMS solo puede aparecer en una nota separada de contraste no cargado.
+  - Estado: **completada el 2026-10-27**. 26/26 controles pasan; JSON y Markdown coinciden materialmente. Evidencia en `validation/results/S02/content_checks.json`.
 
 - [ ] **T03 — Copia editable de la presentación.**
   - Requisitos: RF-S02-02, RF-S02-09; CA-S02-02, CA-S02-09.
