@@ -1,7 +1,7 @@
 # Tareas — S02 Decisión, arquitectura y mapa Silver
 
 Spec y plan aprobados: `specs/002-s02-architecture/spec.md` v0.4 (2026-10-27) y `specs/002-s02-architecture/plan.md` v0.1 (2026-10-27).
-Estado: **Build en curso. T01–T03 completadas; T04–T13 pendientes.** Audit, Fix y Close no están autorizados.
+Estado: **Build en curso. T01–T04 completadas; T05–T13 pendientes.** Audit, Fix y Close no están autorizados.
 
 - [x] **T01 — Inventario inicial, cuatro huellas y calificación separada de COM.**
   - Requisitos: RNF-S02-03, RNF-S02-06, RNF-S02-07; base de RF-S02-08 y RF-S02-09; CA-S02-08 y CA-S02-09.
@@ -40,10 +40,10 @@ Estado: **Build en curso. T01–T03 completadas; T04–T13 pendientes.** Audit, 
   - Hecho cuando: el destino existe, conserva 2 diapositivas y 32 formas por diapositiva, la diapositiva 1 mantiene su texto y SRC-203 conserva su hash.
   - Estado: **completada el 2026-10-27**. Copia binaria exacta: 38.618 bytes y SHA-256 `36E4E9AE…F96516`; 13/13 controles pasan. Evidencia en `validation/results/S02/pptx_copy_checks.json`.
 
-- [ ] **T04 — Completar la diapositiva 2 de arquitectura.**
+- [x] **T04 — Completar la diapositiva 2 de arquitectura.**
   - Requisitos: RF-S02-01, RF-S02-02, RF-S02-04, RF-S02-05, RF-S02-11; RNF-S02-02, RNF-S02-04; CA-S02-01, CA-S02-02, CA-S02-04, CA-S02-05.
   - Depende de: T02, T03 y V02A.
-  - Artefactos: PPTX de T03, `validation/results/S02/pptx_checks.json`.
+  - Artefactos: PPTX de T03, `validation/results/S02/slide2_checks.json`, `evidence/S02/t04_architecture.md` y `evidence/S02/screenshots/s02_t04_architecture_slide.png`.
   - Puede modificar: solo textos de la diapositiva 2.
   - Debe preservar: diapositiva 1, geometría, flechas, colores y notas.
   - Verificación y evidencia: sustituir con estos contenidos y comparar contra el contrato de T02:
@@ -60,7 +60,8 @@ Estado: **Build en curso. T01–T03 completadas; T04–T13 pendientes.** Audit, 
     - Control principal: `Documentar la ausencia de definición, los usos y límites conocidos, y solicitar la definición y validación empresarial.`
     - Control complementario: `No usar centro_distribucion_base como ruta u origen real; dim_centro y los controles de claves son propuestas posteriores.`
     - Pendiente: `Definición y validación de centro_distribucion: seguimiento Grupo 06; validador por acordar. No resuelto.`
-  - Hecho cuando: los textos coinciden con la spec; el riesgo no atribuye una asignación incorrecta observada; la brecha no se declara resuelta; no hay desbordamiento; la diapositiva 1 no cambió; SRC-203 conserva su hash.
+  - Hecho cuando: los textos conservan los significados de la spec —se admite compactación para ajustar el espacio sin eliminar significados—; el riesgo no atribuye una asignación incorrecta observada; la brecha no se declara resuelta; no hay desbordamiento; la diapositiva 1 no cambió; SRC-203 conserva su hash.
+  - Estado: **completada el 2026-10-27**. 38/38 controles pasan. Se modificaron 10 formas de texto y se conservó la geometría de las 32; diapositiva 1 con XML, texto e inventario idénticos a T03; SRC-203 intacto. PowerPoint COM 16.0 abrió sin reparación, renderizó la diapositiva 2 a PNG 1920×1080 y cerró sin guardar. Evidencia en `slide2_checks.json`, `t04_architecture.md` y la captura. T05 no se inició.
 
 - [ ] **T05 — Añadir el mapa Silver como tabla editable.**
   - Requisitos: RF-S02-03, RF-S02-05; RNF-S02-04; CA-S02-03, CA-S02-04.

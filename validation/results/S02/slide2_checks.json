@@ -1,0 +1,603 @@
+{
+  "task": "T04",
+  "scope": "S02 Build T04 - completar la diapositiva 2 de arquitectura",
+  "executed_at_utc": "2026-10-27T20:56:59.642209+00:00",
+  "deliverable": {
+    "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pptx",
+    "size_bytes": 39263,
+    "sha256": "71DCE2F66C96EFB0FF7B3ADDB67ABDD9F1E41215D945388836C21C6F7A53664A",
+    "slides": 2,
+    "shapes_per_slide": [
+      32,
+      32
+    ]
+  },
+  "t03_baseline": {
+    "size_bytes": 38618,
+    "sha256": "36E4E9AE273DF191CCD05171F276697CB7A000698BBB3C523EA5C8A188F96516",
+    "note": "La huella binaria del PPTX cambia por T04; las huellas de la diapositiva 1 se conservan."
+  },
+  "source_203": {
+    "path": "references/S02/GIAD-M4-S02_Plantilla_Diagrama_Arquitectura.pptx",
+    "size_bytes": 38618,
+    "sha256": "36E4E9AE273DF191CCD05171F276697CB7A000698BBB3C523EA5C8A188F96516"
+  },
+  "slide1_fingerprints": {
+    "xml_sha256": "0F944D0FB93C30E7CBAF0D7ED52D35900870A1E1E6BA20E31E0541D1770C7CC9",
+    "normalized_text_sha256": "7023CF3D2379FFF73887AED7CAE75130646DB38F496D99C477D393E1B0F850FA",
+    "shape_inventory_sha256": "26CB5FA7859FD8082944BC3CACC57350C28EA14C7726F547EB7E231ABBE681BC",
+    "xml_matches_t03": true,
+    "text_matches_t03": true,
+    "inventory_matches_t03": true,
+    "shape_texts_match_t03": true
+  },
+  "slide2": {
+    "shape_count": 32,
+    "modified_indices": [
+      0,
+      3,
+      6,
+      10,
+      14,
+      18,
+      22,
+      25,
+      28,
+      31
+    ],
+    "modified_shape_ids": [
+      2,
+      5,
+      8,
+      12,
+      16,
+      20,
+      24,
+      27,
+      30,
+      33
+    ],
+    "geometry_unchanged": true,
+    "geometry_mismatches": [],
+    "auto_size_none": {
+      "0": {
+        "value": 0,
+        "none": true
+      },
+      "3": {
+        "value": 0,
+        "none": true
+      },
+      "6": {
+        "value": 0,
+        "none": true
+      },
+      "10": {
+        "value": 0,
+        "none": true
+      },
+      "14": {
+        "value": 0,
+        "none": true
+      },
+      "18": {
+        "value": 0,
+        "none": true
+      },
+      "22": {
+        "value": 0,
+        "none": true
+      },
+      "25": {
+        "value": 0,
+        "none": true
+      },
+      "28": {
+        "value": 0,
+        "none": true
+      },
+      "31": {
+        "value": 0,
+        "none": true
+      }
+    },
+    "font_sizes_pt": {
+      "0": [
+        11.0
+      ],
+      "3": [
+        10.5,
+        11.0
+      ],
+      "6": [
+        9.5
+      ],
+      "10": [
+        9.5
+      ],
+      "14": [
+        9.0
+      ],
+      "18": [
+        9.5
+      ],
+      "22": [
+        10.0
+      ],
+      "25": [
+        9.0
+      ],
+      "28": [
+        8.0
+      ],
+      "31": [
+        9.5
+      ]
+    },
+    "blocks": {
+      "header": "PROYECTO INTEGRADOR · HITO S02 · EQUIPO 06",
+      "decision_title": "DECISIÓN QUE APOYA EL TABLERO · quién decide, qué decide y cada cuánto",
+      "decision": "La Jefatura de Operaciones decide cada semana dónde priorizar controles térmicos por producto y camión y qué lotes o centros revisar por vencimiento y merma.",
+      "origin": "No documentado por archivo; por acordar.\nNo se atribuye ERP, WMS, TMS ni telemetría a estas tablas.",
+      "silver": "5 fuentes oficiales: DATA-001 a DATA-005.\nUna fila = una lectura, producto, camión, lote o centro-mes.",
+      "power_query": "RutaSilver + File.Contents + Csv.Document; Encabezados y Tipado.\nYa existente; sin cambios en S02.",
+      "model": "5 tablas Import; 0 relaciones; 0 medidas.\nModelo relacional: dimensiones y relaciones, propuestas para S06.",
+      "indicator": "% de viajes con desviación.\nNivel táctico; fórmula y unidad en Fichas KPI.",
+      "gap": "No encontramos definición explícita de centro_distribucion.\nC4 Conocimiento de los datos · Evidencia · 1 Incipiente.\nAusencia documentada; no resuelta.",
+      "risk": "Riesgo: interpretar mal qué representa el centro y usarlo en filtros o conclusiones.\nHecho: 8.000/8.000 viajes emparejados sin discrepancias: centro WMS = centro base; no prueba significado empresarial.\nControl: documentar ausencia, usos y límites conocidos; solicitar definición y validación empresarial.\nComplemento: no usar centro_distribucion_base como ruta u origen real; dim_centro y controles de claves, propuestas posteriores.",
+      "pending": "Definición y validación empresarial de centro_distribucion; seguimiento Grupo 06; validador por acordar. No resuelto."
+    }
+  },
+  "rendered_evidence": {
+    "png": "evidence/S02/screenshots/s02_t04_architecture_slide.png",
+    "width": 1920,
+    "height": 1080,
+    "size_bytes": 87401,
+    "sha256": "BA3EF09DBCDCFA2ABA2962AF6977B79ECFBCA1FD385E975CC39303A2A029B90F",
+    "method": "PowerPoint COM 16.0; diapositiva 2 exportada a PNG 1920×1080; sin guardar",
+    "visual_review": {
+      "truncation": "no",
+      "overflow": "no",
+      "overlap": "no",
+      "contrast": "adecuado",
+      "arrows_visible": "sí",
+      "risk_control_pending_consistent": "sí",
+      "legibility": "legible a 1920×1080; bloque de riesgo a 8 pt, dentro de su contenedor",
+      "result": "pasa"
+    }
+  },
+  "com": {
+    "task": "T04",
+    "tool": "PowerPoint COM",
+    "version": "16.0",
+    "presentation": "C:\\Users\\remrodri\\Github\\Proyecto-Powerbi-Andinalog-rol03b\\deliverables\\S02\\M4_Equipo06_S02_Arquitectura.pptx",
+    "read_only": -1,
+    "slide_count": 2,
+    "shapes_slide2": 32,
+    "output_png": "C:\\Users\\remrodri\\Github\\Proyecto-Powerbi-Andinalog-rol03b\\evidence\\S02\\screenshots\\s02_t04_architecture_slide.png",
+    "output_length_bytes": 87401,
+    "output_sha256": "BA3EF09DBCDCFA2ABA2962AF6977B79ECFBCA1FD385E975CC39303A2A029B90F",
+    "exported_width_px": 1920,
+    "exported_height_px": 1080,
+    "saved_property_before_close": -1,
+    "save_calls": 0,
+    "saved_by_com": false,
+    "opened_without_repair": true,
+    "powerpoint_processes_before": 0,
+    "powerpoint_processes_after": 1,
+    "powerpoint_processes_after_wait": 1,
+    "powerpoint_processes_after_postcheck": 0,
+    "process_check_note": "Verificación independiente con Get-Process POWERPNT al finalizar el script: 0 procesos.",
+    "executed_at_utc": "2026-10-27T20:56:40.6077154Z"
+  },
+  "checks": [
+    {
+      "id": "T04-C01",
+      "description": "El PPTX entregable existe y se abre con python-pptx.",
+      "expected": "existe y abre",
+      "actual": "39263 bytes; python-pptx OK",
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C02",
+      "description": "El PPTX conserva exactamente 2 diapositivas.",
+      "expected": 2,
+      "actual": 2,
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C03",
+      "description": "La diapositiva 1 conserva 32 formas.",
+      "expected": 32,
+      "actual": 32,
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C04",
+      "description": "La diapositiva 2 conserva 32 formas.",
+      "expected": 32,
+      "actual": 32,
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C05",
+      "description": "La huella XML de la diapositiva 1 coincide con T03.",
+      "expected": "0F944D0FB93C30E7CBAF0D7ED52D35900870A1E1E6BA20E31E0541D1770C7CC9",
+      "actual": "0F944D0FB93C30E7CBAF0D7ED52D35900870A1E1E6BA20E31E0541D1770C7CC9",
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C06",
+      "description": "La huella del texto normalizado de la diapositiva 1 coincide con T03.",
+      "expected": "7023CF3D2379FFF73887AED7CAE75130646DB38F496D99C477D393E1B0F850FA",
+      "actual": "7023CF3D2379FFF73887AED7CAE75130646DB38F496D99C477D393E1B0F850FA",
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C07",
+      "description": "La huella del inventario de formas de la diapositiva 1 coincide con T03.",
+      "expected": "26CB5FA7859FD8082944BC3CACC57350C28EA14C7726F547EB7E231ABBE681BC",
+      "actual": "26CB5FA7859FD8082944BC3CACC57350C28EA14C7726F547EB7E231ABBE681BC",
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C08",
+      "description": "Los textos de las 32 formas de la diapositiva 1 no cambiaron.",
+      "expected": [],
+      "actual": [],
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C09",
+      "description": "La geometría de las 32 formas de la diapositiva 2 no cambió.",
+      "expected": [],
+      "actual": [],
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C10",
+      "description": "Se modificaron exactamente las 10 formas de texto previstas.",
+      "expected": [
+        0,
+        3,
+        6,
+        10,
+        14,
+        18,
+        22,
+        25,
+        28,
+        31
+      ],
+      "actual": [
+        0,
+        3,
+        6,
+        10,
+        14,
+        18,
+        22,
+        25,
+        28,
+        31
+      ],
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C11",
+      "description": "Los IDs de las formas modificadas son los previstos.",
+      "expected": [
+        2,
+        5,
+        8,
+        12,
+        16,
+        20,
+        24,
+        27,
+        30,
+        33
+      ],
+      "actual": [
+        2,
+        5,
+        8,
+        12,
+        16,
+        20,
+        24,
+        27,
+        30,
+        33
+      ],
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C12",
+      "description": "Las formas no modificadas conservan su texto.",
+      "expected": [],
+      "actual": [],
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C13",
+      "description": "El título de la forma de decisión no cambió; solo cambió su segundo párrafo.",
+      "expected": "título intacto y decisión normativa",
+      "actual": {
+        "title": "DECISIÓN QUE APOYA EL TABLERO · quién decide, qué decide y cada cuánto",
+        "decision": "La Jefatura de Operaciones decide cada semana dónde priorizar controles térmicos por producto y camión y qué lotes o centros revisar por vencimiento y merma."
+      },
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C14",
+      "description": "Las 10 formas editadas usan auto_size NONE para no alterar geometría.",
+      "expected": "todas NONE",
+      "actual": {
+        "0": {
+          "value": 0,
+          "none": true
+        },
+        "3": {
+          "value": 0,
+          "none": true
+        },
+        "6": {
+          "value": 0,
+          "none": true
+        },
+        "10": {
+          "value": 0,
+          "none": true
+        },
+        "14": {
+          "value": 0,
+          "none": true
+        },
+        "18": {
+          "value": 0,
+          "none": true
+        },
+        "22": {
+          "value": 0,
+          "none": true
+        },
+        "25": {
+          "value": 0,
+          "none": true
+        },
+        "28": {
+          "value": 0,
+          "none": true
+        },
+        "31": {
+          "value": 0,
+          "none": true
+        }
+      },
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C15",
+      "description": "Encabezado con equipo 06.",
+      "expected": "PROYECTO INTEGRADOR · HITO S02 · EQUIPO 06",
+      "actual": "PROYECTO INTEGRADOR · HITO S02 · EQUIPO 06",
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C16",
+      "description": "La decisión conserva quién, qué y cada cuánto.",
+      "expected": "La Jefatura de Operaciones decide cada semana dónde priorizar controles térmicos por producto y camión y qué lotes o centros revisar por vencimiento y merma.",
+      "actual": "La Jefatura de Operaciones decide cada semana dónde priorizar controles térmicos por producto y camión y qué lotes o centros revisar por vencimiento y merma.",
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C17",
+      "description": "Origen no documentado y sin atribución de sistemas.",
+      "expected": "origen no documentado; sin atribución",
+      "actual": "No documentado por archivo; por acordar.\nNo se atribuye ERP, WMS, TMS ni telemetría a estas tablas.",
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C18",
+      "description": "Silver declara las cinco fuentes oficiales DATA-001 a DATA-005 y el grano.",
+      "expected": "cinco fuentes y grano",
+      "actual": "5 fuentes oficiales: DATA-001 a DATA-005.\nUna fila = una lectura, producto, camión, lote o centro-mes.",
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C19",
+      "description": "Power Query conserva RutaSilver, File.Contents, Csv.Document, Encabezados y Tipado, sin cambios en S02.",
+      "expected": "componentes y sin cambios",
+      "actual": "RutaSilver + File.Contents + Csv.Document; Encabezados y Tipado.\nYa existente; sin cambios en S02.",
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C20",
+      "description": "Modelo actual 5 tablas Import, 0 relaciones, 0 medidas; dimensiones y relaciones propuestas para S06.",
+      "expected": "modelo actual y propuesta S06",
+      "actual": "5 tablas Import; 0 relaciones; 0 medidas.\nModelo relacional: dimensiones y relaciones, propuestas para S06.",
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C21",
+      "description": "Indicador táctico con fórmula y unidad en Fichas KPI.",
+      "expected": "KPI táctico",
+      "actual": "% de viajes con desviación.\nNivel táctico; fórmula y unidad en Fichas KPI.",
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C22",
+      "description": "Brecha DCAM con definición ausente, C4, Evidencia, 1 Incipiente y no resuelta.",
+      "expected": "brecha completa y no resuelta",
+      "actual": "No encontramos definición explícita de centro_distribucion.\nC4 Conocimiento de los datos · Evidencia · 1 Incipiente.\nAusencia documentada; no resuelta.",
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C23",
+      "description": "Riesgo sin atribuir una asignación incorrecta observada.",
+      "expected": "riesgo planteado, no observado",
+      "actual": "Riesgo: interpretar mal qué representa el centro y usarlo en filtros o conclusiones.\nHecho: 8.000/8.000 viajes emparejados sin discrepancias: centro WMS = centro base; no prueba significado empresarial.\nControl: documentar ausencia, usos y límites conocidos; solicitar definición y validación empresarial.\nComplemento: no usar centro_distribucion_base como ruta u origen real; dim_centro y controles de claves, propuestas posteriores.",
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C24",
+      "description": "Hecho de 8.000/8.000 viajes emparejados, sin discrepancias, con igualdad centro WMS = centro base y límite empresarial.",
+      "expected": "hecho y límite",
+      "actual": "Riesgo: interpretar mal qué representa el centro y usarlo en filtros o conclusiones.\nHecho: 8.000/8.000 viajes emparejados sin discrepancias: centro WMS = centro base; no prueba significado empresarial.\nControl: documentar ausencia, usos y límites conocidos; solicitar definición y validación empresarial.\nComplemento: no usar centro_distribucion_base como ruta u origen real; dim_centro y controles de claves, propuestas posteriores.",
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C25",
+      "description": "Control principal documenta ausencia, usos y límites conocidos y solicita definición y validación empresarial.",
+      "expected": "control principal completo",
+      "actual": "Riesgo: interpretar mal qué representa el centro y usarlo en filtros o conclusiones.\nHecho: 8.000/8.000 viajes emparejados sin discrepancias: centro WMS = centro base; no prueba significado empresarial.\nControl: documentar ausencia, usos y límites conocidos; solicitar definición y validación empresarial.\nComplemento: no usar centro_distribucion_base como ruta u origen real; dim_centro y controles de claves, propuestas posteriores.",
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C26",
+      "description": "Control complementario no usa centro_distribucion_base como ruta u origen real y deja dim_centro y controles de claves como propuestas posteriores.",
+      "expected": "control complementario completo",
+      "actual": "Riesgo: interpretar mal qué representa el centro y usarlo en filtros o conclusiones.\nHecho: 8.000/8.000 viajes emparejados sin discrepancias: centro WMS = centro base; no prueba significado empresarial.\nControl: documentar ausencia, usos y límites conocidos; solicitar definición y validación empresarial.\nComplemento: no usar centro_distribucion_base como ruta u origen real; dim_centro y controles de claves, propuestas posteriores.",
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C27",
+      "description": "Pendiente identifica definición y validación empresarial de centro_distribucion, Grupo 06 y validador por acordar, sin resolver.",
+      "expected": "pendiente completo y no resuelto",
+      "actual": "Definición y validación empresarial de centro_distribucion; seguimiento Grupo 06; validador por acordar. No resuelto.",
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C28",
+      "description": "Solo aparecen DATA-001 a DATA-005; no hay DATA-006, DATA-007 ni archivo WMS como fuente.",
+      "expected": "cinco fuentes y sin WMS cargado",
+      "actual": {
+        "data_006": false,
+        "data_007": false,
+        "wms_file": false
+      },
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C29",
+      "description": "WMS no es una sexta fuente: solo aparece en la negación de origen y en el hecho de contraste.",
+      "expected": "WMS fuera de Silver y solo en contraste",
+      "actual": {
+        "wms_in_silver": false,
+        "wms_in_origin": true,
+        "wms_in_risk": true
+      },
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C30",
+      "description": "No se presentan metas ni ahorro en el contenido T04.",
+      "expected": "sin metas ni ahorro",
+      "actual": {
+        "meta": false,
+        "ahorro": false
+      },
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C31",
+      "description": "No se presentan DAX, RLS ni validación ejecutada en el contenido T04.",
+      "expected": "sin DAX, RLS ni validación ejecutada",
+      "actual": {
+        "dax": false,
+        "rls": false,
+        "validacion_ejecutada": false
+      },
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C32",
+      "description": "No hay marcadores '?' por pérdida de codificación en la diapositiva 2.",
+      "expected": "sin '?'",
+      "actual": 0,
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C33",
+      "description": "PowerPoint COM abrió sin reparación, en solo lectura y con 2 diapositivas/32 formas.",
+      "expected": "abre sin reparación y en solo lectura",
+      "actual": {
+        "opened_without_repair": true,
+        "read_only": -1,
+        "slide_count": 2,
+        "shapes_slide2": 32
+      },
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C34",
+      "description": "COM no guardó el PPTX y no dejó procesos tras la verificación independiente.",
+      "expected": "sin guardado y sin procesos",
+      "actual": {
+        "saved_by_com": false,
+        "save_calls": 0,
+        "powerpoint_processes_before": 0,
+        "powerpoint_processes_after": 1,
+        "powerpoint_processes_after_wait": 1,
+        "powerpoint_processes_after_postcheck": 0
+      },
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C35",
+      "description": "El render PNG existe a 1920×1080.",
+      "expected": "1920×1080",
+      "actual": {
+        "exists": true,
+        "size": [
+          1920,
+          1080
+        ]
+      },
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C36",
+      "description": "Revisión visual: sin truncamiento, desbordamiento, superposición, contraste insuficiente ni flechas ocultas.",
+      "expected": "sin defectos visuales",
+      "actual": "inspección del PNG 1920×1080",
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C37",
+      "description": "Riesgo, control y pendiente son coherentes y legibles; el bloque denso usa 8 pt y cabe en su contenedor.",
+      "expected": "fuente mínima 8 pt y sin desbordamiento",
+      "actual": {
+        "risk_font_sizes_pt": [
+          8.0
+        ],
+        "visual": "legible; contenido dentro del contenedor"
+      },
+      "status": "pasa"
+    },
+    {
+      "id": "T04-C38",
+      "description": "SRC-203 conserva su tamaño y huella.",
+      "expected": {
+        "size_bytes": 38618,
+        "sha256": "36E4E9AE273DF191CCD05171F276697CB7A000698BBB3C523EA5C8A188F96516"
+      },
+      "actual": {
+        "size_bytes": 38618,
+        "sha256": "36E4E9AE273DF191CCD05171F276697CB7A000698BBB3C523EA5C8A188F96516"
+      },
+      "status": "pasa"
+    }
+  ],
+  "summary": {
+    "passed": 38,
+    "total": 38,
+    "result": "pasa"
+  },
+  "limitations": [
+    "No se añadió el mapa Silver ni se inició T05.",
+    "No se ejecutó validación empresarial, DAX, RLS, publicación ni Power BI Desktop.",
+    "La diapositiva 1 es el ejemplo preservado de SRC-203; no forma parte del contenido T04."
+  ]
+}
