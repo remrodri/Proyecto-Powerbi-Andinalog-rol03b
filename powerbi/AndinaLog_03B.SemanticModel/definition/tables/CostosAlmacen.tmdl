@@ -1,0 +1,44 @@
+table CostosAlmacen
+	lineageTag: 5a27b9cf-baa0-4053-8956-905adcc18434
+
+	column centro_distribucion
+		dataType: string
+		lineageTag: ea20b68f-b7f5-4edc-b65c-a474957196a7
+		sourceColumn: centro_distribucion
+
+	column rotacion_stock_dias
+		dataType: double
+		lineageTag: 7a57b621-3cd4-401f-8ca0-3d2e9784016e
+		sourceColumn: rotacion_stock_dias
+
+	column perdida_mermas_bob
+		dataType: double
+		lineageTag: f726017f-c307-4148-9eaa-8d2ec6802977
+		sourceColumn: perdida_mermas_bob
+
+	column periodo_mes
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 48995510-7d56-4859-a767-5231e3449254
+		summarizeBy: none
+		sourceColumn: periodo_mes
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column costo_almacenamiento_mensual_bob
+		dataType: double
+		lineageTag: 84b10a1a-f496-4d6f-b50c-5203c0cd5705
+		sourceColumn: costo_almacenamiento_mensual_bob
+
+	partition CostosAlmacen = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents(RutaSilver & "andinalog_warehouse_costs_silver.csv"), [Delimiter=",", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    Tipado = Table.TransformColumnTypes(Encabezados, {{"centro_distribucion", type text}, {"rotacion_stock_dias", type number}, {"perdida_mermas_bob", type number}, {"periodo_mes", type date}, {"costo_almacenamiento_mensual_bob", type number}})
+				in
+				    Tipado
+

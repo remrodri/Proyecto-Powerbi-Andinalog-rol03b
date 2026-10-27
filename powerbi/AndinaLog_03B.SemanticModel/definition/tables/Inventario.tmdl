@@ -1,0 +1,73 @@
+table Inventario
+	lineageTag: 98383961-ee67-4b67-97cb-fa8e86d40893
+
+	column movimiento_id
+		dataType: string
+		lineageTag: 0e5758d8-34c9-446e-8804-23fa4b905ae7
+		sourceColumn: movimiento_id
+
+	column lote_id
+		dataType: string
+		lineageTag: 0327cd9a-2706-4ed2-a9f6-ae9f0133e65a
+		sourceColumn: lote_id
+
+	column producto_id
+		dataType: string
+		lineageTag: 8a288596-7c50-49e9-8a1e-bbef87333d75
+		sourceColumn: producto_id
+
+	column centro_distribucion
+		dataType: string
+		lineageTag: 4b1b584c-87dd-44fc-882a-e7677793a3cd
+		sourceColumn: centro_distribucion
+
+	column fecha_ingreso
+		dataType: dateTime
+		lineageTag: e089f628-74ab-4fa5-9d9e-7c9d349f92f8
+		sourceColumn: fecha_ingreso
+
+	column fecha_salida
+		dataType: dateTime
+		lineageTag: 3c4d1b12-06a8-4e27-81ca-ce7080c6e5b7
+		sourceColumn: fecha_salida
+
+	column fecha_vencimiento
+		dataType: dateTime
+		lineageTag: d96c5754-8bd0-4184-beb9-d76dbeeab5ce
+		sourceColumn: fecha_vencimiento
+
+	column cantidad_ingreso
+		dataType: int64
+		lineageTag: be0bd19b-b678-45de-8d5b-70cdfb347116
+		sourceColumn: cantidad_ingreso
+
+	column cantidad_salida
+		dataType: int64
+		lineageTag: 08ecff21-c8f1-4049-95d0-4a0d00f35d44
+		sourceColumn: cantidad_salida
+
+	column cantidad_merma
+		dataType: int64
+		lineageTag: 2d8b9076-5912-43db-9549-d9f135517eaf
+		sourceColumn: cantidad_merma
+
+	column dias_en_almacen
+		dataType: int64
+		lineageTag: 07d0e57b-3f85-46cd-8728-b3d9e953e162
+		sourceColumn: dias_en_almacen
+
+	column costo_unitario_bob
+		dataType: double
+		lineageTag: ebdc2fbe-7545-41ed-a28d-f083f63763b2
+		sourceColumn: costo_unitario_bob
+
+	partition Inventario = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents(RutaSilver & "andinalog_inventory_tracking_silver.csv"), [Delimiter=",", Columns=12, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    Tipado = Table.TransformColumnTypes(Encabezados, {{"movimiento_id", type text}, {"lote_id", type text}, {"producto_id", type text}, {"centro_distribucion", type text}, {"fecha_ingreso", type datetime}, {"fecha_salida", type datetime}, {"fecha_vencimiento", type datetime}, {"cantidad_ingreso", Int64.Type}, {"cantidad_salida", Int64.Type}, {"cantidad_merma", Int64.Type}, {"dias_en_almacen", Int64.Type}, {"costo_unitario_bob", type number}})
+				in
+				    Tipado
+

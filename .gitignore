@@ -1,0 +1,35 @@
+# Scratch work
+/work/
+
+# Local Power BI caches and user settings
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+**/.pbi/unappliedChanges.json
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node dependencies, if tooling requires them
+node_modules/
+
+# Credentials and local environment
+.env
+.env.*
+!.env.example
+
+# Operating system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Office lock files
+~$*
+
+# PBIP/TMDL/report definitions, references, evidence and deliverables
+# are intentionally not excluded.

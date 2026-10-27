@@ -1,0 +1,88 @@
+table Telemetria
+	lineageTag: 032e4dab-8578-42c3-82df-12e125327d29
+
+	column timestamp
+		dataType: dateTime
+		lineageTag: 0eec3374-5abb-4025-9cec-39601eb93d59
+		sourceColumn: timestamp
+
+	column viaje_id
+		dataType: string
+		lineageTag: f4d5b668-5e46-4062-ba8b-ba1498eef139
+		sourceColumn: viaje_id
+
+	column order_id
+		dataType: string
+		lineageTag: f9da3c64-84ad-4df4-8d3d-803b2af932ff
+		sourceColumn: order_id
+
+	column camion_id
+		dataType: string
+		lineageTag: 0f85d337-db2f-4c69-9a2c-fe7be5fec7d7
+		sourceColumn: camion_id
+
+	column producto_id
+		dataType: string
+		lineageTag: 79c1bdc9-9ad9-4aa8-b735-32a073db0916
+		sourceColumn: producto_id
+
+	column temperatura_cabina_c
+		dataType: double
+		lineageTag: eb39c0ac-a423-4cd8-a328-2948d78c6518
+		sourceColumn: temperatura_cabina_c
+
+	column temp_unit
+		dataType: string
+		lineageTag: 24471e05-c23b-48d0-818a-63e52701ffff
+		sourceColumn: temp_unit
+
+	column humedad_cabina_pct
+		dataType: double
+		lineageTag: 36aa8b53-a0c1-4ec1-a6e1-803ca0870ddb
+		sourceColumn: humedad_cabina_pct
+
+	column desviacion_termica_flag
+		dataType: int64
+		lineageTag: fcf68a4b-89f0-4398-8ffd-d4cb3c680324
+		sourceColumn: desviacion_termica_flag
+
+	column desviacion_proximos_60min_flag
+		dataType: int64
+		lineageTag: 1e7d6f83-5921-45bc-a1cd-0733571e3de4
+		sourceColumn: desviacion_proximos_60min_flag
+
+	column temperatura_ambiente_c
+		dataType: double
+		lineageTag: cf9735e5-bfe6-43aa-947d-2a2cc555e696
+		sourceColumn: temperatura_ambiente_c
+
+	column puerta_abierta_flag
+		dataType: int64
+		lineageTag: 79302451-27df-4711-abcb-5d2f4f481ada
+		sourceColumn: puerta_abierta_flag
+
+	column setpoint_c
+		dataType: double
+		lineageTag: 47289a3e-3bb0-4c92-bd0a-9b2699dfbb00
+		sourceColumn: setpoint_c
+
+	column minutos_desde_despacho
+		dataType: int64
+		lineageTag: 163c091f-392a-4cbe-98b1-6e7ced4115e1
+		sourceColumn: minutos_desde_despacho
+
+	column particion_modelo
+		dataType: string
+		lineageTag: 93117e39-f33b-4d7e-9da7-e16a9a60a175
+		sourceColumn: particion_modelo
+
+	partition Telemetria = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents(RutaSilver & "andinalog_iot_telemetry_silver.csv"), [Delimiter=",", Columns=15, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    Tipado = Table.TransformColumnTypes(Encabezados, {{"timestamp", type datetime}, {"viaje_id", type text}, {"order_id", type text}, {"camion_id", type text}, {"producto_id", type text}, {"temperatura_cabina_c", type number}, {"temp_unit", type text}, {"humedad_cabina_pct", type number}, {"desviacion_termica_flag", Int64.Type}, {"desviacion_proximos_60min_flag", Int64.Type}, {"temperatura_ambiente_c", type number}, {"puerta_abierta_flag", Int64.Type}, {"setpoint_c", type number}, {"minutos_desde_despacho", Int64.Type}, {"particion_modelo", type text}})
+				in
+				    Tipado
+

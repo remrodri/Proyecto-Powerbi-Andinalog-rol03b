@@ -1,0 +1,48 @@
+table Productos
+	lineageTag: dbafbd56-83a4-41bf-a175-93b9bf5bea0a
+
+	column producto_id
+		dataType: string
+		lineageTag: cf1eb1a6-b938-41fc-bcdd-5a7508e06556
+		sourceColumn: producto_id
+
+	column nombre_producto
+		dataType: string
+		lineageTag: c0e498e7-014f-4156-b633-4b994e1d7445
+		sourceColumn: nombre_producto
+
+	column categoria_logistica
+		dataType: string
+		lineageTag: 9d6703d1-503c-4022-bfa9-59ef519a11df
+		sourceColumn: categoria_logistica
+
+	column temperatura_conservacion_requerida_c
+		dataType: int64
+		lineageTag: 5e56d2ec-f4fb-4d85-bff3-b557685baabe
+		sourceColumn: temperatura_conservacion_requerida_c
+
+	column tolerancia_temperatura_c
+		dataType: int64
+		lineageTag: b638fb68-92ec-4d9a-b17a-8eefac50166d
+		sourceColumn: tolerancia_temperatura_c
+
+	column costo_unitario_bob
+		dataType: double
+		lineageTag: 1566456d-22b5-436d-ab0e-93d492838b04
+		sourceColumn: costo_unitario_bob
+
+	column precio_unitario_bob
+		dataType: double
+		lineageTag: 012ca6bd-0ab8-4999-b75a-e8c5c1fcc7e4
+		sourceColumn: precio_unitario_bob
+
+	partition Productos = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents(RutaSilver & "andinalog_productos_silver.csv"), [Delimiter=",", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    Tipado = Table.TransformColumnTypes(Encabezados, {{"producto_id", type text}, {"nombre_producto", type text}, {"categoria_logistica", type text}, {"temperatura_conservacion_requerida_c", Int64.Type}, {"tolerancia_temperatura_c", Int64.Type}, {"costo_unitario_bob", type number}, {"precio_unitario_bob", type number}})
+				in
+				    Tipado
+

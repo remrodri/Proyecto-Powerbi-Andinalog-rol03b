@@ -1,0 +1,23 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_ProTooling = ["MCP-PBIModeling","DevMode"]
+
+annotation PBI_QueryOrder = ["Productos","Flota","Inventario","CostosAlmacen","Telemetria","RutaSilver"]
+
+ref table Productos
+ref table Flota
+ref table Inventario
+ref table CostosAlmacen
+ref table Telemetria
+
+ref cultureInfo en-US
+

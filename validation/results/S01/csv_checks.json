@@ -1,0 +1,605 @@
+{
+  "generated_at": "2026-10-20T20:30:22.483678-04:00",
+  "hito": "S01",
+  "task": "T02",
+  "spec_version": "0.4",
+  "plan_version": "0.2",
+  "method": {
+    "language": "Python",
+    "library": "csv (stdlib)",
+    "encoding": "utf-8-sig",
+    "decimal_point": ".",
+    "hash": "SHA-256",
+    "source_mutation": "none"
+  },
+  "sources": {
+    "DATA-001": {
+      "id": "DATA-001",
+      "role": "official",
+      "path": "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_iot_telemetry_silver.csv",
+      "exists": true,
+      "size_bytes": 19440087,
+      "last_write_time": "2026-10-05T14:57:29-04:00",
+      "sha256": "A193F92A0C14EC95ED88DFC60125E530135F4E6E5C54A308AA53D5F076CF3BBE",
+      "rows": 191710,
+      "columns": 15,
+      "header": [
+        "timestamp",
+        "viaje_id",
+        "order_id",
+        "camion_id",
+        "producto_id",
+        "temperatura_cabina_c",
+        "temp_unit",
+        "humedad_cabina_pct",
+        "desviacion_termica_flag",
+        "desviacion_proximos_60min_flag",
+        "temperatura_ambiente_c",
+        "puerta_abierta_flag",
+        "setpoint_c",
+        "minutos_desde_despacho",
+        "particion_modelo"
+      ],
+      "empty_cells": {
+        "timestamp": 0,
+        "viaje_id": 0,
+        "order_id": 0,
+        "camion_id": 0,
+        "producto_id": 0,
+        "temperatura_cabina_c": 0,
+        "temp_unit": 0,
+        "humedad_cabina_pct": 0,
+        "desviacion_termica_flag": 0,
+        "desviacion_proximos_60min_flag": 0,
+        "temperatura_ambiente_c": 0,
+        "puerta_abierta_flag": 0,
+        "setpoint_c": 0,
+        "minutos_desde_despacho": 0,
+        "particion_modelo": 0
+      },
+      "key_checks": [
+        {
+          "fields": [
+            "viaje_id",
+            "minutos_desde_despacho"
+          ],
+          "unique": true,
+          "rows": 191710,
+          "distinct": 191710,
+          "duplicates": 0,
+          "empty_keys": 0
+        },
+        {
+          "fields": [
+            "viaje_id",
+            "timestamp"
+          ],
+          "unique": true,
+          "rows": 191710,
+          "distinct": 191710,
+          "duplicates": 0,
+          "empty_keys": 0
+        }
+      ]
+    },
+    "DATA-002": {
+      "id": "DATA-002",
+      "role": "official",
+      "path": "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_productos_silver.csv",
+      "exists": true,
+      "size_bytes": 6272,
+      "last_write_time": "2026-10-05T14:57:29-04:00",
+      "sha256": "E27824EB494ACE66AED9B9BBEDB82195B033A2FC6400EFF31FF1075E0DFEF28F",
+      "rows": 120,
+      "columns": 7,
+      "header": [
+        "producto_id",
+        "nombre_producto",
+        "categoria_logistica",
+        "temperatura_conservacion_requerida_c",
+        "tolerancia_temperatura_c",
+        "costo_unitario_bob",
+        "precio_unitario_bob"
+      ],
+      "empty_cells": {
+        "producto_id": 0,
+        "nombre_producto": 0,
+        "categoria_logistica": 0,
+        "temperatura_conservacion_requerida_c": 0,
+        "tolerancia_temperatura_c": 0,
+        "costo_unitario_bob": 0,
+        "precio_unitario_bob": 0
+      },
+      "key_checks": [
+        {
+          "fields": [
+            "producto_id"
+          ],
+          "unique": true,
+          "rows": 120,
+          "distinct": 120,
+          "duplicates": 0,
+          "empty_keys": 0
+        }
+      ]
+    },
+    "DATA-003": {
+      "id": "DATA-003",
+      "role": "official",
+      "path": "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_flota_silver.csv",
+      "exists": true,
+      "size_bytes": 4528,
+      "last_write_time": "2026-10-05T14:57:29-04:00",
+      "sha256": "A30FF0BC0A0DED58B549AB03E8F196D187BCEE994C02FF749D1B492F13228307",
+      "rows": 100,
+      "columns": 6,
+      "header": [
+        "camion_id",
+        "centro_distribucion_base",
+        "capacidad_kg",
+        "tipo_camion",
+        "antiguedad_anios",
+        "fecha_ultimo_mantenimiento"
+      ],
+      "empty_cells": {
+        "camion_id": 0,
+        "centro_distribucion_base": 0,
+        "capacidad_kg": 0,
+        "tipo_camion": 0,
+        "antiguedad_anios": 0,
+        "fecha_ultimo_mantenimiento": 0
+      },
+      "key_checks": [
+        {
+          "fields": [
+            "camion_id"
+          ],
+          "unique": true,
+          "rows": 100,
+          "distinct": 100,
+          "duplicates": 0,
+          "empty_keys": 0
+        }
+      ]
+    },
+    "DATA-004": {
+      "id": "DATA-004",
+      "role": "official",
+      "path": "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_inventory_tracking_silver.csv",
+      "exists": true,
+      "size_bytes": 961833,
+      "last_write_time": "2026-10-05T14:57:29-04:00",
+      "sha256": "13EFBE4E2D7BB0EB60075E918600023FB1BAEAC9A930E5AF4D8CE2A2BF92A406",
+      "rows": 7782,
+      "columns": 12,
+      "header": [
+        "movimiento_id",
+        "lote_id",
+        "producto_id",
+        "centro_distribucion",
+        "fecha_ingreso",
+        "fecha_salida",
+        "fecha_vencimiento",
+        "cantidad_ingreso",
+        "cantidad_salida",
+        "cantidad_merma",
+        "dias_en_almacen",
+        "costo_unitario_bob"
+      ],
+      "empty_cells": {
+        "movimiento_id": 0,
+        "lote_id": 0,
+        "producto_id": 0,
+        "centro_distribucion": 0,
+        "fecha_ingreso": 0,
+        "fecha_salida": 0,
+        "fecha_vencimiento": 0,
+        "cantidad_ingreso": 0,
+        "cantidad_salida": 0,
+        "cantidad_merma": 0,
+        "dias_en_almacen": 0,
+        "costo_unitario_bob": 0
+      },
+      "key_checks": [
+        {
+          "fields": [
+            "lote_id"
+          ],
+          "unique": true,
+          "rows": 7782,
+          "distinct": 7782,
+          "duplicates": 0,
+          "empty_keys": 0
+        },
+        {
+          "fields": [
+            "movimiento_id"
+          ],
+          "unique": true,
+          "rows": 7782,
+          "distinct": 7782,
+          "duplicates": 0,
+          "empty_keys": 0
+        }
+      ]
+    },
+    "DATA-005": {
+      "id": "DATA-005",
+      "role": "official",
+      "path": "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_warehouse_costs_silver.csv",
+      "exists": true,
+      "size_bytes": 6407,
+      "last_write_time": "2026-10-05T14:57:29-04:00",
+      "sha256": "D3D238E629D6C98E56D678AEF4B0D208A8E31C9CEFF1ECD91F5699AA5C192AC0",
+      "rows": 144,
+      "columns": 5,
+      "header": [
+        "centro_distribucion",
+        "rotacion_stock_dias",
+        "perdida_mermas_bob",
+        "periodo_mes",
+        "costo_almacenamiento_mensual_bob"
+      ],
+      "empty_cells": {
+        "centro_distribucion": 0,
+        "rotacion_stock_dias": 0,
+        "perdida_mermas_bob": 0,
+        "periodo_mes": 0,
+        "costo_almacenamiento_mensual_bob": 0
+      },
+      "key_checks": [
+        {
+          "fields": [
+            "centro_distribucion",
+            "periodo_mes"
+          ],
+          "unique": true,
+          "rows": 144,
+          "distinct": 144,
+          "duplicates": 0,
+          "empty_keys": 0
+        }
+      ]
+    },
+    "DATA-006": {
+      "id": "DATA-006",
+      "role": "provenance",
+      "path": "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\GIAD-M3_v10_auditoria_bronze_silver.csv",
+      "exists": true,
+      "size_bytes": 2879,
+      "last_write_time": "2026-10-05T14:57:29-04:00",
+      "sha256": "0977BF12D0A422DFE93C073616C1FE73BE5A6F68D05370103C955DD8B8A00283",
+      "rows": 33,
+      "columns": 10,
+      "header": [
+        "archivo_bronze",
+        "archivo_silver",
+        "filas_bronze",
+        "filas_silver",
+        "duplicados_bronze",
+        "duplicados_silver",
+        "celdas_centinela_bronze",
+        "celdas_centinela_silver",
+        "conversiones_f_a_c",
+        "columnas_silver"
+      ],
+      "empty_cells": {
+        "archivo_bronze": 0,
+        "archivo_silver": 0,
+        "filas_bronze": 0,
+        "filas_silver": 0,
+        "duplicados_bronze": 0,
+        "duplicados_silver": 0,
+        "celdas_centinela_bronze": 0,
+        "celdas_centinela_silver": 0,
+        "conversiones_f_a_c": 0,
+        "columnas_silver": 0
+      },
+      "key_checks": []
+    },
+    "DATA-007": {
+      "id": "DATA-007",
+      "role": "contrast",
+      "path": "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_wms_orders_silver.csv",
+      "exists": true,
+      "size_bytes": 3545848,
+      "last_write_time": "2026-10-05T14:57:29-04:00",
+      "sha256": "7ACAAD0BA6E404819A364C8BFE579EA2EC5C71FC3082192C8352E01EC14D0CAE",
+      "rows": 30000,
+      "columns": 16,
+      "header": [
+        "order_id",
+        "cliente_id",
+        "producto_id",
+        "lote_id",
+        "fecha_despacho",
+        "centro_distribucion",
+        "camion_id",
+        "chofer_id",
+        "cantidad_solicitada",
+        "cantidad_entregada",
+        "tiempo_entrega_prometido_hrs",
+        "tiempo_entrega_real_hrs",
+        "otif_on_time",
+        "otif_in_full",
+        "otif",
+        "particion_modelo"
+      ],
+      "empty_cells": {
+        "order_id": 0,
+        "cliente_id": 0,
+        "producto_id": 0,
+        "lote_id": 0,
+        "fecha_despacho": 0,
+        "centro_distribucion": 0,
+        "camion_id": 0,
+        "chofer_id": 0,
+        "cantidad_solicitada": 0,
+        "cantidad_entregada": 0,
+        "tiempo_entrega_prometido_hrs": 0,
+        "tiempo_entrega_real_hrs": 0,
+        "otif_on_time": 0,
+        "otif_in_full": 0,
+        "otif": 0,
+        "particion_modelo": 0
+      },
+      "key_checks": [
+        {
+          "fields": [
+            "order_id"
+          ],
+          "unique": true,
+          "rows": 30000,
+          "distinct": 30000,
+          "duplicates": 0,
+          "empty_keys": 0
+        }
+      ]
+    }
+  },
+  "auxiliary_sources": {
+    "clientes": {
+      "path": "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_clientes_silver.csv",
+      "rows": 400,
+      "columns": 4,
+      "header": [
+        "cliente_id",
+        "nombre_comercial",
+        "tipo_cliente",
+        "zona_despacho"
+      ]
+    },
+    "drivers": {
+      "path": "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_hr_drivers_silver.csv",
+      "rows": 7200,
+      "columns": 8,
+      "header": [
+        "chofer_id",
+        "chofer_nombre",
+        "centro_distribucion",
+        "periodo_mes",
+        "horas_conduccion_mes",
+        "salario_base_bob",
+        "ausentismo_dias",
+        "experiencia_anios"
+      ]
+    }
+  },
+  "inventory": {
+    "rows": 7782,
+    "rows_without_exit": 0,
+    "balance_mismatches": 0
+  },
+  "telemetry": {
+    "orders_with_two_partitions": 14,
+    "order_rows_with_two_partitions": 339,
+    "order_positives_with_two_partitions": 43,
+    "trips_with_two_partitions": 14,
+    "trip_rows_with_two_partitions": 339,
+    "trip_positives_with_two_partitions": 43,
+    "boundary_reads": 26,
+    "boundary_percent": 0.0136,
+    "boundary_trips": 26,
+    "boundary_dependent_trips": [],
+    "boundary_distribution": [
+      {
+        "required": -18.0,
+        "tolerance": 3.0,
+        "temperature": -15.0,
+        "count": 19
+      },
+      {
+        "required": 4.0,
+        "tolerance": 2.0,
+        "temperature": 6.0,
+        "count": 7
+      }
+    ],
+    "telemetry_products": 70,
+    "catalog_refrigerated_frozen": 70,
+    "products_in_telemetry_not_refrigerated_frozen": [],
+    "missing_product_references": 0
+  },
+  "provenance": {
+    "data006_rows": 33,
+    "official_records_found": 5,
+    "official_records": [
+      {
+        "archivo_bronze": "andinalog_iot_telemetry.csv",
+        "archivo_silver": "andinalog_iot_telemetry_silver.csv",
+        "filas_bronze": "192285",
+        "filas_silver": "191710",
+        "duplicados_bronze": "575",
+        "duplicados_silver": "0",
+        "celdas_centinela_bronze": "288",
+        "celdas_centinela_silver": "0",
+        "conversiones_f_a_c": "6709",
+        "columnas_silver": "15"
+      },
+      {
+        "archivo_bronze": "andinalog_productos.csv",
+        "archivo_silver": "andinalog_productos_silver.csv",
+        "filas_bronze": "121",
+        "filas_silver": "120",
+        "duplicados_bronze": "1",
+        "duplicados_silver": "0",
+        "celdas_centinela_bronze": "0",
+        "celdas_centinela_silver": "0",
+        "conversiones_f_a_c": "0",
+        "columnas_silver": "7"
+      },
+      {
+        "archivo_bronze": "andinalog_flota.csv",
+        "archivo_silver": "andinalog_flota_silver.csv",
+        "filas_bronze": "101",
+        "filas_silver": "100",
+        "duplicados_bronze": "1",
+        "duplicados_silver": "0",
+        "celdas_centinela_bronze": "0",
+        "celdas_centinela_silver": "0",
+        "conversiones_f_a_c": "0",
+        "columnas_silver": "6"
+      },
+      {
+        "archivo_bronze": "andinalog_inventory_tracking.csv",
+        "archivo_silver": "andinalog_inventory_tracking_silver.csv",
+        "filas_bronze": "7805",
+        "filas_silver": "7782",
+        "duplicados_bronze": "23",
+        "duplicados_silver": "0",
+        "celdas_centinela_bronze": "11",
+        "celdas_centinela_silver": "0",
+        "conversiones_f_a_c": "0",
+        "columnas_silver": "12"
+      },
+      {
+        "archivo_bronze": "andinalog_warehouse_costs.csv",
+        "archivo_silver": "andinalog_warehouse_costs_silver.csv",
+        "filas_bronze": "144",
+        "filas_silver": "144",
+        "duplicados_bronze": "0",
+        "duplicados_silver": "0",
+        "celdas_centinela_bronze": "0",
+        "celdas_centinela_silver": "0",
+        "conversiones_f_a_c": "0",
+        "columnas_silver": "5"
+      }
+    ],
+    "wms_record": {
+      "archivo_bronze": "andinalog_wms_orders.csv",
+      "archivo_silver": "andinalog_wms_orders_silver.csv",
+      "filas_bronze": "30090",
+      "filas_silver": "30000",
+      "duplicados_bronze": "90",
+      "duplicados_silver": "0",
+      "celdas_centinela_bronze": "0",
+      "celdas_centinela_silver": "0",
+      "conversiones_f_a_c": "0",
+      "columnas_silver": "16"
+    },
+    "wms_record_counted_as_official": false,
+    "row_count_checks": [
+      {
+        "source": "DATA-001",
+        "file": "andinalog_iot_telemetry_silver.csv",
+        "data006_filas_silver": 191710,
+        "actual_rows": 191710,
+        "data006_columnas_silver": 15,
+        "actual_columns": 15,
+        "rows_match": true,
+        "columns_match": true
+      },
+      {
+        "source": "DATA-002",
+        "file": "andinalog_productos_silver.csv",
+        "data006_filas_silver": 120,
+        "actual_rows": 120,
+        "data006_columnas_silver": 7,
+        "actual_columns": 7,
+        "rows_match": true,
+        "columns_match": true
+      },
+      {
+        "source": "DATA-003",
+        "file": "andinalog_flota_silver.csv",
+        "data006_filas_silver": 100,
+        "actual_rows": 100,
+        "data006_columnas_silver": 6,
+        "actual_columns": 6,
+        "rows_match": true,
+        "columns_match": true
+      },
+      {
+        "source": "DATA-004",
+        "file": "andinalog_inventory_tracking_silver.csv",
+        "data006_filas_silver": 7782,
+        "actual_rows": 7782,
+        "data006_columnas_silver": 12,
+        "actual_columns": 12,
+        "rows_match": true,
+        "columns_match": true
+      },
+      {
+        "source": "DATA-005",
+        "file": "andinalog_warehouse_costs_silver.csv",
+        "data006_filas_silver": 144,
+        "actual_rows": 144,
+        "data006_columnas_silver": 5,
+        "actual_columns": 5,
+        "rows_match": true,
+        "columns_match": true
+      }
+    ]
+  },
+  "wms": {
+    "wms_rows": 30000,
+    "wms_orders": 30000,
+    "telemetry_orders": 8000,
+    "covered_orders": 8000,
+    "coverage_of_telemetry_orders": "8000 de 8000",
+    "wms_orders_without_telemetry": 22000,
+    "center_base": {
+      "matches": 8000,
+      "expected": 8000,
+      "missing": 0,
+      "mismatches": []
+    },
+    "lote_center": {
+      "matches": 30000,
+      "expected": 30000,
+      "missing": 0,
+      "mismatches": []
+    },
+    "driver_month_center": {
+      "matches": 30000,
+      "expected": 30000,
+      "missing": 0,
+      "mismatches": []
+    },
+    "client_zone_center": {
+      "matches": 30000,
+      "expected": 30000,
+      "missing": 0,
+      "mismatches": []
+    },
+    "order_camion_conflicts": {}
+  },
+  "checks": {
+    "P01": {
+      "status": "pass",
+      "checked": 10,
+      "changed": [],
+      "missing": []
+    },
+    "P02": {
+      "status": "pass",
+      "discrepancies": []
+    },
+    "P06": {
+      "status": "pass",
+      "wms_loaded": false,
+      "method": "Cruces en memoria con csv; ninguna fuente WMS se cargó en Power BI."
+    }
+  },
+  "discrepancies": []
+}

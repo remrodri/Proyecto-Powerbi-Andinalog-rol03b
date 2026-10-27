@@ -1,0 +1,6 @@
+/// Ruta raíz de los Silver de AndinaLog, con barra final.
+expression RutaSilver = "C:\GIAD\GIAD-M3_datos_sinteticos_v10_silver\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 8b34c65d-e120-49f4-9fec-e6a9695dabe5
+
+	annotation PBI_ResultType = Text
+

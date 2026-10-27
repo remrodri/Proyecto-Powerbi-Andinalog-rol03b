@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "AndinaLog_03B"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "2fd695d4-13f0-413e-8ca4-9d1ad2cdbb9b"
+  }
+}

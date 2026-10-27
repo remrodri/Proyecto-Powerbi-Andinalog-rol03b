@@ -1,0 +1,153 @@
+{
+    "generated_at":  "2026-10-20T20:10:13.1841609-04:00",
+    "hito":  "S01",
+    "task":  "T01",
+    "spec_version":  "0.4",
+    "plan_version":  "0.2",
+    "hash_algorithm":  "SHA256",
+    "read_only":  true,
+    "source_root":  "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver",
+    "source_count":  10,
+    "all_sources_exist":  true,
+    "environment":  {
+                        "os":  "Microsoft Windows NT 10.0.26200.0",
+                        "powershell":  "5.1.26100.9711",
+                        "culture":  "en-US",
+                        "win_system_locale":  "en-US",
+                        "python":  {
+                                       "version":  "3.14.6",
+                                       "executable":  "C:\\Python314\\python.exe",
+                                       "modules":  {
+                                                       "csv":  true,
+                                                       "json":  true,
+                                                       "hashlib":  true,
+                                                       "openpyxl":  true,
+                                                       "pandas":  true
+                                                   }
+                                   },
+                        "renderer":  "LibreOffice/soffice no encontrado; revisiÃ³n visual XLSX queda pendiente.",
+                        "git_repository":  false,
+                        "git_version":  "git version 2.55.0.windows.3",
+                        "desktop":  {
+                                        "installed":  true,
+                                        "distribution":  "Microsoft Store",
+                                        "package_name":  "Microsoft.MicrosoftPowerBIDesktop",
+                                        "version":  "2.159.883.0",
+                                        "install_location":  "C:\\Program Files\\WindowsApps\\Microsoft.MicrosoftPowerBIDesktop_2.159.883.0_x64__8wekyb3d8bbwe",
+                                        "process_running":  false,
+                                        "executable_paths_checked":  [
+                                                                         "C:\\Program Files\\Microsoft Power BI Desktop\\bin\\PBIDesktop.exe",
+                                                                         "C:\\Program Files (x86)\\Microsoft Power BI Desktop\\bin\\PBIDesktop.exe",
+                                                                         "C:\\Users\\remrodri\\AppData\\Local\\Microsoft\\WindowsApps\\PBIDesktop.exe"
+                                                                     ],
+                                        "standalone_executable_found":  false,
+                                        "note":  "Paquete de Microsoft Store detectado; no se abriÃ³ Power BI ni se importaron tablas."
+                                    }
+                    },
+    "sources":  [
+                    {
+                        "id":  "DATA-001",
+                        "role":  "official",
+                        "path":  "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_iot_telemetry_silver.csv",
+                        "exists":  true,
+                        "size_bytes":  19440087,
+                        "last_write_time":  "2026-10-05T14:57:29.0000000-04:00",
+                        "sha256":  "A193F92A0C14EC95ED88DFC60125E530135F4E6E5C54A308AA53D5F076CF3BBE"
+                    },
+                    {
+                        "id":  "DATA-002",
+                        "role":  "official",
+                        "path":  "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_productos_silver.csv",
+                        "exists":  true,
+                        "size_bytes":  6272,
+                        "last_write_time":  "2026-10-05T14:57:29.0000000-04:00",
+                        "sha256":  "E27824EB494ACE66AED9B9BBEDB82195B033A2FC6400EFF31FF1075E0DFEF28F"
+                    },
+                    {
+                        "id":  "DATA-003",
+                        "role":  "official",
+                        "path":  "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_flota_silver.csv",
+                        "exists":  true,
+                        "size_bytes":  4528,
+                        "last_write_time":  "2026-10-05T14:57:29.0000000-04:00",
+                        "sha256":  "A30FF0BC0A0DED58B549AB03E8F196D187BCEE994C02FF749D1B492F13228307"
+                    },
+                    {
+                        "id":  "DATA-004",
+                        "role":  "official",
+                        "path":  "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_inventory_tracking_silver.csv",
+                        "exists":  true,
+                        "size_bytes":  961833,
+                        "last_write_time":  "2026-10-05T14:57:29.0000000-04:00",
+                        "sha256":  "13EFBE4E2D7BB0EB60075E918600023FB1BAEAC9A930E5AF4D8CE2A2BF92A406"
+                    },
+                    {
+                        "id":  "DATA-005",
+                        "role":  "official",
+                        "path":  "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_warehouse_costs_silver.csv",
+                        "exists":  true,
+                        "size_bytes":  6407,
+                        "last_write_time":  "2026-10-05T14:57:29.0000000-04:00",
+                        "sha256":  "D3D238E629D6C98E56D678AEF4B0D208A8E31C9CEFF1ECD91F5699AA5C192AC0"
+                    },
+                    {
+                        "id":  "DATA-006",
+                        "role":  "provenance",
+                        "path":  "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\GIAD-M3_v10_auditoria_bronze_silver.csv",
+                        "exists":  true,
+                        "size_bytes":  2879,
+                        "last_write_time":  "2026-10-05T14:57:29.0000000-04:00",
+                        "sha256":  "0977BF12D0A422DFE93C073616C1FE73BE5A6F68D05370103C955DD8B8A00283"
+                    },
+                    {
+                        "id":  "DATA-007",
+                        "role":  "contrast",
+                        "path":  "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_wms_orders_silver.csv",
+                        "exists":  true,
+                        "size_bytes":  3545848,
+                        "last_write_time":  "2026-10-05T14:57:29.0000000-04:00",
+                        "sha256":  "7ACAAD0BA6E404819A364C8BFE579EA2EC5C71FC3082192C8352E01EC14D0CAE"
+                    },
+                    {
+                        "id":  "SRC-101",
+                        "role":  "reference",
+                        "path":  "C:\\Users\\remrodri\\Github\\Proyecto-Powerbi-Andinalog-rol03b\\references\\S01\\GIAD-M4-S01_Preparacion_Proyecto_Integrador.docx",
+                        "exists":  true,
+                        "size_bytes":  39313,
+                        "last_write_time":  "2026-10-19T15:57:23.8604032-04:00",
+                        "sha256":  "8967424A1FAA78111B4D0E035BB7E492C439C8894BC088892BDB9E5B982F0F1D"
+                    },
+                    {
+                        "id":  "SRC-201",
+                        "role":  "reference",
+                        "path":  "C:\\Users\\remrodri\\Github\\Proyecto-Powerbi-Andinalog-rol03b\\references\\general\\GIAD-M4_Plantillas_Proyecto_Integrador_v2.xlsx",
+                        "exists":  true,
+                        "size_bytes":  36907,
+                        "last_write_time":  "2026-10-19T15:55:21.2404931-04:00",
+                        "sha256":  "0CCC4A532C0B3091E6D9BD00857EFDD6761D4E1D3855B49B8FE7A66220D2DF30"
+                    },
+                    {
+                        "id":  "SRC-202",
+                        "role":  "reference",
+                        "path":  "C:\\Users\\remrodri\\Github\\Proyecto-Powerbi-Andinalog-rol03b\\references\\S01\\GIAD-M4-S01_Sesion1_Completa-20-32.pdf",
+                        "exists":  true,
+                        "size_bytes":  71011,
+                        "last_write_time":  "2026-10-20T17:38:57.7465086-04:00",
+                        "sha256":  "9A1718459402DD1E5850F42C8FD7FCBF3214013BCBF0B2EEE9D40AD0037B8BD9"
+                    }
+                ],
+    "notes":  [
+                  "T01 solo verifica fuentes y entorno.",
+                  "No se importaron tablas ni se abriÃ³ Power BI.",
+                  "No se completaron plantillas.",
+                  "No se ejecutÃ³ T02 ni se contaron filas/columnas en CSV."
+              ],
+    "verification":  {
+                         "post_check_at":  "2026-10-20T20:10:59.5041767-04:00",
+                         "all_hashes_match":  true,
+                         "changed_ids":  [
+
+                                         ],
+                         "note":  "Relectura después de T01; no se modificaron las fuentes."
+                     }
+}

@@ -1,0 +1,49 @@
+table Flota
+	lineageTag: a062adc5-d3b2-4758-a4b5-a211b792cc18
+
+	column camion_id
+		dataType: string
+		lineageTag: 7bc4bd4a-8a7e-4df9-9e0f-597b93471910
+		sourceColumn: camion_id
+
+	column centro_distribucion_base
+		dataType: string
+		lineageTag: 7b9d09bc-5013-49b7-8742-50e42a1be580
+		sourceColumn: centro_distribucion_base
+
+	column capacidad_kg
+		dataType: int64
+		lineageTag: d3821a20-fb4b-4a97-9f69-d8830882c88b
+		sourceColumn: capacidad_kg
+
+	column tipo_camion
+		dataType: string
+		lineageTag: b55b3748-c722-4116-868e-f71d9262eb1a
+		sourceColumn: tipo_camion
+
+	column antiguedad_anios
+		dataType: int64
+		lineageTag: dc3baedc-fe33-41df-bbdb-26a3240a04e6
+		sourceColumn: antiguedad_anios
+
+	column fecha_ultimo_mantenimiento
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 13dd90bf-5bf0-4d31-bab3-c3412aa1ec68
+		summarizeBy: none
+		sourceColumn: fecha_ultimo_mantenimiento
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Flota = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents(RutaSilver & "andinalog_flota_silver.csv"), [Delimiter=",", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    Tipado = Table.TransformColumnTypes(Encabezados, {{"camion_id", type text}, {"centro_distribucion_base", type text}, {"capacidad_kg", Int64.Type}, {"tipo_camion", type text}, {"antiguedad_anios", Int64.Type}, {"fecha_ultimo_mantenimiento", type date}})
+				in
+				    Tipado
+
