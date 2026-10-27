@@ -1,7 +1,7 @@
 # Tareas — S02 Decisión, arquitectura y mapa Silver
 
 Spec y plan aprobados: `specs/002-s02-architecture/spec.md` v0.4 (2026-10-27) y `specs/002-s02-architecture/plan.md` v0.1 (2026-10-27).
-Estado: **Build en curso. T01–T06 completadas; T07–T13 pendientes.** Audit, Fix y Close no están autorizados.
+Estado: **Build en curso. T01–T07 completadas; T08–T13 pendientes.** Audit, Fix y Close no están autorizados.
 
 - [x] **T01 — Inventario inicial, cuatro huellas y calificación separada de COM.**
   - Requisitos: RNF-S02-03, RNF-S02-06, RNF-S02-07; base de RF-S02-08 y RF-S02-09; CA-S02-08 y CA-S02-09.
@@ -83,7 +83,7 @@ Estado: **Build en curso. T01–T06 completadas; T07–T13 pendientes.** Audit, 
   - Hecho cuando: A7:G11 tiene 5 filas, sin WMS, con claves de S01 y frecuencia exacta; 50 fórmulas y 12 hojas se conservan; S01 no cambió.
   - Estado: **completada el 2026-10-27**. B4=`Grupo 06`, D4=`03B`, F4=`2026-10-27` como texto ISO/General, igual que S01. A7:G11 contiene DATA-001 a DATA-005, sin WMS, con la frecuencia literal de Inventario; se sustituyó la fila de ejemplo y se normalizó A7:G7 al estilo de A8:G8. Se conservaron 12 hojas, 50 fórmulas, 11 DV, 1 rango de CF con 4 reglas, 19 combinadas y S01 sin cambios. `openpyxl` normalizó la alineación por omisión de B4/D4/F4, sin cambio material de fuente, relleno, borde o formato. **18/18 invariantes y 14/14 controles del mapa pasan**; ZIP/CRC/XML válidos y reabribles. SRC-201 y PPTX intactos; no se creó PDF ni se usó Excel COM. Evidencia: `xlsx_invariants.json`, `map_checks.json` y `evidence/S02/t06_tracking_update.md`. T07 no se inició.
 
-- [ ] **T07 — Completar `Fichas KPI` C7:E11.**
+- [x] **T07 — Completar `Fichas KPI` C7:E11.**
   - Requisitos: RF-S02-06, RF-S02-07; CA-S02-06, CA-S02-07.
   - Depende de: T06.
   - Artefactos: copia XLSX de seguimiento, `validation/results/S02/kpi_checks.json`.
@@ -91,6 +91,7 @@ Estado: **Build en curso. T01–T06 completadas; T07–T13 pendientes.** Audit, 
   - Debe preservar: A7:B11, columnas F–AA, otras hojas, formatos y validaciones.
   - Verificación y evidencia: escribir «Táctico», fórmula del Anexo B y unidad; comparar contra el contrato; no completar metas, umbrales, DAX ni responsables.
   - Hecho cuando: 5/5 filas con C–E completas, A–B sin cambios, sin merma por valor y sin columnas posteriores modificadas.
+  - Estado: **completada el 2026-10-27**. C7:C11=`Táctico`; D7:D11 con la fórmula en palabras aprobada y E7:E10=`Porcentaje`, E11=`Días`. Se conservaron A7:B11, F–AA, estilos, 12 hojas, 50 fórmulas, 11 DV, 1 rango de CF con 4 reglas, 19 combinadas, S01 y S02 sin cambios; solo cambiaron 15 valores. **25/25 controles pasan** en `kpi_checks.json` y `xlsx_invariants.json`; XLSX final: 34.584 bytes y SHA-256 `C2F691F4CD5EDD47AD5E900A593740A9CD5EC11A197B5D5703DF9963E0C7D0D4`; ZIP/CRC/XML válidos y reabribles. No se añadieron metas, umbrales, DAX, responsables, referencias globales, merma por valor ni medida de apoyo. SRC-201 y PPTX intactos; no se creó PDF ni se usó Excel COM. Evidencia: `evidence/S02/t07_fichas_kpi.md`. T08 no se inició.
 
 - [ ] **T08 — Exportar el PDF con diagrama y mapa.**
   - Requisitos: RF-S02-09; CA-S02-02, CA-S02-03, CA-S02-09.

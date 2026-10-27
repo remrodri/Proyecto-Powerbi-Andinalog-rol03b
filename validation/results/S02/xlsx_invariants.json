@@ -1,28 +1,29 @@
 {
-  "task": "T06",
+  "task": "T07",
   "hit": "S02",
-  "scope": "S02 Build T06",
-  "executed_at_utc": "2026-10-27T21:26:01.488420+00:00",
+  "scope": "S02 Build T07",
+  "executed_at_utc": "2026-10-27T21:32:48.384102+00:00",
   "files": {
     "before": {
-      "path": "deliverables\\tracking\\M4_Equipo06_Proyecto_Integrador_v2.xlsx",
-      "size": 33844,
-      "sha256": "E7F09B0AC9EF786096640F6D2B751E372A65BFA41B1595B545B535B562DB74F1"
-    },
-    "after": {
       "path": "deliverables\\tracking\\M4_Equipo06_Proyecto_Integrador_v2.xlsx",
       "size": 34402,
       "sha256": "D677C305BBD4C1AFA4B2A912E849DC822E78E3F90EE8AF96C1334AACB141BB5F"
     },
+    "after": {
+      "path": "deliverables\\tracking\\M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+      "size": 34584,
+      "sha256": "C2F691F4CD5EDD47AD5E900A593740A9CD5EC11A197B5D5703DF9963E0C7D0D4"
+    },
     "sha_changed": true,
-    "size_delta": 558,
+    "size_delta": 182,
     "src201": {
       "path": "references\\general\\GIAD-M4_Plantillas_Proyecto_Integrador_v2.xlsx",
-      "sha256": "0CCC4A532C0B3091E6D9BD00857EFDD6761D4E1D3855B49B8FE7A66220D2DF30",
-      "size": 36907
+      "size": 36907,
+      "sha256": "0CCC4A532C0B3091E6D9BD00857EFDD6761D4E1D3855B49B8FE7A66220D2DF30"
     },
     "pptx": {
       "path": "deliverables\\S02\\M4_Equipo06_S02_Arquitectura.pptx",
+      "size": 43872,
       "sha256": "26324855E2864A636C0390D725FA34787269DE5A9F2893031602B97B16AB325D",
       "expected_t05_sha256": "26324855E2864A636C0390D725FA34787269DE5A9F2893031602B97B16AB325D",
       "unchanged": true
@@ -53,105 +54,110 @@
     "formulas_equal": true,
     "data_validations_total": 11,
     "conditional_formatting_total": 1,
+    "conditional_formatting_rules_total": 4,
     "merged_total": 19
   },
   "authorized_changes": {
     "values": {
-      "sheet": "S02 Mapa Silver",
+      "sheet": "Fichas KPI",
+      "range": "C7:E11",
       "coordinates": [
-        "A10",
-        "A11",
-        "A7",
-        "A8",
-        "A9",
-        "B10",
-        "B11",
-        "B4",
-        "B7",
-        "B8",
-        "B9",
-        "C10",
-        "C11",
         "C7",
-        "C8",
-        "C9",
-        "D10",
-        "D11",
-        "D4",
         "D7",
-        "D8",
-        "D9",
-        "E10",
-        "E11",
         "E7",
+        "C8",
+        "D8",
         "E8",
+        "C9",
+        "D9",
         "E9",
-        "F10",
-        "F11",
-        "F4",
-        "F7",
-        "F8",
-        "F9",
-        "G10",
-        "G11",
-        "G7",
-        "G8",
-        "G9"
+        "C10",
+        "D10",
+        "E10",
+        "C11",
+        "D11",
+        "E11"
       ],
-      "count": 38
+      "count": 15
     },
     "styles": {
-      "sheet": "S02 Mapa Silver",
-      "coordinates": [
-        "A7",
-        "B7",
-        "C7",
-        "D7",
-        "E7",
-        "F7",
-        "G7"
-      ],
-      "count": 7,
-      "reason": "Normalización de la fila de ejemplo gris al estilo de datos de A8:G8; sin cambios de dimensiones."
+      "coordinates": [],
+      "count": 0
     },
-    "raw_style_diff": {
-      "sheet": "S02 Mapa Silver",
-      "coordinates": [
-        "A7",
-        "B4",
-        "B7",
-        "C7",
-        "D4",
-        "D7",
-        "E7",
-        "F4",
-        "F7",
-        "G7"
-      ],
-      "count": 10
-    },
-    "default_alignment_normalization": {
-      "coordinates": [
-        "B4",
-        "D4",
-        "F4"
-      ],
-      "from": {
-        "horizontal": null,
-        "vertical": null
-      },
-      "to": {
-        "horizontal": "general",
-        "vertical": "bottom"
-      },
-      "material_equivalent": true,
-      "reason": "openpyxl normaliza la alineación por omisión al escribir valores en B4, D4 y F4; fuente, relleno, borde y formato numérico no cambian."
+    "formulas": {
+      "count": 0
     }
   },
-  "unexpected": {
-    "values": {},
-    "styles": {},
-    "meta": {}
+  "preserved": {
+    "S01_equal_t06": true,
+    "S02_equal_t06": true,
+    "fichas_outside_allowed_values_changed": [],
+    "fichas_outside_allowed_styles_changed": [],
+    "fichas_meta_changed": [],
+    "other_sheets_values_changed": {},
+    "other_sheets_meta_changed": {}
+  },
+  "before_after_values": {
+    "C7": {
+      "before": null,
+      "after": "Táctico"
+    },
+    "D7": {
+      "before": null,
+      "after": "Viajes con al menos una lectura marcada dividido entre viajes observados, multiplicado por 100."
+    },
+    "E7": {
+      "before": null,
+      "after": "Porcentaje"
+    },
+    "C8": {
+      "before": null,
+      "after": "Táctico"
+    },
+    "D8": {
+      "before": null,
+      "after": "Lecturas marcadas dividido entre lecturas observadas, multiplicado por 100."
+    },
+    "E8": {
+      "before": null,
+      "after": "Porcentaje"
+    },
+    "C9": {
+      "before": null,
+      "after": "Táctico"
+    },
+    "D9": {
+      "before": null,
+      "after": "Suma de cantidad_merma dividida entre suma de cantidad_ingreso, multiplicada por 100."
+    },
+    "E9": {
+      "before": null,
+      "after": "Porcentaje"
+    },
+    "C10": {
+      "before": null,
+      "after": "Táctico"
+    },
+    "D10": {
+      "before": null,
+      "after": "Lotes con salida posterior al día de vencimiento divididos entre lotes salidos, multiplicado por 100."
+    },
+    "E10": {
+      "before": null,
+      "after": "Porcentaje"
+    },
+    "C11": {
+      "before": null,
+      "after": "Táctico"
+    },
+    "D11": {
+      "before": null,
+      "after": "Promedio de dias_en_almacen de los lotes con salida."
+    },
+    "E11": {
+      "before": null,
+      "after": "Días"
+    }
   },
   "zip": {
     "exists": true,
@@ -174,12 +180,19 @@
   "checks": [
     {
       "id": "X01",
-      "description": "El XLSX previo coincide con el snapshot pre-edición",
+      "description": "El baseline T07 coincide con el cierre T06",
       "ok": true,
       "detail": {
-        "path": "deliverables\\tracking\\M4_Equipo06_Proyecto_Integrador_v2.xlsx",
-        "size": 33844,
-        "sha256": "E7F09B0AC9EF786096640F6D2B751E372A65BFA41B1595B545B535B562DB74F1"
+        "t07_pre": {
+          "path": "deliverables\\tracking\\M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+          "size": 34402,
+          "sha256": "D677C305BBD4C1AFA4B2A912E849DC822E78E3F90EE8AF96C1334AACB141BB5F"
+        },
+        "t06_post": {
+          "path": "deliverables\\tracking\\M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+          "size": 34402,
+          "sha256": "D677C305BBD4C1AFA4B2A912E849DC822E78E3F90EE8AF96C1334AACB141BB5F"
+        }
       }
     },
     {
@@ -189,15 +202,15 @@
       "detail": {
         "before": {
           "path": "deliverables\\tracking\\M4_Equipo06_Proyecto_Integrador_v2.xlsx",
-          "size": 33844,
-          "sha256": "E7F09B0AC9EF786096640F6D2B751E372A65BFA41B1595B545B535B562DB74F1"
-        },
-        "after": {
-          "path": "deliverables\\tracking\\M4_Equipo06_Proyecto_Integrador_v2.xlsx",
           "size": 34402,
           "sha256": "D677C305BBD4C1AFA4B2A912E849DC822E78E3F90EE8AF96C1334AACB141BB5F"
         },
-        "size_delta": 558
+        "after": {
+          "path": "deliverables\\tracking\\M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+          "size": 34584,
+          "sha256": "C2F691F4CD5EDD47AD5E900A593740A9CD5EC11A197B5D5703DF9963E0C7D0D4"
+        },
+        "size_delta": 182
       }
     },
     {
@@ -221,210 +234,270 @@
     },
     {
       "id": "X04",
-      "description": "Se conservan las 50 fórmulas con la misma coordenada y expresión",
+      "description": "Se conservan las 50 fórmulas con coordenada y expresión",
       "ok": true,
       "detail": {
         "before": 50,
-        "after": 50
+        "after": 50,
+        "equal": true
       }
     },
     {
       "id": "X05",
-      "description": "Se conservan las validaciones de datos",
+      "description": "Las validaciones de datos se conservan",
       "ok": true,
       "detail": {
-        "Instrucciones": 0,
-        "Fichas KPI": 4,
-        "Campos ficha KPI": 0,
-        "S01 Inventario": 0,
-        "S02 Mapa Silver": 0,
-        "S03 Linaje": 1,
-        "S04 Antes-después": 1,
-        "S05-S06 Modelo": 3,
-        "S07 KPI": 0,
-        "S10 Supuestos": 0,
-        "S11 Pruebas RLS": 0,
-        "S12 Mejoras": 2
+        "before": 11,
+        "after": 11
       }
     },
     {
       "id": "X06",
-      "description": "Se conserva el formato condicional",
+      "description": "El formato condicional se conserva",
       "ok": true,
       "detail": {
-        "Instrucciones": 0,
-        "Fichas KPI": 1,
-        "Campos ficha KPI": 0,
-        "S01 Inventario": 0,
-        "S02 Mapa Silver": 0,
-        "S03 Linaje": 0,
-        "S04 Antes-después": 0,
-        "S05-S06 Modelo": 0,
-        "S07 KPI": 0,
-        "S10 Supuestos": 0,
-        "S11 Pruebas RLS": 0,
-        "S12 Mejoras": 0
+        "ranges": 1,
+        "rules": 4
       }
     },
     {
       "id": "X07",
-      "description": "Se conservan las combinaciones de celdas",
+      "description": "Las 19 celdas combinadas se conservan",
       "ok": true,
       "detail": {
-        "Instrucciones": [
-          "A2:C2",
-          "A3:C3"
-        ],
-        "Fichas KPI": [
-          "A3:AA3",
-          "A5:K5",
-          "L5:V5",
-          "W5:AA5"
-        ],
-        "Campos ficha KPI": [
-          "A15:F15",
-          "A21:F21",
-          "A3:F3",
-          "A7:F7"
-        ],
-        "S01 Inventario": [
-          "A3:G3"
-        ],
-        "S02 Mapa Silver": [
-          "A3:G3"
-        ],
-        "S03 Linaje": [
-          "A3:G3"
-        ],
-        "S04 Antes-después": [
-          "A3:G3"
-        ],
-        "S05-S06 Modelo": [
-          "A3:H3"
-        ],
-        "S07 KPI": [
-          "A3:G3"
-        ],
-        "S10 Supuestos": [
-          "A3:H3"
-        ],
-        "S11 Pruebas RLS": [
-          "A3:G3"
-        ],
-        "S12 Mejoras": [
-          "A3:G3"
-        ]
+        "before": 19,
+        "after": 19
       }
     },
     {
       "id": "X08",
-      "description": "S01 Inventario conserva dimensiones, valores y estilos",
+      "description": "Metadatos de hojas, impresión y dimensiones sin cambios",
       "ok": true,
       "detail": {
-        "dimensions": "A1:G22",
-        "values_sha256": "EE3534EA648BA324E835628879EFE97CDF601BFEC5BC978639A446E347BF2F43",
-        "styles_sha256": "8977845EAAC3A006740C67B7143691B91A9B76D419BFEAC8812D2B0BDECB623A"
+        "Instrucciones": [],
+        "Fichas KPI": [],
+        "Campos ficha KPI": [],
+        "S01 Inventario": [],
+        "S02 Mapa Silver": [],
+        "S03 Linaje": [],
+        "S04 Antes-después": [],
+        "S05-S06 Modelo": [],
+        "S07 KPI": [],
+        "S10 Supuestos": [],
+        "S11 Pruebas RLS": [],
+        "S12 Mejoras": []
       }
     },
     {
       "id": "X09",
-      "description": "Las hojas ajenas a S02 conservan valores, estilos y metadatos",
+      "description": "S01 Inventario permanece idéntica al cierre T06",
       "ok": true,
       "detail": {
-        "unexpected_values": {},
-        "unexpected_styles": {},
-        "unexpected_meta": {}
+        "sha_before": "EE3534EA648BA324E835628879EFE97CDF601BFEC5BC978639A446E347BF2F43",
+        "sha_after": "EE3534EA648BA324E835628879EFE97CDF601BFEC5BC978639A446E347BF2F43"
       }
     },
     {
       "id": "X10",
-      "description": "S02 Mapa Silver conserva dimensiones, combinaciones, DV, CF y configuración de hoja",
+      "description": "S02 Mapa Silver permanece idéntica al cierre T06",
       "ok": true,
-      "detail": []
+      "detail": {
+        "sha_before": "8469293D35A2B8E9C9D3F9C1DF5BE5EBAEBF498F2071F9059316D2373E9973D4",
+        "sha_after": "8469293D35A2B8E9C9D3F9C1DF5BE5EBAEBF498F2071F9059316D2373E9973D4"
+      }
     },
     {
       "id": "X11",
-      "description": "S02 Mapa Silver solo cambia estilos en A7:G7 y los normaliza al estilo de datos",
+      "description": "A7:B11 de Fichas KPI no cambió en valores ni estilos",
       "ok": true,
       "detail": {
-        "style_diff": [
-          "A7",
-          "B7",
-          "C7",
-          "D7",
-          "E7",
-          "F7",
-          "G7"
-        ],
-        "row7_matches_row8": true
+        "range": "A7:B11"
       }
     },
     {
       "id": "X12",
-      "description": "S02 Mapa Silver solo cambia valores en B4, D4, F4 y A7:G11",
+      "description": "Fichas KPI fuera de C7:E11 no cambió en valores ni estilos",
       "ok": true,
       "detail": {
-        "value_diff_count": 38,
-        "value_diff": [
-          "A10",
-          "A11",
-          "A7",
-          "A8",
-          "A9",
-          "B10",
-          "B11",
-          "B4",
-          "B7",
-          "B8",
-          "B9",
-          "C10",
-          "C11",
-          "C7",
-          "C8",
-          "C9",
-          "D10",
-          "D11",
-          "D4",
-          "D7",
-          "D8",
-          "D9",
-          "E10",
-          "E11",
-          "E7",
-          "E8",
-          "E9",
-          "F10",
-          "F11",
-          "F4",
-          "F7",
-          "F8",
-          "F9",
-          "G10",
-          "G11",
-          "G7",
-          "G8",
-          "G9"
-        ]
+        "value_changes_outside": [],
+        "style_changes_outside": []
       }
     },
     {
       "id": "X13",
-      "description": "Las celdas B4, D4 y F4 conservan su estilo material previo",
+      "description": "Solo cambiaron los 15 valores autorizados en Fichas KPI C7:E11",
       "ok": true,
       "detail": {
-        "B4": true,
-        "D4": true,
-        "F4": true,
-        "raw_default_alignment_normalized": true
+        "changed": {
+          "Instrucciones": [],
+          "Fichas KPI": [
+            "C7",
+            "D7",
+            "E7",
+            "C8",
+            "D8",
+            "E8",
+            "C9",
+            "D9",
+            "E9",
+            "C10",
+            "D10",
+            "E10",
+            "C11",
+            "D11",
+            "E11"
+          ],
+          "Campos ficha KPI": [],
+          "S01 Inventario": [],
+          "S02 Mapa Silver": [],
+          "S03 Linaje": [],
+          "S04 Antes-después": [],
+          "S05-S06 Modelo": [],
+          "S07 KPI": [],
+          "S10 Supuestos": [],
+          "S11 Pruebas RLS": [],
+          "S12 Mejoras": []
+        }
       }
     },
     {
       "id": "X14",
-      "description": "El archivo es un ZIP válido, con partes requeridas, sin errores CRC y reabrible",
+      "description": "Los 15 valores esperados están completos",
+      "ok": true,
+      "detail": {
+        "C7": "Táctico",
+        "D7": "Viajes con al menos una lectura marcada dividido entre viajes observados, multiplicado por 100.",
+        "E7": "Porcentaje",
+        "C8": "Táctico",
+        "D8": "Lecturas marcadas dividido entre lecturas observadas, multiplicado por 100.",
+        "E8": "Porcentaje",
+        "C9": "Táctico",
+        "D9": "Suma de cantidad_merma dividida entre suma de cantidad_ingreso, multiplicada por 100.",
+        "E9": "Porcentaje",
+        "C10": "Táctico",
+        "D10": "Lotes con salida posterior al día de vencimiento divididos entre lotes salidos, multiplicado por 100.",
+        "E10": "Porcentaje",
+        "C11": "Táctico",
+        "D11": "Promedio de dias_en_almacen de los lotes con salida.",
+        "E11": "Días"
+      }
+    },
+    {
+      "id": "X15",
+      "description": "C7:C11 contiene Táctico",
+      "ok": true,
+      "detail": [
+        "Táctico",
+        "Táctico",
+        "Táctico",
+        "Táctico",
+        "Táctico"
+      ]
+    },
+    {
+      "id": "X16",
+      "description": "D7:D11 coincide con la redacción aprobada",
+      "ok": true,
+      "detail": [
+        "Viajes con al menos una lectura marcada dividido entre viajes observados, multiplicado por 100.",
+        "Lecturas marcadas dividido entre lecturas observadas, multiplicado por 100.",
+        "Suma de cantidad_merma dividida entre suma de cantidad_ingreso, multiplicada por 100.",
+        "Lotes con salida posterior al día de vencimiento divididos entre lotes salidos, multiplicado por 100.",
+        "Promedio de dias_en_almacen de los lotes con salida."
+      ]
+    },
+    {
+      "id": "X17",
+      "description": "E7:E11 contiene las unidades aprobadas",
+      "ok": true,
+      "detail": [
+        "Porcentaje",
+        "Porcentaje",
+        "Porcentaje",
+        "Porcentaje",
+        "Días"
+      ]
+    },
+    {
+      "id": "X18",
+      "description": "Los estilos de Fichas KPI se conservan sin diferencias",
+      "ok": true,
+      "detail": {
+        "changed": []
+      }
+    },
+    {
+      "id": "X19",
+      "description": "D7:E11 son texto y D7:D11 no contiene DAX ni fórmulas",
+      "ok": true,
+      "detail": {
+        "data_types": {
+          "C7": "s",
+          "D7": "s",
+          "E7": "s",
+          "C8": "s",
+          "D8": "s",
+          "E8": "s",
+          "C9": "s",
+          "D9": "s",
+          "E9": "s",
+          "C10": "s",
+          "D10": "s",
+          "E10": "s",
+          "C11": "s",
+          "D11": "s",
+          "E11": "s"
+        },
+        "dax_tokens": {}
+      }
+    },
+    {
+      "id": "X20",
+      "description": "No hay sexto KPI, merma por valor, medida de apoyo ni filas KPI adicionales",
+      "ok": true,
+      "detail": {
+        "extra_rows": {},
+        "excluded_hits": [],
+        "allowed_footnotes": [
+          "A17",
+          "A18",
+          "A19"
+        ]
+      }
+    },
+    {
+      "id": "X21",
+      "description": "C7:E11 no contiene referencias globales ni valores de resultado",
+      "ok": true,
+      "detail": {
+        "reference_terms": [
+          "14,3625",
+          "6,1395",
+          "7,3573",
+          "1.069",
+          "7.782",
+          "13,7",
+          "38,9805",
+          "35.574.924"
+        ]
+      }
+    },
+    {
+      "id": "X22",
+      "description": "dias_en_almacen se conserva exacto y sin variante acentuada",
+      "ok": true,
+      "detail": {
+        "D11": "Promedio de dias_en_almacen de los lotes con salida."
+      }
+    },
+    {
+      "id": "X23",
+      "description": "El paquete XLSX es válido, sin errores CRC y con las partes requeridas",
       "ok": true,
       "detail": {
         "exists": true,
         "testzip": null,
+        "members": 23,
         "required_parts": {
           "[Content_Types].xml": true,
           "_rels/.rels": true,
@@ -441,38 +514,35 @@
       }
     },
     {
-      "id": "X15",
-      "description": "Todos los XML del paquete son parseables",
-      "ok": true,
-      "detail": []
-    },
-    {
-      "id": "X16",
-      "description": "SRC-201 no cambió",
+      "id": "X24",
+      "description": "SRC-201, PPTX y ausencia de PDF se conservan",
       "ok": true,
       "detail": {
-        "path": "references\\general\\GIAD-M4_Plantillas_Proyecto_Integrador_v2.xlsx",
-        "sha256": "0CCC4A532C0B3091E6D9BD00857EFDD6761D4E1D3855B49B8FE7A66220D2DF30",
-        "size": 36907
-      }
-    },
-    {
-      "id": "X17",
-      "description": "PowerPoint y PDF de S02 no cambiaron",
-      "ok": true,
-      "detail": {
-        "pptx_sha256": "26324855E2864A636C0390D725FA34787269DE5A9F2893031602B97B16AB325D",
+        "src201": {
+          "path": "references\\general\\GIAD-M4_Plantillas_Proyecto_Integrador_v2.xlsx",
+          "size": 36907,
+          "sha256": "0CCC4A532C0B3091E6D9BD00857EFDD6761D4E1D3855B49B8FE7A66220D2DF30"
+        },
+        "pptx": {
+          "path": "deliverables\\S02\\M4_Equipo06_S02_Arquitectura.pptx",
+          "size": 43872,
+          "sha256": "26324855E2864A636C0390D725FA34787269DE5A9F2893031602B97B16AB325D"
+        },
         "pdf_exists": false
       }
     },
     {
-      "id": "X18",
-      "description": "No hay diferencias no autorizadas de valores, estilos o metadatos",
+      "id": "X25",
+      "description": "El libro reabre con openpyxl y conserva los valores escritos",
       "ok": true,
       "detail": {
-        "unexpected_values": {},
-        "unexpected_styles": {},
-        "unexpected_meta": {}
+        "D7:D11": [
+          "Viajes con al menos una lectura marcada dividido entre viajes observados, multiplicado por 100.",
+          "Lecturas marcadas dividido entre lecturas observadas, multiplicado por 100.",
+          "Suma de cantidad_merma dividida entre suma de cantidad_ingreso, multiplicada por 100.",
+          "Lotes con salida posterior al día de vencimiento divididos entre lotes salidos, multiplicado por 100.",
+          "Promedio de dias_en_almacen de los lotes con salida."
+        ]
       }
     }
   ],
