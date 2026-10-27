@@ -3,11 +3,11 @@
 ## Estado actual
 
 - Última actualización: 27 de octubre de 2026.
-- Fase: S01 cerrado con limitaciones documentadas el 2026-10-22. **S02 con Specify y Plan completados; Build T01 y T02 completadas**: spec v0.4, plan v0.1 y tareas aprobados y guardados; T03–T10 pendientes de autorización.
+- Fase: S01 cerrado con limitaciones documentadas el 2026-10-22. **S02 con Specify y Plan completados; Build T01–T03 completadas**: spec v0.4, plan v0.1 y tareas aprobados y guardados; T04–T10 pendientes de autorización.
 - Hito/spec de referencia: [specs/002-s02-architecture/spec.md](specs/002-s02-architecture/spec.md), S02, versión 0.4, aprobada el 2026-10-27; [plan.md](specs/002-s02-architecture/plan.md) v0.1 y [tasks.md](specs/002-s02-architecture/tasks.md) aprobados el 2026-10-27. S01 permanece en [specs/001-s01-inventory/spec.md](specs/001-s01-inventory/spec.md), versión 0.4, cerrada con limitaciones.
-- Alcance autorizado actual: S02 con Specify y Plan completados y T01–T02 de Build ejecutadas. T03–T13 permanecen sin ejecutar; Audit, Fix y Close no están autorizados. Los pendientes trasladados a S02, S08 y S11 no se declaran resueltos.
+- Alcance autorizado actual: S02 con Specify y Plan completados y T01–T03 de Build ejecutadas. T04–T13 permanecen sin ejecutar; Audit, Fix y Close no están autorizados. Los pendientes trasladados a S02, S08 y S11 no se declaran resueltos.
 - Implementación Power BI: PBIP `powerbi/AndinaLog_03B.pbip` con `RutaSilver`, cinco tablas, 0 relaciones, 0 medidas y sin visuales. Ronda 02 verificó 13/13 huellas, la reconstrucción exacta de los TMDL históricos y el estado semántico; `cache.abf` es estado local volátil, no definición. T09 no modificó modelo ni datos.
-- Próximo paso: solicitar autorización para T03; no iniciarla automáticamente. T02 dejó el contrato de contenido validado en `work/S02/content.json` y `work/S02/content.md`. DUD-S02-07 queda registrada como ausencia documentada; el origen, los propietarios, la frecuencia de actualización y la validación empresarial del centro siguen pendientes.
+- Próximo paso: solicitar autorización para T04; no iniciarla automáticamente. T03 dejó la copia editable en `deliverables/S02/M4_Equipo06_S02_Arquitectura.pptx`, binariamente idéntica a SRC-203. DUD-S02-07 queda registrada como ausencia documentada; el origen, los propietarios, la frecuencia de actualización y la validación empresarial del centro siguen pendientes.
 
 ## Cómo mantener esta memoria
 
@@ -61,7 +61,7 @@ S10 prescribe umbral térmico 0,3–0,8 °C en pasos de 0,1, predeterminado 0,5.
 
 ## Pendientes principales
 
-1. S01 cerrado con limitaciones documentadas el 2026-10-22. S02 tiene Specify y Plan completados: spec v0.4, plan v0.1 y tareas aprobados y guardados; T01 y T02 completadas, y T03–T13 sin ejecutar. DUD-S02-07 se registra como ausencia documentada. Origen de los sistemas, propietarios de las fuentes, frecuencia de actualización y validación empresarial del centro siguen pendientes y se registran como «por acordar» (DEC-029, DEC-031, PEN-017 a PEN-019).
+1. S01 cerrado con limitaciones documentadas el 2026-10-22. S02 tiene Specify y Plan completados: spec v0.4, plan v0.1 y tareas aprobados y guardados; T01–T03 completadas, y T04–T13 sin ejecutar. DUD-S02-07 se registra como ausencia documentada. Origen de los sistemas, propietarios de las fuentes, frecuencia de actualización y validación empresarial del centro siguen pendientes y se registran como «por acordar» (DEC-029, DEC-031, PEN-017 a PEN-019).
 2. .gitignore y los documentos iniciales están presentes. No se ha inicializado Git en esta colaboración. C4 quedó respaldado por DEC-026 mediante la lista complementaria de SRC-208 y la aprobación del usuario; la brecha A y el puntaje 1 siguen sujetos a auditoría y validación docente.
 3. Obtener rúbrica v4, posibles guías S12–S13 y lista completa de comisionamiento. La auditoría Bronze–Silver ya está registrada como DATA-006.
 4. Usuario, decisión, frecuencia y KPI candidatos definidos en DEC-016 y DEC-017; faltan selección final de KPI en S02, metas y umbrales en S08 y responsables empresariales en S11. El componente DCAM aplicable quedó resuelto como C4 en DEC-026.
@@ -338,3 +338,10 @@ S10 prescribe umbral térmico 0,3–0,8 °C en pasos de 0,1, predeterminado 0,5.
 - Se creó [s02_content.py](validation/checks/s02_content.py); **26/26 controles pasan** y el resultado quedó en [content_checks.json](validation/results/S02/content_checks.json). El Markdown es la representación determinista del JSON y sus tablas de mapa, KPI y pendientes se compararon contra él.
 - Se preservaron literalmente `dias_en_almacen`, la frecuencia de inventario, el origen «No documentado / por acordar» y los pendientes sin respaldo. WMS no aparece en las cinco filas del mapa. No se afirmaron validación empresarial, sesión, DAX, RLS ni publicación ejecutadas.
 - Huellas: `content.json` `A7C3A75D...BF1C7882` y `content.md` `00109A5D...C427BC`. No se modificaron spec, plan, decisiones, Excel, PowerPoint, Power BI, Silver, referencias ni entregables. T03 no se inició.
+
+### 2026-10-27 - Build T03: copia editable de la presentación
+
+- Se ejecutó únicamente T03. Se creó `deliverables/S02/M4_Equipo06_S02_Arquitectura.pptx` mediante copia binaria exacta de SRC-203: **38.618 bytes** y SHA-256 `36E4E9AE273DF191CCD05171F276697CB7A000698BBB3C523EA5C8A188F96516`, idéntico al original.
+- Se creó [pptx_copy_checks.json](validation/results/S02/pptx_copy_checks.json); **13/13 controles pasan**. La copia conserva 2 diapositivas y 32 formas por diapositiva. Huellas de la diapositiva 1: XML `0F944D0F...770C7CC9`, texto normalizado `7023CF3D...E1B0F850FA` e inventario de formas `26CB5FA7...BE681BC`; la diapositiva 2 conserva sus marcadores de plantilla y no contiene textos de T04.
+- La copia se abrió con `python-pptx` en solo lectura y el ZIP pasó CRC y partes requeridas. No se abrió PowerPoint ni se usó COM, no se guardó con `python-pptx`, no se exportó PDF y no se añadieron diapositivas. No se observó directamente una solicitud de reparación porque PowerPoint no se abrió; la igualdad binaria con SRC-203, calificado sin reparación en V02A, y la integridad del paquete no muestran indicio de reparación.
+- La igualdad binaria queda como **línea base de T03**; los cambios autorizados comenzarán en T04 solo sobre la copia entregable. SRC-203, SRC-201, copia Excel, spec, plan, contrato, Power BI, Silver, referencias y archivos S01 se conservaron. T04 no se inició.

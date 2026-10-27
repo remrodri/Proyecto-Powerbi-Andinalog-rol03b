@@ -1,7 +1,7 @@
 # Tareas — S02 Decisión, arquitectura y mapa Silver
 
 Spec y plan aprobados: `specs/002-s02-architecture/spec.md` v0.4 (2026-10-27) y `specs/002-s02-architecture/plan.md` v0.1 (2026-10-27).
-Estado: **Build en curso. T01 y T02 completadas; T03–T13 pendientes.** Audit, Fix y Close no están autorizados.
+Estado: **Build en curso. T01–T03 completadas; T04–T13 pendientes.** Audit, Fix y Close no están autorizados.
 
 - [x] **T01 — Inventario inicial, cuatro huellas y calificación separada de COM.**
   - Requisitos: RNF-S02-03, RNF-S02-06, RNF-S02-07; base de RF-S02-08 y RF-S02-09; CA-S02-08 y CA-S02-09.
@@ -30,14 +30,15 @@ Estado: **Build en curso. T01 y T02 completadas; T03–T13 pendientes.** Audit, 
   - Hecho cuando: el validador confirma 5 filas de mapa, 5 KPI tácticos, frecuencia exacta de inventario, `dias_en_almacen`, origen «no documentado», pendientes «por acordar» y **WMS ausente de las cinco filas del mapa**. WMS solo puede aparecer en una nota separada de contraste no cargado.
   - Estado: **completada el 2026-10-27**. 26/26 controles pasan; JSON y Markdown coinciden materialmente. Evidencia en `validation/results/S02/content_checks.json`.
 
-- [ ] **T03 — Copia editable de la presentación.**
+- [x] **T03 — Copia editable de la presentación.**
   - Requisitos: RF-S02-02, RF-S02-09; CA-S02-02, CA-S02-09.
   - Depende de: T01.
-  - Artefactos: `deliverables/S02/M4_Equipo06_S02_Arquitectura.pptx`.
-  - Puede modificar: solo el PPTX de destino.
+  - Artefactos: `deliverables/S02/M4_Equipo06_S02_Arquitectura.pptx`, `validation/results/S02/pptx_copy_checks.json`.
+  - Puede modificar: solo el PPTX de destino y el resultado de verificación.
   - Debe preservar: SRC-203 intacto; diapositiva 1 sin cambios.
-  - Verificación y evidencia: hash de SRC-203; copia; apertura con `python-pptx`; listado de diapositivas y formas.
+  - Verificación y evidencia: hash de SRC-203; copia binaria; apertura con `python-pptx` en solo lectura; listado de diapositivas, formas y textos.
   - Hecho cuando: el destino existe, conserva 2 diapositivas y 32 formas por diapositiva, la diapositiva 1 mantiene su texto y SRC-203 conserva su hash.
+  - Estado: **completada el 2026-10-27**. Copia binaria exacta: 38.618 bytes y SHA-256 `36E4E9AE…F96516`; 13/13 controles pasan. Evidencia en `validation/results/S02/pptx_copy_checks.json`.
 
 - [ ] **T04 — Completar la diapositiva 2 de arquitectura.**
   - Requisitos: RF-S02-01, RF-S02-02, RF-S02-04, RF-S02-05, RF-S02-11; RNF-S02-02, RNF-S02-04; CA-S02-01, CA-S02-02, CA-S02-04, CA-S02-05.
