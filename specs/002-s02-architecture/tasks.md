@@ -1,7 +1,7 @@
 # Tareas — S02 Decisión, arquitectura y mapa Silver
 
 Spec y plan aprobados: `specs/002-s02-architecture/spec.md` v0.4 (2026-10-27) y `specs/002-s02-architecture/plan.md` v0.1 (2026-10-27).
-Estado: **Build en curso. T01–T08 completadas; T09–T13 pendientes.** Audit, Fix y Close no están autorizados.
+Estado: **Build en curso. T01–T09 completadas; T10–T13 pendientes.** Audit, Fix y Close no están autorizados.
 
 - [x] **T01 — Inventario inicial, cuatro huellas y calificación separada de COM.**
   - Requisitos: RNF-S02-03, RNF-S02-06, RNF-S02-07; base de RF-S02-08 y RF-S02-09; CA-S02-08 y CA-S02-09.
@@ -103,7 +103,7 @@ Estado: **Build en curso. T01–T08 completadas; T09–T13 pendientes.** Audit, 
   - Hecho cuando: el PDF tiene 1 página de diagrama + N de mapa; tamaño 16:9; aparecen los 5 archivos y «Por acordar»; no aparece «ACERÍA» ni WMS dentro del mapa; el PDF abre en `pypdfium2`.
   - Estado: **completada el 2026-10-27**. SRC-102 registra que la diapositiva 1 es un ejemplo; se excluyó solo de `work/S02/export.pptx`. La copia quedó con 3 diapositivas y el PPTX editable conserva 4. PDF: 237.204 bytes, SHA-256 `07516A56C643334AD59F8AEBD6FB67757E954196D736181BCE771ABFCB201A42`, 3 páginas de 960 x 540 pt. Estructura 8/8 PASS y texto 10/10 PASS; los cinco archivos aparecen una vez en el mapa, sin WMS ni contenido de Acería. PPTX, XLSX, SRC-201, SRC-203, spec, PBIP, referencias, Silver y S01 conservan sus huellas. Evidencia: `evidence/S02/pdf_treatment.md`, `pdf_structure.json` y `pdf_text.json`. T09 no se inició.
 
-- [ ] **T09 — Revisión visual de PPTX, XLSX y PDF.**
+- [x] **T09 — Revisión visual de PPTX, XLSX y PDF.**
   - Requisitos: CA-S02-02, CA-S02-03, CA-S02-06, CA-S02-09; RNF-S02-07, RNF-S02-09.
   - Depende de: T04, T05, T07, T08 y V02A; para la parte Excel, V02B.
   - Artefactos: `evidence/S02/review.md`, `evidence/S02/screenshots/`, `work/S02/review.xlsx`.
@@ -111,6 +111,7 @@ Estado: **Build en curso. T01–T08 completadas; T09–T13 pendientes.** Audit, 
   - Debe preservar: entregables; Excel se revisa sobre copia temporal.
   - Verificación y evidencia: renderizar diapositivas con PowerPoint COM; páginas del PDF con `pypdfium2`; copia XLSX con Excel COM; capturar pantallas fechadas.
   - Hecho cuando: hay capturas de las diapositivas (diagrama y todas las del mapa), de `S02 Mapa Silver`, de `Fichas KPI` y de todas las páginas del PDF; no hay textos truncados, objetos superpuestos, filas partidas entre páginas ni columnas ilegibles; cada defecto queda registrado. Si Excel COM falla, se detiene solo la parte Excel, se documenta y la revisión visual de ese artefacto queda pendiente; no se declara V09 ejecutada para el libro.
+  - Estado: **completada el 2026-10-27**. Ronda 1: PPTX y PDF pasan; `Fichas KPI` C7:E11 pasa; el título KPI se corta al exportar solo `A1:E11` y `S02 Mapa Silver` falla por truncamiento de filas 7–11. Ronda 2: se corrigió solo `S02 Mapa Silver` en el entregable (filas 7–11 a 45 pt; área `A1:G11`; A4 horizontal; ajuste 1×1; márgenes 18 pt; centrado) y se repitió la evidencia Excel. `Fichas KPI` no cambió en el entregable: título/metadatos y tabla se capturaron por separado desde `work/S02/review.xlsx` sin guardar; `A3:AA3` y 19 combinadas intactas. Capturas r2: mapa, encabezado KPI y tabla KPI, todas legibles y sin truncamiento; PPTX y PDF conservan las capturas y hashes de la ronda 1. **19/19 controles XF01–XF19 pasan** en `validation/results/S02/t09_fix_checks.json`; XLSX final 39.510 bytes y SHA-256 `31C7E81FE2A21C2BD9DDE76C01B25198DEADA0283F28A46AA4015AFA0734B24D`; 12 hojas, 50 fórmulas, 11 DV, 1 rango de CF, 19 combinadas y anchos sin cambios. Evidencia: `evidence/S02/review.md`, sección 11. T10 no se inició.
 
 - [ ] **T10 — Conciliación final.**
   - Requisitos: RF-S02-03, RF-S02-06, RF-S02-07, RF-S02-09, RF-S02-11; RNF-S02-01, RNF-S02-02, RNF-S02-03; CA-S02-03, CA-S02-06, CA-S02-07, CA-S02-09, CA-S02-10.
