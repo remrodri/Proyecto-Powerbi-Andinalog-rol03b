@@ -2,12 +2,12 @@
 
 ## Estado actual
 
-- Última actualización: 22 de octubre de 2026.
-- Fase: T01–T10 completadas. T08 ronda 01 **requiere correcciones**, T09 corrección y ronda 02 **conforme al alcance auditado**; A-S01-001 cerrado. El usuario aprobó el cierre de S01 el 2026-10-22 con limitaciones documentadas. S02 no iniciado.
-- Hito/spec de referencia: [specs/001-s01-inventory/spec.md](specs/001-s01-inventory/spec.md), S01, versión 0.4, aprobada y cerrada con limitaciones; las dudas abiertas quedan trasladadas y no hay spec S02 aprobada.
-- Alcance autorizado actual: T01–T10 completadas; S01 cerrado con las limitaciones documentadas el 2026-10-22; A-S01-001 cerrado. Los pendientes trasladados a S02, S08 y S11 no se declaran resueltos. S02 no iniciado.
+- Última actualización: 27 de octubre de 2026.
+- Fase: S01 cerrado con limitaciones documentadas el 2026-10-22. **S02 con Specify y Plan completados**: spec v0.4, plan v0.1 y tareas aprobados y guardados; Build pendiente de autorización.
+- Hito/spec de referencia: [specs/002-s02-architecture/spec.md](specs/002-s02-architecture/spec.md), S02, versión 0.4, aprobada el 2026-10-27; [plan.md](specs/002-s02-architecture/plan.md) v0.1 y [tasks.md](specs/002-s02-architecture/tasks.md) aprobados el 2026-10-27. S01 permanece en [specs/001-s01-inventory/spec.md](specs/001-s01-inventory/spec.md), versión 0.4, cerrada con limitaciones.
+- Alcance autorizado actual: S02 con Specify y Plan completados. Build, Audit, Fix y Close no están autorizados; T01–T13 permanecen sin ejecutar. Los pendientes trasladados a S02, S08 y S11 no se declaran resueltos.
 - Implementación Power BI: PBIP `powerbi/AndinaLog_03B.pbip` con `RutaSilver`, cinco tablas, 0 relaciones, 0 medidas y sin visuales. Ronda 02 verificó 13/13 huellas, la reconstrucción exacta de los TMDL históricos y el estado semántico; `cache.abf` es estado local volátil, no definición. T09 no modificó modelo ni datos.
-- Próximo paso: esperar autorización separada para S02; no iniciarlo automáticamente. La semántica de `centro_distribucion`, la selección final de KPI y los demás pendientes trasladados siguen abiertos.
+- Próximo paso: solicitar autorización independiente para Build T01–T10; no iniciar Build automáticamente. DUD-S02-07 queda registrada como ausencia documentada; el origen, los propietarios, la frecuencia de actualización y la validación empresarial del centro siguen pendientes.
 
 ## Cómo mantener esta memoria
 
@@ -61,7 +61,7 @@ S10 prescribe umbral térmico 0,3–0,8 °C en pasos de 0,1, predeterminado 0,5.
 
 ## Pendientes principales
 
-1. S01 cerrado con limitaciones documentadas el 2026-10-22; T01–T10 completadas. La selección final de KPI, la semántica de `centro_distribucion` y los demás pendientes trasladados siguen abiertos en S02/S08/S11 y no se declaran resueltos. S02 no se inició.
+1. S01 cerrado con limitaciones documentadas el 2026-10-22. S02 tiene Specify y Plan completados: spec v0.4, plan v0.1 y tareas aprobados y guardados; Build pendiente de autorización y T01–T13 sin ejecutar. DUD-S02-07 se registra como ausencia documentada. Origen de los sistemas, propietarios de las fuentes, frecuencia de actualización y validación empresarial del centro siguen pendientes y se registran como «por acordar» (DEC-029, DEC-031, PEN-017 a PEN-019).
 2. .gitignore y los documentos iniciales están presentes. No se ha inicializado Git en esta colaboración. C4 quedó respaldado por DEC-026 mediante la lista complementaria de SRC-208 y la aprobación del usuario; la brecha A y el puntaje 1 siguen sujetos a auditoría y validación docente.
 3. Obtener rúbrica v4, posibles guías S12–S13 y lista completa de comisionamiento. La auditoría Bronze–Silver ya está registrada como DATA-006.
 4. Usuario, decisión, frecuencia y KPI candidatos definidos en DEC-016 y DEC-017; faltan selección final de KPI en S02, metas y umbrales en S08 y responsables empresariales en S11. El componente DCAM aplicable quedó resuelto como C4 en DEC-026.
@@ -308,3 +308,19 @@ S10 prescribe umbral térmico 0,3–0,8 °C en pasos de 0,1, predeterminado 0,5.
 - El usuario aprobó el cierre de S01 con las limitaciones documentadas y las precisiones de RF-S01-06, RF-S01-07, RF-S01-09, CA-S01-03, CA-S01-04 y CA-S01-06.
 - Se completaron T08, T09 y T10; se actualizaron `spec.md`, `tasks.md`, `AUDIT.md`, `MEMORY.md` y las notas de estado de `plan.md` y `docs/context.md`. Se conservaron las rondas, el hallazgo cerrado, la limitación histórica `03:08` y las observaciones no bloqueantes.
 - Los pendientes de S02, S08 y S11 siguen abiertos y no se declaran resueltos. No se modificaron modelo, datos, PBIP, TMDL ni entregables. S02 no se inició.
+
+### 2026-10-27 - S02 Specify completada y spec v0.4 aprobada
+
+- Se redactó y revisó la spec S02 en chat hasta la v0.3; el usuario pidió cinco correcciones puntuales y luego aprobó la v0.4 con una precisión final sobre la frecuencia de inventario.
+- Se guardó [spec.md](specs/002-s02-architecture/spec.md) versión 0.4 aprobada. Contiene frase de decisión, arquitectura origen → Silver → Power Query → modelo → indicador, mapa Silver de cinco filas (DATA-001 a DATA-005), cinco KPI tácticos y pendientes con responsable e «Hito de tratamiento».
+- El mapa Silver excluye DATA-007 `andinalog_wms_orders_silver.csv`, que queda únicamente como contraste no cargado y no cuenta como sexta fuente. El origen por archivo se registra «no documentado / por acordar»; el contexto del dossier no se usa como linaje.
+- DUD-S02-07 queda registrada como ausencia documentada (DEC-031), sin declarar resuelta la brecha ni identificar validador empresarial. Los KPI son tácticos por la decisión semanal (DEC-030). Inventario mantiene una fila por lote con ingreso, salida y merma; frecuencia «sin periodicidad fija» (DEC-032).
+- Se registraron DEC-028 a DEC-032 y PEN-017 a PEN-019 en `docs/decisions.md`. Siguen pendientes el origen de los sistemas, los propietarios de las fuentes, la frecuencia de actualización y la validación empresarial del centro.
+- Plan, tareas, Build y auditoría no se iniciaron. No se crearon `plan.md`, `tasks.md` ni `AUDIT.md`; no se modificaron Power BI, Excel, PowerPoint, plantillas, referencias, datos ni entregables.
+
+### 2026-10-27 - Plan S02 v0.1 aprobado y guardado
+
+- Se guardaron [plan.md](specs/002-s02-architecture/plan.md) v0.1 y [tasks.md](specs/002-s02-architecture/tasks.md), aprobados por el usuario. Se consolidaron las correcciones: auditoría de 30 elementos, calificación separada de PowerPoint COM y Excel COM, riesgo DCAM según la spec y cierre sin sustitución de requisitos.
+- El plan adopta la vía PPT nativa: diapositiva 1 de ejemplo sin modificar, diapositiva 2 con el diagrama y diapositivas 3+ con el mapa como tabla editable de siete columnas; el PDF se exporta con PowerPoint COM desde una copia sin la diapositiva 1. WMS queda fuera de las cinco filas y solo puede constar en una nota de contraste.
+- Se registraron 13 tareas pendientes con gates separados: Build T01–T10, Audit T11, Fix T12 solo si hay hallazgos, nueva Audit T13.1 y Close T13.2. La aprobación del plan no autoriza iniciar Build.
+- DEC-033 registra la aprobación, la vía PPT nativa, las autorizaciones separadas y la calificación pendiente de COM en T01. No se crearon `AUDIT.md`, `evidence/S02/`, `validation/results/S02/`, `work/S02/` ni `deliverables/S02/`; no se modificaron Excel, PowerPoint, Power BI, referencias, Silver ni entregables.

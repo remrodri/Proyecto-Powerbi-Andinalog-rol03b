@@ -1,6 +1,6 @@
 # Registro de decisiones · AndinaLog 03B
 
-Última actualización: 21 de octubre de 2026.
+Última actualización: 27 de octubre de 2026.
 
 Este archivo registra decisiones relevantes y su fundamento. No sustituye el contexto, las specs ni las evidencias. «Confirmada» significa acordada por el usuario o exigida expresamente por una fuente docente; no implica implementación ni validación técnica.
 
@@ -212,6 +212,60 @@ Este archivo registra decisiones relevantes y su fundamento. No sustituye el con
 - Consecuencia: T01 se ejecuta y registra; las tareas T02–T10 permanecen pendientes. La aprobación del plan no acredita el cumplimiento de S01 ni autoriza por sí sola el resto del Build.
 - Límite: los artefactos de T01 se limitan a manifiesto de fuentes y registro de entorno; no se completan entregables ni se transforman datos.
 
+### DEC-028 · Aprobación de la spec S02 v0.4
+
+- Fecha: 2026-10-27.
+- Estado: confirmada por el usuario.
+- Decisión: aprobar y guardar la spec S02 v0.4 en `specs/002-s02-architecture/spec.md`, con la única precisión final sobre la frecuencia de `andinalog_inventory_tracking_silver.csv`. La aprobación habilita la preparación del Plan de S02.
+- Fundamento: aprobación explícita del usuario tras corregir la v0.3 no aprobada.
+- Consecuencia: S02 queda con Specify completada; Plan, tareas, Build y auditoría siguen pendientes. No se crean `plan.md`, `tasks.md` ni `AUDIT.md` por esta decisión.
+- Límite: no autoriza Build, entregables, cambios en Power BI, plantillas, Excel o PowerPoint, ni iniciar el hito siguiente.
+
+### DEC-029 · Arquitectura y mapa Silver de S02
+
+- Fecha: 2026-10-27.
+- Estado: confirmada por el usuario.
+- Decisión: el mapa Silver contiene exactamente cinco filas, DATA-001 a DATA-005. DATA-007 `andinalog_wms_orders_silver.csv` queda fuera del mapa, se registra solo como fuente de contraste orden→centro, no se carga y no cuenta como sexta fuente oficial. El origen de cada archivo se registra como «no documentado / por acordar»; el contexto del dossier —ERP con parametrización inconsistente, WMS parcial en dos centros y ausencia de TMS— es contexto general y no linaje comprobado.
+- Fundamento: guía S02, inventario de S01 y correcciones solicitadas por el usuario.
+- Consecuencia: RF-S02-03 y CA-S02-03 exigen cinco filas; la caja Origen no atribuye sistemas a las tablas. Origen y propietarios quedan como pendientes PEN-017.
+- Límite: no se inventan propietarios, sistemas de origen ni linaje a partir de los nombres de archivo.
+
+### DEC-030 · KPI tácticos de S02
+
+- Fecha: 2026-10-27.
+- Estado: confirmada por el usuario.
+- Decisión: seleccionar los cinco KPI heredados —porcentaje de viajes con desviación, porcentaje de lecturas con desviación, merma por cantidades, porcentaje de lotes salidos vencidos y días promedio en almacén— con nivel **táctico**, porque apoyan la decisión semanal de la Jefatura de Operaciones. El detalle de la observación o el grano no determinan el nivel. Se conserva «número de lotes vencidos» como medida de apoyo y no se incorpora «merma por valor» como KPI.
+- Fundamento: DEC-016, DEC-017, guía S02 y catálogo SRC-005.
+- Consecuencia: RF-S02-06 y CA-S02-06 exigen nivel, fórmula en palabras y unidad; metas y umbrales corresponden a S08, DAX a S07 y responsables empresariales a S11.
+- Límite: los valores de referencia son líneas base, no metas. PEN-002 conserva su historial; la selección de S02 se registra en esta decisión.
+
+### DEC-031 · Brecha DCAM de S02 como ausencia documentada
+
+- Fecha: 2026-10-27.
+- Estado: confirmada por el usuario.
+- Decisión: admitir tres estados para la brecha de `centro_distribucion` y `centro_distribucion_base`: definición respaldada con fuente citada; definición propuesta provisional pendiente de validación; o ausencia documentada con usos, límites conocidos y solicitud concreta de definición y validación. Para DUD-S02-07 se adopta **ausencia documentada**. En todos los casos se registra el estado de validación y el seguimiento del Grupo 06.
+- Fundamento: DEC-018, DEC-026 y ausencia de un validador empresarial identificado.
+- Consecuencia: RF-S02-04 y CA-S02-05 se cumplen con la ausencia documentada; `dim_centro` y los controles de claves quedan solo como propuestas complementarias. La validación empresarial sigue pendiente como PEN-019.
+- Límite: no se inventa definición, no se declara resuelta la brecha y no se convierte al Grupo 06 en propietario empresarial.
+
+### DEC-032 · Grano y frecuencia de inventario
+
+- Fecha: 2026-10-27.
+- Estado: confirmada por el usuario.
+- Decisión: `andinalog_inventory_tracking_silver.csv` mantiene **una fila por lote con ingreso, salida y merma en esta entrega**. Su frecuencia se registra como «sin periodicidad fija: una fila por lote contiene las fechas de ingreso y salida; actualización por acordar». No se separan filas de ingreso y salida.
+- Fundamento: grano comprobado en S01 y precisión solicitada por el usuario al aprobar la spec.
+- Consecuencia: el texto se aplica en §3.2, RF-S02-03 y Anexo A de la spec S02; se conserva la distinción entre grano, frecuencia de observación y frecuencia de actualización.
+- Límite: no se declara una periodicidad de actualización que las fuentes no demuestran.
+
+### DEC-033 · Aprobación del Plan S02 v0.1 y autorizaciones por fase
+
+- Fecha: 2026-10-27.
+- Estado: confirmada por el usuario.
+- Decisión: aprobar y guardar `plan.md` v0.1 y `tasks.md` de S02. El plan adopta la **vía PPT nativa**: la diapositiva 1 de la copia de SRC-203 conserva el ejemplo sin modificar, la 2 contiene el diagrama y las 3+ el mapa Silver como tabla editable de siete columnas; el PDF se exporta con PowerPoint COM desde una copia de trabajo sin la diapositiva 1. Se mantienen autorizaciones separadas: Build (T01–T10), Audit (T11), Fix (T12, solo con hallazgos), nueva Audit (T13.1) y Close (T13.2). La aprobación del plan no autoriza ejecutar ninguna fase.
+- Fundamento: aprobación explícita del usuario y correcciones solicitadas sobre cobertura de auditoría, calificación de COM, riesgo DCAM, cierre y WMS.
+- Consecuencia: T01–T13 quedan pendientes. PowerPoint COM y Excel COM se califican por separado en T01 (V02A y V02B) y no se consideran herramientas de ejecución hasta superar esa prueba. La auditoría deberá cubrir 11 RF + 9 RNF + 10 CA = 30 elementos.
+- Límite: no se crean `AUDIT.md`, evidencia, resultados, temporales ni entregables de S02; no se modifican Excel, PowerPoint, Power BI, referencias ni Silver. El cierre exige 30/30 elementos auditados, los 10 CA demostrados, ningún hallazgo bloqueante y aprobación explícita, sin que una limitación sustituya un requisito incumplido.
+
 ## Decisiones pendientes
 
 | ID | Tema | Qué falta resolver | Momento o dependencia |
@@ -232,6 +286,9 @@ Este archivo registra decisiones relevantes y su fundamento. No sustituye el con
 | PEN-014 | Material faltante | Auditoría Bronze–Silver recibida como DATA-006; faltan rúbrica v4, guías S12–S13 y lista de comisionamiento. | Antes de cerrar requisitos afectados. |
 | PEN-015 | Diferencias entre plantillas | Estados de mejoras, polaridad en rango y formato de entregas. | Specs afectadas. |
 | PEN-016 | Convención final PBIP | Nombre, formato del informe y estructura efectiva de la versión Desktop. | Plan de implementación. |
+| PEN-017 | Origen y propietarios de las fuentes | Los sistemas de origen y los propietarios de las cinco fuentes no están documentados; S02 los registra como «por acordar». Documentarlos no los resuelve. | Por acordar; seguimiento del Grupo 06. |
+| PEN-018 | Frecuencia de actualización | La periodicidad de actualización de las tablas no está documentada; S02 la distingue de la frecuencia de observación y la marca «por acordar». | Por acordar. |
+| PEN-019 | Validación empresarial del centro | Falta un validador que confirme el significado de `centro_distribucion` y `centro_distribucion_base`; la brecha se registra como ausencia documentada (DEC-031). | Por acordar; uso en filtros y RLS en S06 y S11. |
 
 ## Historial del registro
 
@@ -242,6 +299,8 @@ Este archivo registra decisiones relevantes y su fundamento. No sustituye el con
 - 2026-10-20: se añade DEC-024: corrección de la frase de autorización de la spec, aprobación del plan v0.2 y de las tareas alineadas, con autorización limitada a T01.
 - 2026-10-20: se actualiza DEC-019 sin cambiar la decisión: T02 guardó EV-S01-WMS en `evidence/S01/wms_contrast.md`; la auditoría sigue pendiente.
 - 2026-10-21: se añaden DEC-026 y DEC-027. C4 queda respaldado por aprobación del usuario con SRC-208 como referencia complementaria; Rodrigo Tucuman queda designado para compartir pantalla. Se actualizan DEC-013, DEC-018, DEC-022 y PEN-003. T07 se completa; S01 permanece abierto a auditoría.
+- 2026-10-27: se añaden DEC-028 a DEC-032 y PEN-017 a PEN-019. Se registra la aprobación de la spec S02 v0.4, el mapa de cinco fuentes con WMS fuera, los KPI tácticos, la brecha como ausencia documentada y el grano/frecuencia de inventario. No se reescriben decisiones ni pendientes anteriores.
+- 2026-10-27: se añade DEC-033. Se aprueba el Plan S02 v0.1 con vía PPT nativa, auditoría de 30 elementos, calificación separada de PowerPoint COM y Excel COM en T01 y autorizaciones independientes para Build, Audit, Fix, nueva Audit y Close. Las tareas permanecen pendientes y Build no se autoriza.
 
 
 ### DEC-015 · Skill reutilizable por fases
