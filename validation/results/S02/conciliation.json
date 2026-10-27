@@ -1,0 +1,1873 @@
+{
+  "schema_version": "1.0",
+  "task": "T10",
+  "phase": "Build",
+  "subcase": "03B",
+  "team": "Grupo 06",
+  "scope": "Conciliación final de S02 sin modificar los artefactos auditados.",
+  "started_at_utc": "2026-10-27T23:32:21.232298Z",
+  "finished_at_utc": "2026-10-27T23:32:21.641982Z",
+  "tool": {
+    "python": "3.14.6",
+    "openpyxl": "3.1.5",
+    "python_pptx": "1.0.2",
+    "pypdfium2": "unknown",
+    "com": false
+  },
+  "hashes": {
+    "before": {
+      "spec": {
+        "path": "specs/002-s02-architecture/spec.md",
+        "size_bytes": 28474,
+        "sha256": "A91958C34BADCF6E5AAF3D0F063AC94C3FE458436A9C30AF6AE1362FD626598A"
+      },
+      "content_json": {
+        "path": "work/S02/content.json",
+        "size_bytes": 13094,
+        "sha256": "A7C3A75D43841B72E542F7A05F7B6FC882F7DA8316EF8689B8A92205BF1C7882"
+      },
+      "content_md": {
+        "path": "work/S02/content.md",
+        "size_bytes": 9375,
+        "sha256": "00109A5D0F03A7C3E6892D3C2FCBDA978845A24F05FFD4875A122EE360C427BC"
+      },
+      "xlsx": {
+        "path": "deliverables/tracking/M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+        "size_bytes": 39510,
+        "sha256": "31C7E81FE2A21C2BD9DDE76C01B25198DEADA0283F28A46AA4015AFA0734B24D"
+      },
+      "pptx": {
+        "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pptx",
+        "size_bytes": 43872,
+        "sha256": "26324855E2864A636C0390D725FA34787269DE5A9F2893031602B97B16AB325D"
+      },
+      "pdf": {
+        "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pdf",
+        "size_bytes": 237204,
+        "sha256": "07516A56C643334AD59F8AEBD6FB67757E954196D736181BCE771ABFCB201A42"
+      },
+      "pbip": {
+        "path": "powerbi/AndinaLog_03B.pbip",
+        "size_bytes": 292,
+        "sha256": "F8712089DBB5BBF10C5DE3655522C84540184101F5D8A96BE6EA017AFA8A1CCE"
+      }
+    },
+    "after": {
+      "spec": {
+        "path": "specs/002-s02-architecture/spec.md",
+        "size_bytes": 28474,
+        "sha256": "A91958C34BADCF6E5AAF3D0F063AC94C3FE458436A9C30AF6AE1362FD626598A"
+      },
+      "content_json": {
+        "path": "work/S02/content.json",
+        "size_bytes": 13094,
+        "sha256": "A7C3A75D43841B72E542F7A05F7B6FC882F7DA8316EF8689B8A92205BF1C7882"
+      },
+      "content_md": {
+        "path": "work/S02/content.md",
+        "size_bytes": 9375,
+        "sha256": "00109A5D0F03A7C3E6892D3C2FCBDA978845A24F05FFD4875A122EE360C427BC"
+      },
+      "xlsx": {
+        "path": "deliverables/tracking/M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+        "size_bytes": 39510,
+        "sha256": "31C7E81FE2A21C2BD9DDE76C01B25198DEADA0283F28A46AA4015AFA0734B24D"
+      },
+      "pptx": {
+        "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pptx",
+        "size_bytes": 43872,
+        "sha256": "26324855E2864A636C0390D725FA34787269DE5A9F2893031602B97B16AB325D"
+      },
+      "pdf": {
+        "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pdf",
+        "size_bytes": 237204,
+        "sha256": "07516A56C643334AD59F8AEBD6FB67757E954196D736181BCE771ABFCB201A42"
+      },
+      "pbip": {
+        "path": "powerbi/AndinaLog_03B.pbip",
+        "size_bytes": 292,
+        "sha256": "F8712089DBB5BBF10C5DE3655522C84540184101F5D8A96BE6EA017AFA8A1CCE"
+      }
+    },
+    "expected": {
+      "spec": {
+        "size": 28474,
+        "sha256": "A91958C34BADCF6E5AAF3D0F063AC94C3FE458436A9C30AF6AE1362FD626598A"
+      },
+      "content_json": {
+        "size": 13094,
+        "sha256": "A7C3A75D43841B72E542F7A05F7B6FC882F7DA8316EF8689B8A92205BF1C7882"
+      },
+      "content_md": {
+        "size": 9375,
+        "sha256": "00109A5D0F03A7C3E6892D3C2FCBDA978845A24F05FFD4875A122EE360C427BC"
+      },
+      "xlsx": {
+        "size": 39510,
+        "sha256": "31C7E81FE2A21C2BD9DDE76C01B25198DEADA0283F28A46AA4015AFA0734B24D"
+      },
+      "pptx": {
+        "size": 43872,
+        "sha256": "26324855E2864A636C0390D725FA34787269DE5A9F2893031602B97B16AB325D"
+      },
+      "pdf": {
+        "size": 237204,
+        "sha256": "07516A56C643334AD59F8AEBD6FB67757E954196D736181BCE771ABFCB201A42"
+      }
+    },
+    "references": {
+      "file_count_before": 52,
+      "file_count_after": 52,
+      "aggregate_sha256_before": "62BCF5FDDA329847257E96761FEB818DA1CE41CCF106F5A3AC077727DE8B90C8",
+      "aggregate_sha256_after": "62BCF5FDDA329847257E96761FEB818DA1CE41CCF106F5A3AC077727DE8B90C8"
+    }
+  },
+  "source_integrity": [
+    {
+      "id": "DATA-001",
+      "path": "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_iot_telemetry_silver.csv",
+      "ok": true,
+      "expected_sha256": "A193F92A0C14EC95ED88DFC60125E530135F4E6E5C54A308AA53D5F076CF3BBE",
+      "actual_sha256": "A193F92A0C14EC95ED88DFC60125E530135F4E6E5C54A308AA53D5F076CF3BBE",
+      "actual_size_bytes": 19440087
+    },
+    {
+      "id": "DATA-002",
+      "path": "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_productos_silver.csv",
+      "ok": true,
+      "expected_sha256": "E27824EB494ACE66AED9B9BBEDB82195B033A2FC6400EFF31FF1075E0DFEF28F",
+      "actual_sha256": "E27824EB494ACE66AED9B9BBEDB82195B033A2FC6400EFF31FF1075E0DFEF28F",
+      "actual_size_bytes": 6272
+    },
+    {
+      "id": "DATA-003",
+      "path": "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_flota_silver.csv",
+      "ok": true,
+      "expected_sha256": "A30FF0BC0A0DED58B549AB03E8F196D187BCEE994C02FF749D1B492F13228307",
+      "actual_sha256": "A30FF0BC0A0DED58B549AB03E8F196D187BCEE994C02FF749D1B492F13228307",
+      "actual_size_bytes": 4528
+    },
+    {
+      "id": "DATA-004",
+      "path": "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_inventory_tracking_silver.csv",
+      "ok": true,
+      "expected_sha256": "13EFBE4E2D7BB0EB60075E918600023FB1BAEAC9A930E5AF4D8CE2A2BF92A406",
+      "actual_sha256": "13EFBE4E2D7BB0EB60075E918600023FB1BAEAC9A930E5AF4D8CE2A2BF92A406",
+      "actual_size_bytes": 961833
+    },
+    {
+      "id": "DATA-005",
+      "path": "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_warehouse_costs_silver.csv",
+      "ok": true,
+      "expected_sha256": "D3D238E629D6C98E56D678AEF4B0D208A8E31C9CEFF1ECD91F5699AA5C192AC0",
+      "actual_sha256": "D3D238E629D6C98E56D678AEF4B0D208A8E31C9CEFF1ECD91F5699AA5C192AC0",
+      "actual_size_bytes": 6407
+    },
+    {
+      "id": "DATA-006",
+      "path": "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\GIAD-M3_v10_auditoria_bronze_silver.csv",
+      "ok": true,
+      "expected_sha256": "0977BF12D0A422DFE93C073616C1FE73BE5A6F68D05370103C955DD8B8A00283",
+      "actual_sha256": "0977BF12D0A422DFE93C073616C1FE73BE5A6F68D05370103C955DD8B8A00283",
+      "actual_size_bytes": 2879
+    },
+    {
+      "id": "DATA-007",
+      "path": "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_wms_orders_silver.csv",
+      "ok": true,
+      "expected_sha256": "7ACAAD0BA6E404819A364C8BFE579EA2EC5C71FC3082192C8352E01EC14D0CAE",
+      "actual_sha256": "7ACAAD0BA6E404819A364C8BFE579EA2EC5C71FC3082192C8352E01EC14D0CAE",
+      "actual_size_bytes": 3545848
+    },
+    {
+      "id": "SRC-101",
+      "path": "C:\\Users\\remrodri\\Github\\Proyecto-Powerbi-Andinalog-rol03b\\references\\S01\\GIAD-M4-S01_Preparacion_Proyecto_Integrador.docx",
+      "ok": true,
+      "expected_sha256": "8967424A1FAA78111B4D0E035BB7E492C439C8894BC088892BDB9E5B982F0F1D",
+      "actual_sha256": "8967424A1FAA78111B4D0E035BB7E492C439C8894BC088892BDB9E5B982F0F1D",
+      "actual_size_bytes": 39313
+    },
+    {
+      "id": "SRC-201",
+      "path": "C:\\Users\\remrodri\\Github\\Proyecto-Powerbi-Andinalog-rol03b\\references\\general\\GIAD-M4_Plantillas_Proyecto_Integrador_v2.xlsx",
+      "ok": true,
+      "expected_sha256": "0CCC4A532C0B3091E6D9BD00857EFDD6761D4E1D3855B49B8FE7A66220D2DF30",
+      "actual_sha256": "0CCC4A532C0B3091E6D9BD00857EFDD6761D4E1D3855B49B8FE7A66220D2DF30",
+      "actual_size_bytes": 36907
+    },
+    {
+      "id": "SRC-202",
+      "path": "C:\\Users\\remrodri\\Github\\Proyecto-Powerbi-Andinalog-rol03b\\references\\S01\\GIAD-M4-S01_Sesion1_Completa-20-32.pdf",
+      "ok": true,
+      "expected_sha256": "9A1718459402DD1E5850F42C8FD7FCBF3214013BCBF0B2EEE9D40AD0037B8BD9",
+      "actual_sha256": "9A1718459402DD1E5850F42C8FD7FCBF3214013BCBF0B2EEE9D40AD0037B8BD9",
+      "actual_size_bytes": 71011
+    },
+    {
+      "id": "SRC-201",
+      "path": "references/general/GIAD-M4_Plantillas_Proyecto_Integrador_v2.xlsx",
+      "ok": true,
+      "expected_sha256": "0CCC4A532C0B3091E6D9BD00857EFDD6761D4E1D3855B49B8FE7A66220D2DF30",
+      "actual_sha256": "0CCC4A532C0B3091E6D9BD00857EFDD6761D4E1D3855B49B8FE7A66220D2DF30",
+      "actual_size_bytes": 36907
+    },
+    {
+      "id": "SRC-203",
+      "path": "references/S02/GIAD-M4-S02_Plantilla_Diagrama_Arquitectura.pptx",
+      "ok": true,
+      "expected_sha256": "36E4E9AE273DF191CCD05171F276697CB7A000698BBB3C523EA5C8A188F96516",
+      "actual_sha256": "36E4E9AE273DF191CCD05171F276697CB7A000698BBB3C523EA5C8A188F96516",
+      "actual_size_bytes": 38618
+    },
+    {
+      "id": "PBIP",
+      "path": "powerbi/AndinaLog_03B.pbip",
+      "ok": true,
+      "expected_sha256": "F8712089DBB5BBF10C5DE3655522C84540184101F5D8A96BE6EA017AFA8A1CCE",
+      "actual_sha256": "F8712089DBB5BBF10C5DE3655522C84540184101F5D8A96BE6EA017AFA8A1CCE",
+      "actual_size_bytes": 292
+    }
+  ],
+  "normalization": {
+    "rules": [
+      "NFKC",
+      "espacios horizontales y saltos de línea colapsados",
+      "casefold solo para comparar",
+      "comillas tipográficas y guiones normalizados",
+      "backticks y énfasis Markdown (**) retirados",
+      "flecha → convertida a ->"
+    ],
+    "equivalences": [
+      "spec 'decide, con revisión semanal' ~ entregables 'decide cada semana'; compactación admitida en T04 sin cambio de significado",
+      "spec 'Cinco CSV oficiales' ~ diapositiva/PDF '5 fuentes oficiales'; mismo conjunto DATA-001 a DATA-005",
+      "spec 'Interpretar incorrectamente' ~ diapositiva/PDF 'interpretar mal'; abreviatura sin cambio semántico",
+      "Excel 'dividido entre'/'multiplicado por' ~ spec/contrato '/'/'×'; equivalencia aritmética",
+      "etiquetas 'Hecho observado'/'Control principal'/'Control complementario' ~ 'Hecho'/'Control'/'Complemento'; compactación de espacio",
+      "saltos de línea del PDF y del PPTX colapsados; no se altera el contenido"
+    ],
+    "fuzzy_matching": false
+  },
+  "checks": [
+    {
+      "id": "T10-H01",
+      "category": "hashes",
+      "description": "La spec v0.4 conserva tamaño y SHA-256 antes y después; coincide con content.json.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "archivo completo"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "spec.sha256"
+        }
+      ],
+      "expected": {
+        "size_bytes": 28474,
+        "sha256": "A91958C34BADCF6E5AAF3D0F063AC94C3FE458436A9C30AF6AE1362FD626598A",
+        "content_spec_sha256": "A91958C34BADCF6E5AAF3D0F063AC94C3FE458436A9C30AF6AE1362FD626598A",
+        "before_equals_after": true
+      },
+      "observed": {
+        "size_bytes": 28474,
+        "sha256": "A91958C34BADCF6E5AAF3D0F063AC94C3FE458436A9C30AF6AE1362FD626598A",
+        "after_sha256": "A91958C34BADCF6E5AAF3D0F063AC94C3FE458436A9C30AF6AE1362FD626598A",
+        "content_spec_sha256": "A91958C34BADCF6E5AAF3D0F063AC94C3FE458436A9C30AF6AE1362FD626598A",
+        "before_equals_after": true
+      },
+      "normalization": "SHA-256 y tamaño exactos",
+      "evidence": "validation/results/S02/conciliation.json; hashes.before/after.spec",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-H02",
+      "category": "hashes",
+      "description": "work/S02/content.json conserva tamaño y SHA-256 antes y después.",
+      "sources": [
+        {
+          "path": "work/S02/content.json",
+          "location": "archivo completo"
+        }
+      ],
+      "expected": {
+        "size_bytes": 13094,
+        "sha256": "A7C3A75D43841B72E542F7A05F7B6FC882F7DA8316EF8689B8A92205BF1C7882",
+        "before_equals_after": true
+      },
+      "observed": {
+        "size_bytes": 13094,
+        "sha256": "A7C3A75D43841B72E542F7A05F7B6FC882F7DA8316EF8689B8A92205BF1C7882",
+        "after_size_bytes": 13094,
+        "after_sha256": "A7C3A75D43841B72E542F7A05F7B6FC882F7DA8316EF8689B8A92205BF1C7882",
+        "before_equals_after": true
+      },
+      "normalization": "SHA-256 y tamaño exactos",
+      "evidence": "validation/results/S02/conciliation.json; hashes.before/after.content_json",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-H03",
+      "category": "hashes",
+      "description": "work/S02/content.md conserva tamaño y SHA-256 antes y después.",
+      "sources": [
+        {
+          "path": "work/S02/content.md",
+          "location": "archivo completo"
+        }
+      ],
+      "expected": {
+        "size_bytes": 9375,
+        "sha256": "00109A5D0F03A7C3E6892D3C2FCBDA978845A24F05FFD4875A122EE360C427BC",
+        "before_equals_after": true
+      },
+      "observed": {
+        "size_bytes": 9375,
+        "sha256": "00109A5D0F03A7C3E6892D3C2FCBDA978845A24F05FFD4875A122EE360C427BC",
+        "after_size_bytes": 9375,
+        "after_sha256": "00109A5D0F03A7C3E6892D3C2FCBDA978845A24F05FFD4875A122EE360C427BC",
+        "before_equals_after": true
+      },
+      "normalization": "SHA-256 y tamaño exactos",
+      "evidence": "validation/results/S02/conciliation.json; hashes.before/after.content_md",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-H04",
+      "category": "hashes",
+      "description": "deliverables/tracking/M4_Equipo06_Proyecto_Integrador_v2.xlsx conserva tamaño y SHA-256 antes y después.",
+      "sources": [
+        {
+          "path": "deliverables/tracking/M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+          "location": "archivo completo"
+        }
+      ],
+      "expected": {
+        "size_bytes": 39510,
+        "sha256": "31C7E81FE2A21C2BD9DDE76C01B25198DEADA0283F28A46AA4015AFA0734B24D",
+        "before_equals_after": true
+      },
+      "observed": {
+        "size_bytes": 39510,
+        "sha256": "31C7E81FE2A21C2BD9DDE76C01B25198DEADA0283F28A46AA4015AFA0734B24D",
+        "after_size_bytes": 39510,
+        "after_sha256": "31C7E81FE2A21C2BD9DDE76C01B25198DEADA0283F28A46AA4015AFA0734B24D",
+        "before_equals_after": true
+      },
+      "normalization": "SHA-256 y tamaño exactos",
+      "evidence": "validation/results/S02/conciliation.json; hashes.before/after.xlsx",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-H05",
+      "category": "hashes",
+      "description": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pptx conserva tamaño y SHA-256 antes y después.",
+      "sources": [
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pptx",
+          "location": "archivo completo"
+        }
+      ],
+      "expected": {
+        "size_bytes": 43872,
+        "sha256": "26324855E2864A636C0390D725FA34787269DE5A9F2893031602B97B16AB325D",
+        "before_equals_after": true
+      },
+      "observed": {
+        "size_bytes": 43872,
+        "sha256": "26324855E2864A636C0390D725FA34787269DE5A9F2893031602B97B16AB325D",
+        "after_size_bytes": 43872,
+        "after_sha256": "26324855E2864A636C0390D725FA34787269DE5A9F2893031602B97B16AB325D",
+        "before_equals_after": true
+      },
+      "normalization": "SHA-256 y tamaño exactos",
+      "evidence": "validation/results/S02/conciliation.json; hashes.before/after.pptx",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-H06",
+      "category": "hashes",
+      "description": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pdf conserva tamaño y SHA-256 antes y después.",
+      "sources": [
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pdf",
+          "location": "archivo completo"
+        }
+      ],
+      "expected": {
+        "size_bytes": 237204,
+        "sha256": "07516A56C643334AD59F8AEBD6FB67757E954196D736181BCE771ABFCB201A42",
+        "before_equals_after": true
+      },
+      "observed": {
+        "size_bytes": 237204,
+        "sha256": "07516A56C643334AD59F8AEBD6FB67757E954196D736181BCE771ABFCB201A42",
+        "after_size_bytes": 237204,
+        "after_sha256": "07516A56C643334AD59F8AEBD6FB67757E954196D736181BCE771ABFCB201A42",
+        "before_equals_after": true
+      },
+      "normalization": "SHA-256 y tamaño exactos",
+      "evidence": "validation/results/S02/conciliation.json; hashes.before/after.pdf",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-H07",
+      "category": "hashes",
+      "description": "Silver, referencias clave y PBIP mantienen sus huellas registradas; no se alteraron las fuentes.",
+      "sources": [
+        {
+          "path": "validation/results/S01/source_manifest.json",
+          "location": "sources[]"
+        },
+        {
+          "path": "validation/results/S02/initial_manifest.json",
+          "location": "objects[]"
+        },
+        {
+          "path": "powerbi/AndinaLog_03B.pbip",
+          "location": "archivo completo"
+        }
+      ],
+      "expected": {
+        "all_recorded_hashes_equal": true,
+        "source_count": 13
+      },
+      "observed": {
+        "all_recorded_hashes_equal": true,
+        "source_count": 13,
+        "mismatches": []
+      },
+      "normalization": "SHA-256 y tamaño exactos contra manifiestos",
+      "evidence": "validation/results/S02/conciliation.json; source_integrity",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-H08",
+      "category": "hashes",
+      "description": "El árbol de references conserva el mismo manifiesto agregado antes y después.",
+      "sources": [
+        {
+          "path": "references/",
+          "location": "todos los archivos"
+        }
+      ],
+      "expected": {
+        "file_count": 52,
+        "aggregate_sha256": "62BCF5FDDA329847257E96761FEB818DA1CE41CCF106F5A3AC077727DE8B90C8",
+        "before_equals_after": true
+      },
+      "observed": {
+        "file_count_before": 52,
+        "file_count_after": 52,
+        "aggregate_sha256_before": "62BCF5FDDA329847257E96761FEB818DA1CE41CCF106F5A3AC077727DE8B90C8",
+        "aggregate_sha256_after": "62BCF5FDDA329847257E96761FEB818DA1CE41CCF106F5A3AC077727DE8B90C8",
+        "before_equals_after": true
+      },
+      "normalization": "SHA-256 por archivo y agregado de rutas ordenadas",
+      "evidence": "validation/results/S02/conciliation.json; references_manifest",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-D01",
+      "category": "decision_architecture",
+      "description": "La decisión apoya a la Jefatura de Operaciones, es semanal y aparece una sola vez con el mismo significado en spec, contrato, PPTX y PDF.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "§1.2"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "decision.sentence"
+        },
+        {
+          "path": "work/S02/content.md",
+          "location": "## Decisión"
+        },
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pptx",
+          "location": "diapositiva 2"
+        },
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pdf",
+          "location": "página 1"
+        }
+      ],
+      "expected": {
+        "sentence": "La Jefatura de Operaciones decide cada semana dónde priorizar controles térmicos por producto y camión y qué lotes o centros revisar por vencimiento y merma.",
+        "one_sentence": true,
+        "same_in_all": true
+      },
+      "observed": {
+        "spec_quote_present": true,
+        "content_json_sentence": "La Jefatura de Operaciones decide cada semana dónde priorizar controles térmicos por producto y camión y qué lotes o centros revisar por vencimiento y merma.",
+        "content_md_present": true,
+        "pptx_slide2_present": true,
+        "pdf_page1_present": true,
+        "period_count": 1
+      },
+      "normalization": "Texto normalizado; se admite 'decide cada semana' frente a 'decide, con revisión semanal'",
+      "evidence": "evidence/S02/conciliation.md; T10-D01",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-D02",
+      "category": "decision_architecture",
+      "description": "Las cinco cajas del flujo origen → Silver → Power Query → modelo → indicador están presentes.",
+      "sources": [
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pptx",
+          "location": "diapositiva 2"
+        },
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pdf",
+          "location": "página 1"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "slide_blocks[].label"
+        }
+      ],
+      "expected": {
+        "labels": [
+          "1 · origen",
+          "2 · tabla silver",
+          "3 · power query",
+          "4 · modelo semántico",
+          "5 · indicador"
+        ],
+        "present_in": [
+          "pptx_slide2",
+          "pdf_page1",
+          "content"
+        ]
+      },
+      "observed": {
+        "pptx_slide2": true,
+        "pdf_page1": true,
+        "content_labels": [
+          "Encabezado",
+          "Decisión",
+          "Origen",
+          "Tabla Silver",
+          "Power Query",
+          "Modelo semántico",
+          "Indicador",
+          "Brecha DCAM",
+          "Riesgo",
+          "Hecho observado",
+          "Límite",
+          "Control principal",
+          "Control complementario",
+          "Pendiente"
+        ]
+      },
+      "normalization": "Texto normalizado; se toleran mayúsculas y saltos de línea",
+      "evidence": "evidence/S02/conciliation.md; T10-D02",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-D03",
+      "category": "decision_architecture",
+      "description": "El origen se registra como no documentado/por acordar y no se atribuye ERP, WMS, TMS ni telemetría.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "§3.3 y Anexo A"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "map.origin"
+        },
+        {
+          "path": "work/S02/content.md",
+          "location": "## Mapa Silver"
+        },
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pptx",
+          "location": "diapositiva 2"
+        },
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pdf",
+          "location": "página 1"
+        }
+      ],
+      "expected": {
+        "origin": "No documentado / por acordar",
+        "attribution": "No se atribuye ERP, WMS, TMS ni telemetría"
+      },
+      "observed": {
+        "content_map_origin": "No documentado / por acordar",
+        "spec_has_origin": true,
+        "spec_has_no_attribution": true,
+        "pptx_has_origin": true,
+        "pdf_has_origin": true
+      },
+      "normalization": "Texto normalizado",
+      "evidence": "evidence/S02/conciliation.md; T10-D03",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-D04",
+      "category": "decision_architecture",
+      "description": "El estado actual del modelo (5 tablas, 0 relaciones, 0 medidas) se diferencia de la propuesta para S06.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "§3.3"
+        },
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pptx",
+          "location": "diapositiva 2"
+        },
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pdf",
+          "location": "página 1"
+        },
+        {
+          "path": "powerbi/AndinaLog_03B.SemanticModel/definition",
+          "location": "TMDL"
+        }
+      ],
+      "expected": {
+        "tables": 5,
+        "relationships": 0,
+        "measures": 0,
+        "proposal_label": "dimensiones y relaciones propuestas para S06"
+      },
+      "observed": {
+        "model_tables": 5,
+        "model_table_names": [
+          "CostosAlmacen",
+          "Flota",
+          "Inventario",
+          "Productos",
+          "Telemetria"
+        ],
+        "model_measures": 0,
+        "model_relationships": 0,
+        "pptx_model_present": true,
+        "pdf_model_present": true
+      },
+      "normalization": "Texto normalizado y conteo TMDL",
+      "evidence": "evidence/S02/conciliation.md; T10-D04; powerbi/.../definition",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-D05",
+      "category": "decision_architecture",
+      "description": "La brecha DCAM se documenta como ausencia no resuelta, con DUD-S02-07 abierta.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "§7, §8.3 y §9"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "dcam"
+        },
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pptx",
+          "location": "diapositiva 2"
+        },
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pdf",
+          "location": "página 1"
+        }
+      ],
+      "expected": {
+        "id": "DUD-S02-07",
+        "state": "Ausencia documentada",
+        "resolved": false,
+        "message": "no resuelta"
+      },
+      "observed": {
+        "spec_has_state": true,
+        "content_state": "Ausencia documentada",
+        "content_resolved": false,
+        "pptx_has_state": true,
+        "pdf_has_state": true
+      },
+      "normalization": "Texto normalizado y booleano content.dcam.resolved",
+      "evidence": "evidence/S02/conciliation.md; T10-D05",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-D06",
+      "category": "decision_architecture",
+      "description": "Riesgo, hecho observado, límite, control principal, control complementario y pendiente son coherentes entre soportes.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "§7 y §8"
+        },
+        {
+          "path": "work/S02/content.md",
+          "location": "## Brecha DCAM"
+        },
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pptx",
+          "location": "diapositiva 2"
+        },
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pdf",
+          "location": "página 1"
+        }
+      ],
+      "expected": {
+        "risk": [
+          "interpretar",
+          "centro",
+          "filtros",
+          "conclusiones"
+        ],
+        "observed_fact": [
+          "8.000",
+          "sin discrepancias|no hallaron discrepancias|no encontraron discrepancias"
+        ],
+        "control": [
+          "usos",
+          "límites conocidos",
+          "definición y validación",
+          "solicitar|solicitud"
+        ],
+        "complement": [
+          "propuestas",
+          "no usar centro_distribucion_base|no usar el centro base"
+        ],
+        "pending": [
+          "grupo 06",
+          "validador por acordar",
+          "no resuelto"
+        ]
+      },
+      "observed": {
+        "risk_ok": true,
+        "fact_ok": true,
+        "control_ok": true,
+        "complement_ok": true,
+        "pending_ok": true
+      },
+      "normalization": "Fragmentos normalizados; se admiten 'no prueba', 'no acredita' y 'no demuestra'",
+      "evidence": "evidence/S02/conciliation.md; T10-D06",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-M01",
+      "category": "silver_map",
+      "description": "El mapa contiene exactamente DATA-001 a DATA-005, cinco filas y siete campos por fila.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "Anexo A"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "map.rows"
+        },
+        {
+          "path": "work/S02/content.md",
+          "location": "## Mapa Silver"
+        },
+        {
+          "path": "deliverables/tracking/M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+          "location": "S02 Mapa Silver!A7:G11"
+        },
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pptx",
+          "location": "diapositivas 3-4"
+        }
+      ],
+      "expected": {
+        "ids": [
+          "DATA-001",
+          "DATA-002",
+          "DATA-003",
+          "DATA-004",
+          "DATA-005"
+        ],
+        "rows": 5,
+        "fields_per_row": 7,
+        "files": [
+          "andinalog_iot_telemetry_silver.csv",
+          "andinalog_productos_silver.csv",
+          "andinalog_flota_silver.csv",
+          "andinalog_inventory_tracking_silver.csv",
+          "andinalog_warehouse_costs_silver.csv"
+        ]
+      },
+      "observed": {
+        "spec_rows": 5,
+        "content_rows": 5,
+        "md_rows": 5,
+        "xlsx_rows": 5,
+        "pptx_rows": 5,
+        "content_ids": [
+          "DATA-001",
+          "DATA-002",
+          "DATA-003",
+          "DATA-004",
+          "DATA-005"
+        ],
+        "spec_files": [
+          "`andinalog_iot_telemetry_silver.csv`",
+          "`andinalog_productos_silver.csv`",
+          "`andinalog_flota_silver.csv`",
+          "`andinalog_inventory_tracking_silver.csv`",
+          "`andinalog_warehouse_costs_silver.csv`"
+        ]
+      },
+      "normalization": "Conteo exacto y orden de archivos",
+      "evidence": "validation/results/S02/conciliation.json; T10-M01",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-M02",
+      "category": "silver_map",
+      "description": "Los siete campos de cada una de las cinco fuentes coinciden en spec, contrato, Excel y PPTX.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "Anexo A"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "map.rows[].fields"
+        },
+        {
+          "path": "work/S02/content.md",
+          "location": "## Mapa Silver"
+        },
+        {
+          "path": "deliverables/tracking/M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+          "location": "S02 Mapa Silver!A7:G11"
+        },
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pptx",
+          "location": "diapositivas 3-4"
+        }
+      ],
+      "expected": {
+        "rows": 5,
+        "fields": 7,
+        "comparisons": 35,
+        "mismatches": []
+      },
+      "observed": {
+        "comparisons": 35,
+        "mismatches": []
+      },
+      "normalization": "Texto normalizado; sin coincidencia difusa",
+      "evidence": "validation/results/S02/conciliation.json; T10-M02",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-M03",
+      "category": "silver_map",
+      "description": "El PDF distribuye el mapa completo en 3+2 filas y conserva los siete campos de cada fuente.",
+      "sources": [
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pdf",
+          "location": "páginas 2-3"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "map.rows"
+        }
+      ],
+      "expected": {
+        "distribution": {
+          "page_2": [
+            "andinalog_iot_telemetry_silver.csv",
+            "andinalog_productos_silver.csv",
+            "andinalog_flota_silver.csv"
+          ],
+          "page_3": [
+            "andinalog_inventory_tracking_silver.csv",
+            "andinalog_warehouse_costs_silver.csv"
+          ]
+        },
+        "fields": 7,
+        "mismatches": []
+      },
+      "observed": {
+        "page_count": 3,
+        "page_2_heading": true,
+        "page_3_heading": true,
+        "mismatches": []
+      },
+      "normalization": "Texto PDF normalizado; saltos de línea colapsados",
+      "evidence": "validation/results/S02/conciliation.json; T10-M03",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-M04",
+      "category": "silver_map",
+      "description": "Cada fuente oficial aparece una sola vez en Excel, PPTX y PDF.",
+      "sources": [
+        {
+          "path": "deliverables/tracking/M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+          "location": "S02 Mapa Silver!A7:A11"
+        },
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pptx",
+          "location": "tablas de diapositivas 3-4"
+        },
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pdf",
+          "location": "páginas 2-3"
+        }
+      ],
+      "expected": {
+        "andinalog_iot_telemetry_silver.csv": {
+          "xlsx": 1,
+          "pptx": 1,
+          "pdf": 1
+        },
+        "andinalog_productos_silver.csv": {
+          "xlsx": 1,
+          "pptx": 1,
+          "pdf": 1
+        },
+        "andinalog_flota_silver.csv": {
+          "xlsx": 1,
+          "pptx": 1,
+          "pdf": 1
+        },
+        "andinalog_inventory_tracking_silver.csv": {
+          "xlsx": 1,
+          "pptx": 1,
+          "pdf": 1
+        },
+        "andinalog_warehouse_costs_silver.csv": {
+          "xlsx": 1,
+          "pptx": 1,
+          "pdf": 1
+        }
+      },
+      "observed": {
+        "andinalog_iot_telemetry_silver.csv": {
+          "xlsx": 1,
+          "pptx": 1,
+          "pdf": 1
+        },
+        "andinalog_productos_silver.csv": {
+          "xlsx": 1,
+          "pptx": 1,
+          "pdf": 1
+        },
+        "andinalog_flota_silver.csv": {
+          "xlsx": 1,
+          "pptx": 1,
+          "pdf": 1
+        },
+        "andinalog_inventory_tracking_silver.csv": {
+          "xlsx": 1,
+          "pptx": 1,
+          "pdf": 1
+        },
+        "andinalog_warehouse_costs_silver.csv": {
+          "xlsx": 1,
+          "pptx": 1,
+          "pdf": 1
+        }
+      },
+      "normalization": "Coincidencia exacta de nombre de archivo",
+      "evidence": "validation/results/S02/conciliation.json; T10-M04",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-M05",
+      "category": "silver_map",
+      "description": "La frecuencia de inventario conserva el grano y la frase exactos en todos los soportes.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "§3.2, RF-S02-03 y Anexo A"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "map.rows[DATA-004].fields.frecuencia"
+        },
+        {
+          "path": "work/S02/content.md",
+          "location": "## Mapa Silver"
+        },
+        {
+          "path": "deliverables/tracking/M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+          "location": "S02 Mapa Silver!A10:G10"
+        },
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pptx",
+          "location": "diapositiva 4"
+        },
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pdf",
+          "location": "página 3"
+        }
+      ],
+      "expected": {
+        "frequency": "Sin periodicidad fija: una fila por lote contiene las fechas de ingreso y salida; actualización por acordar",
+        "grain": "Un lote con ingreso, salida y merma en esta entrega"
+      },
+      "observed": {
+        "frequency": "Sin periodicidad fija: una fila por lote contiene las fechas de ingreso y salida; actualización por acordar",
+        "spec_has_phrase": true,
+        "content_md_has_phrase": true,
+        "xlsx_has_phrase": true,
+        "pptx_has_phrase": true,
+        "pdf_has_phrase": true
+      },
+      "normalization": "Texto normalizado",
+      "evidence": "validation/results/S02/conciliation.json; T10-M05",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-M06",
+      "category": "silver_map",
+      "description": "WMS queda fuera del mapa y del modelo, solo como contraste no cargado; no cuenta como sexta fuente.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "Anexo A, nota fuera del mapa"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "wms_note"
+        },
+        {
+          "path": "work/S02/content.md",
+          "location": "## Nota WMS separada"
+        },
+        {
+          "path": "deliverables/tracking/M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+          "location": "S02 Mapa Silver!A7:G11"
+        },
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pptx",
+          "location": "tablas de diapositivas 3-4"
+        },
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pdf",
+          "location": "páginas 2-3"
+        }
+      ],
+      "expected": {
+        "in_map": false,
+        "loaded": false,
+        "counts_as_official": false,
+        "map_artifacts_without_wms": true
+      },
+      "observed": {
+        "spec_map_has_wms": false,
+        "spec_map_has_data_007": false,
+        "wms_note": {
+          "id": "DATA-007",
+          "file": "andinalog_wms_orders_silver.csv",
+          "role": "Contraste no cargado",
+          "scope": "orden→centro",
+          "in_map": false,
+          "loaded": false,
+          "counts_as_official": false,
+          "note": "No forma parte del mapa ni del modelo semántico. Se conserva solo como fuente de contraste orden→centro (EV-S01-WMS), no se carga y no se cuenta como sexta fuente oficial."
+        },
+        "xlsx_map_has_wms": false,
+        "pptx_map_has_wms": false,
+        "pdf_map_has_wms": false
+      },
+      "normalization": "Texto normalizado y banderas booleanas",
+      "evidence": "validation/results/S02/conciliation.json; T10-M06",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-K01",
+      "category": "kpi",
+      "description": "Hay exactamente cinco KPI con el mismo nombre y orden en spec, contrato, Markdown y Excel.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "Anexo B"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "kpis"
+        },
+        {
+          "path": "work/S02/content.md",
+          "location": "## KPI tácticos"
+        },
+        {
+          "path": "deliverables/tracking/M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+          "location": "Fichas KPI!A7:A11"
+        }
+      ],
+      "expected": {
+        "count": 5,
+        "names": [
+          "% de viajes con desviación",
+          "% de lecturas con desviación",
+          "Merma por cantidades",
+          "% de lotes salidos vencidos",
+          "Días promedio en almacén"
+        ],
+        "same_order": true
+      },
+      "observed": {
+        "spec": [
+          "% de viajes con desviación",
+          "% de lecturas con desviación",
+          "Merma por cantidades",
+          "% de lotes salidos vencidos",
+          "Días promedio en almacén"
+        ],
+        "content": [
+          "% de viajes con desviación",
+          "% de lecturas con desviación",
+          "Merma por cantidades",
+          "% de lotes salidos vencidos",
+          "Días promedio en almacén"
+        ],
+        "content_md": [
+          "% de viajes con desviación",
+          "% de lecturas con desviación",
+          "Merma por cantidades",
+          "% de lotes salidos vencidos",
+          "Días promedio en almacén"
+        ],
+        "xlsx": [
+          "% de viajes con desviación",
+          "% de lecturas con desviación",
+          "Merma por cantidades",
+          "% de lotes salidos vencidos",
+          "Días promedio en almacén"
+        ]
+      },
+      "normalization": "Texto normalizado; sin sinónimos ni coincidencia difusa",
+      "evidence": "validation/results/S02/conciliation.json; T10-K01",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-K02",
+      "category": "kpi",
+      "description": "Los cinco KPI son tácticos y la decisión semanal justifica el nivel.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "Anexo B"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "kpis[].level"
+        },
+        {
+          "path": "work/S02/content.md",
+          "location": "## KPI tácticos"
+        },
+        {
+          "path": "deliverables/tracking/M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+          "location": "Fichas KPI!C7:C11"
+        }
+      ],
+      "expected": {
+        "level": "Táctico",
+        "count": 5
+      },
+      "observed": {
+        "spec_levels": [
+          "Táctico",
+          "Táctico",
+          "Táctico",
+          "Táctico",
+          "Táctico"
+        ],
+        "content_levels": [
+          "Táctico",
+          "Táctico",
+          "Táctico",
+          "Táctico",
+          "Táctico"
+        ],
+        "md_levels": [
+          "Táctico",
+          "Táctico",
+          "Táctico",
+          "Táctico",
+          "Táctico"
+        ],
+        "xlsx_levels": [
+          "Táctico",
+          "Táctico",
+          "Táctico",
+          "Táctico",
+          "Táctico"
+        ]
+      },
+      "normalization": "Texto normalizado",
+      "evidence": "validation/results/S02/conciliation.json; T10-K02",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-K03",
+      "category": "kpi",
+      "description": "Cada KPI conserva fórmula en palabras y unidad, con el denominador indicado.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "Anexo B"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "kpis[].formula/unit"
+        },
+        {
+          "path": "work/S02/content.md",
+          "location": "## KPI tácticos"
+        },
+        {
+          "path": "deliverables/tracking/M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+          "location": "Fichas KPI!D7:E11"
+        }
+      ],
+      "expected": {
+        "formula_fragments": [
+          [
+            "viajes con al menos una lectura marcada",
+            "viajes observados",
+            "100"
+          ],
+          [
+            "lecturas marcadas",
+            "lecturas observadas",
+            "100"
+          ],
+          [
+            "cantidad_merma",
+            "cantidad_ingreso",
+            "100"
+          ],
+          [
+            "lotes con salida posterior al día de vencimiento",
+            "lotes salidos",
+            "100"
+          ],
+          [
+            "promedio de dias_en_almacen"
+          ]
+        ],
+        "units": [
+          "Porcentaje",
+          "Porcentaje",
+          "Porcentaje",
+          "Porcentaje",
+          "Días"
+        ],
+        "mismatches": []
+      },
+      "observed": {
+        "formula_mismatches": [],
+        "units": [
+          "Porcentaje",
+          "Porcentaje",
+          "Porcentaje",
+          "Porcentaje",
+          "Días"
+        ],
+        "units_consistent": true
+      },
+      "normalization": "Fragmentos normalizados; 'dividido entre' y 'multiplicado por' equivalen a '/' y '×'",
+      "evidence": "validation/results/S02/conciliation.json; T10-K03",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-K04",
+      "category": "kpi",
+      "description": "El identificador dias_en_almacen se conserva sin tilde; la tilde solo aparece en el nombre visible.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "Anexo B"
+        },
+        {
+          "path": "work/S02/content.md",
+          "location": "## KPI tácticos"
+        },
+        {
+          "path": "deliverables/tracking/M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+          "location": "Fichas KPI!D11"
+        }
+      ],
+      "expected": {
+        "identifier": "dias_en_almacen",
+        "accented_identifier_absent": true
+      },
+      "observed": {
+        "spec_has_identifier": true,
+        "content_md_has_identifier": true,
+        "xlsx_has_identifier": true,
+        "spec_has_accented_identifier": false,
+        "xlsx_has_accented_identifier": false
+      },
+      "normalization": "Texto normalizado; se distingue el nombre visible del identificador",
+      "evidence": "validation/results/S02/conciliation.json; T10-K04",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-K05",
+      "category": "kpi",
+      "description": "El número de lotes vencidos se mantiene como medida de apoyo separada, no como KPI principal.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "Anexo B, medida de apoyo"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "support_measure"
+        },
+        {
+          "path": "work/S02/content.md",
+          "location": "## Medida de apoyo"
+        },
+        {
+          "path": "deliverables/tracking/M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+          "location": "Fichas KPI!A7:A11"
+        }
+      ],
+      "expected": {
+        "name": "Número de lotes vencidos",
+        "is_kpi": false,
+        "not_in_kpi_catalog": true
+      },
+      "observed": {
+        "support_measure": {
+          "name": "Número de lotes vencidos",
+          "value": "1.069",
+          "unit": "Conteo",
+          "is_kpi": false,
+          "note": "No es KPI principal."
+        },
+        "present_in_spec": true,
+        "present_in_kpi_names": []
+      },
+      "normalization": "Texto normalizado y booleano support_measure.is_kpi",
+      "evidence": "validation/results/S02/conciliation.json; T10-K05",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-K06",
+      "category": "kpi",
+      "description": "Merma por valor queda excluida del catálogo y registrada como pendiente, sin borrar su motivo.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "Anexo B y §8.3"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "excluded_kpis"
+        },
+        {
+          "path": "work/S02/content.md",
+          "location": "## KPI excluidos"
+        },
+        {
+          "path": "deliverables/tracking/M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+          "location": "Fichas KPI!A7:A11"
+        }
+      ],
+      "expected": {
+        "name": "Merma por valor",
+        "in_kpi_catalog": false,
+        "pending_recorded": true
+      },
+      "observed": {
+        "excluded": {
+          "name": "Merma por valor",
+          "reason": "Documentada como pendiente; no es KPI.",
+          "milestone": "Por acordar; impacto económico en S10"
+        },
+        "present_in_kpi_names": [],
+        "present_in_pending": true
+      },
+      "normalization": "Texto normalizado",
+      "evidence": "validation/results/S02/conciliation.json; T10-K06",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-K07",
+      "category": "kpi",
+      "description": "No hay metas, umbrales, DAX ni responsables completados en S02; esas capas quedan para hitos posteriores.",
+      "sources": [
+        {
+          "path": "deliverables/tracking/M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+          "location": "Fichas KPI!J7:Z11"
+        },
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "§3.3 y Anexo B"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "claims.dax_executed"
+        },
+        {
+          "path": "powerbi/AndinaLog_03B.SemanticModel/definition",
+          "location": "TMDL"
+        }
+      ],
+      "expected": {
+        "later_cells_empty": true,
+        "model_measures": 0,
+        "dax_executed": false
+      },
+      "observed": {
+        "non_empty_later_cells": [],
+        "model_measures": 0,
+        "dax_executed": false
+      },
+      "normalization": "Celdas vacías exactas y booleano de alcance",
+      "evidence": "validation/results/S02/conciliation.json; T10-K07",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-P01",
+      "category": "pending",
+      "description": "La tabla de pendientes conserva trece filas con estado, responsable e hito.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "§8.3"
+        }
+      ],
+      "expected": {
+        "rows": 13,
+        "fields": [
+          "item",
+          "status",
+          "responsible",
+          "milestone"
+        ]
+      },
+      "observed": {
+        "rows": 13,
+        "items": [
+          "Definición y validación de `centro_distribucion` y `centro_distribucion_base`",
+          "Selección final de KPI",
+          "Metas y umbrales",
+          "Responsables empresariales de KPI",
+          "Roles y pruebas RLS",
+          "Merma por valor",
+          "26 lecturas en límites térmicos",
+          "Particiones y horizonte futuro",
+          "Relación temporal de costos",
+          "Origen de los sistemas y propietarios de las fuentes",
+          "Frecuencia de actualización",
+          "Sesión compartida de S02 (Rodrigo Tucuman)",
+          "Publicación en Service"
+        ]
+      },
+      "normalization": "Conteo y campos no vacíos",
+      "evidence": "validation/results/S02/conciliation.json; T10-P01",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-P02",
+      "category": "pending",
+      "description": "La spec y el contrato conservan el mismo estado, responsable e hito para cada pendiente.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "§8.3"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "pending"
+        },
+        {
+          "path": "work/S02/content.md",
+          "location": "## Pendientes"
+        }
+      ],
+      "expected": {
+        "rows": 13,
+        "same_fields": true,
+        "mismatches": []
+      },
+      "observed": {
+        "spec_rows": 13,
+        "content_rows": 13,
+        "md_rows": 13,
+        "mismatches": []
+      },
+      "normalization": "Texto normalizado, comparación campo a campo",
+      "evidence": "validation/results/S02/conciliation.json; T10-P02",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-P03",
+      "category": "pending",
+      "description": "Los pendientes sin respaldo conservan «Por acordar»; no se inventan responsables ni frecuencias.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "§8.3"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "pending"
+        },
+        {
+          "path": "docs/decisions.md",
+          "location": "PEN-017 a PEN-019"
+        }
+      ],
+      "expected": {
+        "por_acordar_preserved": true,
+        "mismatches": []
+      },
+      "observed": {
+        "mismatches": [],
+        "items": [
+          "Metas y umbrales",
+          "Responsables empresariales de KPI",
+          "Roles y pruebas RLS",
+          "Merma por valor",
+          "Origen de los sistemas y propietarios de las fuentes",
+          "Frecuencia de actualización"
+        ]
+      },
+      "normalization": "Texto normalizado",
+      "evidence": "validation/results/S02/conciliation.json; T10-P03",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-P04",
+      "category": "pending",
+      "description": "Registrar un pendiente no lo resuelve: centro, origen y frecuencia siguen abiertos.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "§8.3"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "pending"
+        },
+        {
+          "path": "docs/decisions.md",
+          "location": "PEN-017 a PEN-019"
+        }
+      ],
+      "expected": {
+        "center": "no resuelto",
+        "origin": "no resuelto",
+        "frequency": "no resuelta"
+      },
+      "observed": {
+        "center": {
+          "item": "Definición y validación de `centro_distribucion` y `centro_distribucion_base`",
+          "status": "Documentado como ausencia; no resuelto",
+          "responsible": "Grupo 06; validador por acordar",
+          "milestone": "S02 (documentación), S06 (filtros) y S11 (RLS)"
+        },
+        "origin": {
+          "item": "Origen de los sistemas y propietarios de las fuentes",
+          "status": "Documentado como no disponible; no resuelto",
+          "responsible": "Grupo 06 documenta; propietario por acordar",
+          "milestone": "Por acordar"
+        },
+        "frequency": {
+          "item": "Frecuencia de actualización",
+          "status": "Documentada como «por acordar»; no resuelta",
+          "responsible": "Por acordar",
+          "milestone": "Por acordar"
+        }
+      },
+      "normalization": "Texto normalizado",
+      "evidence": "validation/results/S02/conciliation.json; T10-P04",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-P05",
+      "category": "pending",
+      "description": "La validación empresarial del centro sigue pendiente y la brecha DCAM no se declara resuelta.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "§8.3 y DUD-S02-07"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "dcam"
+        },
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pptx",
+          "location": "diapositiva 2"
+        },
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pdf",
+          "location": "página 1"
+        }
+      ],
+      "expected": {
+        "center_validation": "pendiente",
+        "dcam_resolved": false
+      },
+      "observed": {
+        "center_row": {
+          "item": "Definición y validación de `centro_distribucion` y `centro_distribucion_base`",
+          "status": "Documentado como ausencia; no resuelto",
+          "responsible": "Grupo 06; validador por acordar",
+          "milestone": "S02 (documentación), S06 (filtros) y S11 (RLS)"
+        },
+        "dcam_resolved": false,
+        "pptx_open": true
+      },
+      "normalization": "Texto normalizado y booleano dcam.resolved",
+      "evidence": "validation/results/S02/conciliation.json; T10-P05",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-P06",
+      "category": "pending",
+      "description": "Origen, propietarios y frecuencia de actualización siguen pendientes y marcados por acordar.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "§8.3"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "pending"
+        },
+        {
+          "path": "docs/decisions.md",
+          "location": "PEN-017 y PEN-018"
+        }
+      ],
+      "expected": {
+        "origin": "no disponible; no resuelto",
+        "owners": "por acordar",
+        "frequency": "por acordar; no resuelta"
+      },
+      "observed": {
+        "origin": {
+          "item": "Origen de los sistemas y propietarios de las fuentes",
+          "status": "Documentado como no disponible; no resuelto",
+          "responsible": "Grupo 06 documenta; propietario por acordar",
+          "milestone": "Por acordar"
+        },
+        "frequency": {
+          "item": "Frecuencia de actualización",
+          "status": "Documentada como «por acordar»; no resuelta",
+          "responsible": "Por acordar",
+          "milestone": "Por acordar"
+        }
+      },
+      "normalization": "Texto normalizado",
+      "evidence": "validation/results/S02/conciliation.json; T10-P06",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-P07",
+      "category": "pending",
+      "description": "La sesión compartida no se declara ejecutada; Rodrigo Tucuman figura solo como designado.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "§8.3"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "pending y claims.session_executed"
+        }
+      ],
+      "expected": {
+        "status": "No ejecutada ni declarada",
+        "designated": "Rodrigo Tucuman",
+        "executed_claim": false
+      },
+      "observed": {
+        "session_row": {
+          "item": "Sesión compartida de S02 (Rodrigo Tucuman)",
+          "status": "No ejecutada ni declarada",
+          "responsible": "Rodrigo Tucuman",
+          "milestone": "S02"
+        },
+        "session_executed": false,
+        "spec_positive_claim": false
+      },
+      "normalization": "Texto normalizado; designación distinta de ejecución",
+      "evidence": "validation/results/S02/conciliation.json; T10-P07",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-P08",
+      "category": "pending",
+      "description": "La publicación en Service se registra como prevista y no ejecutada.",
+      "sources": [
+        {
+          "path": "specs/002-s02-architecture/spec.md",
+          "location": "§8.3"
+        },
+        {
+          "path": "work/S02/content.json",
+          "location": "pending y claims.published"
+        }
+      ],
+      "expected": {
+        "status": "Prevista, no ejecutada",
+        "published": false
+      },
+      "observed": {
+        "publication_row": {
+          "item": "Publicación en Service",
+          "status": "Prevista, no ejecutada",
+          "responsible": "Por acordar",
+          "milestone": "S11 y entrega final"
+        },
+        "published": false
+      },
+      "normalization": "Texto normalizado y booleano claims.published",
+      "evidence": "validation/results/S02/conciliation.json; T10-P08",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-I01",
+      "category": "integrity",
+      "description": "El Excel conserva 12 hojas, 50 fórmulas, 11 validaciones, 1 rango de formato condicional, 19 combinadas y el área de impresión del mapa.",
+      "sources": [
+        {
+          "path": "deliverables/tracking/M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+          "location": "todas las hojas; S02 Mapa Silver; Fichas KPI"
+        }
+      ],
+      "expected": {
+        "sheets": 12,
+        "formulas": 50,
+        "data_validations": 11,
+        "cf_ranges": 1,
+        "cf_rules": 4,
+        "merged": 19,
+        "kpi_header_merged": "A3:AA3",
+        "kpi_print_area_empty": true,
+        "map_print_area": "A1:G11"
+      },
+      "observed": {
+        "sheets": 12,
+        "formulas": 50,
+        "data_validations": 11,
+        "cf_ranges": 1,
+        "cf_rules": 4,
+        "merged": 19,
+        "kpi_header_merged": true,
+        "kpi_print_area": "",
+        "map_print_area": "'S02 Mapa Silver'!$A$1:$G$11"
+      },
+      "normalization": "Conteo y cadenas exactas",
+      "evidence": "validation/results/S02/conciliation.json; T10-I01",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-I02",
+      "category": "integrity",
+      "description": "El PPTX conserva cuatro diapositivas, la diapositiva 1 intacta y no replica el ejemplo de Acería en las diapositivas entregadas.",
+      "sources": [
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pptx",
+          "location": "diapositivas 1-4; ppt/slides/slide1.xml"
+        }
+      ],
+      "expected": {
+        "slide_count": 4,
+        "slide1_xml_sha256": "0F944D0FB93C30E7CBAF0D7ED52D35900870A1E1E6BA20E31E0541D1770C7CC9",
+        "example_terms_in_slides_2_4": 0
+      },
+      "observed": {
+        "slide_count": 4,
+        "slide1_xml_sha256": "0F944D0FB93C30E7CBAF0D7ED52D35900870A1E1E6BA20E31E0541D1770C7CC9",
+        "example_terms_found": []
+      },
+      "normalization": "SHA-256 del XML y búsqueda textual",
+      "evidence": "validation/results/S02/conciliation.json; T10-I02",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-I03",
+      "category": "integrity",
+      "description": "El PDF tiene tres páginas 16:9 y no contiene el ejemplo de Acería.",
+      "sources": [
+        {
+          "path": "deliverables/S02/M4_Equipo06_S02_Arquitectura.pdf",
+          "location": "páginas 1-3"
+        }
+      ],
+      "expected": {
+        "pages": 3,
+        "page_size_pt": [
+          960.0,
+          540.0
+        ],
+        "example_terms": 0
+      },
+      "observed": {
+        "pages": 3,
+        "page_sizes_pt": [
+          [
+            960.0,
+            540.0
+          ],
+          [
+            960.0,
+            540.0
+          ],
+          [
+            960.0,
+            540.0
+          ]
+        ],
+        "example_terms_found": []
+      },
+      "normalization": "Dimensiones con tolerancia de 0,5 pt; texto normalizado",
+      "evidence": "validation/results/S02/conciliation.json; T10-I03",
+      "status": "PASS"
+    },
+    {
+      "id": "T10-I04",
+      "category": "integrity",
+      "description": "El modelo semántico actual conserva cinco tablas, cero medidas y cero relaciones.",
+      "sources": [
+        {
+          "path": "powerbi/AndinaLog_03B.SemanticModel/definition",
+          "location": "model.tmdl y tables/*.tmdl"
+        }
+      ],
+      "expected": {
+        "tables": 5,
+        "measures": 0,
+        "relationships": 0
+      },
+      "observed": {
+        "tables": 5,
+        "table_names": [
+          "CostosAlmacen",
+          "Flota",
+          "Inventario",
+          "Productos",
+          "Telemetria"
+        ],
+        "measures": 0,
+        "relationships": 0
+      },
+      "normalization": "Conteo TMDL",
+      "evidence": "validation/results/S02/conciliation.json; T10-I04",
+      "status": "PASS"
+    }
+  ],
+  "summary": {
+    "total": 39,
+    "passed": 39,
+    "failed": 0,
+    "failures": []
+  },
+  "all_pass": true
+}

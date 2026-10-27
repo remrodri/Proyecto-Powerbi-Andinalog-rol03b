@@ -1,7 +1,7 @@
 # Tareas — S02 Decisión, arquitectura y mapa Silver
 
 Spec y plan aprobados: `specs/002-s02-architecture/spec.md` v0.4 (2026-10-27) y `specs/002-s02-architecture/plan.md` v0.1 (2026-10-27).
-Estado: **Build en curso. T01–T09 completadas; T10–T13 pendientes.** Audit, Fix y Close no están autorizados.
+Estado: **Build T01–T10 completado. T11–T13 pendientes.** Audit, Fix y Close no están autorizados.
 
 - [x] **T01 — Inventario inicial, cuatro huellas y calificación separada de COM.**
   - Requisitos: RNF-S02-03, RNF-S02-06, RNF-S02-07; base de RF-S02-08 y RF-S02-09; CA-S02-08 y CA-S02-09.
@@ -113,14 +113,15 @@ Estado: **Build en curso. T01–T09 completadas; T10–T13 pendientes.** Audit, 
   - Hecho cuando: hay capturas de las diapositivas (diagrama y todas las del mapa), de `S02 Mapa Silver`, de `Fichas KPI` y de todas las páginas del PDF; no hay textos truncados, objetos superpuestos, filas partidas entre páginas ni columnas ilegibles; cada defecto queda registrado. Si Excel COM falla, se detiene solo la parte Excel, se documenta y la revisión visual de ese artefacto queda pendiente; no se declara V09 ejecutada para el libro.
   - Estado: **completada el 2026-10-27**. Ronda 1: PPTX y PDF pasan; `Fichas KPI` C7:E11 pasa; el título KPI se corta al exportar solo `A1:E11` y `S02 Mapa Silver` falla por truncamiento de filas 7–11. Ronda 2: se corrigió solo `S02 Mapa Silver` en el entregable (filas 7–11 a 45 pt; área `A1:G11`; A4 horizontal; ajuste 1×1; márgenes 18 pt; centrado) y se repitió la evidencia Excel. `Fichas KPI` no cambió en el entregable: título/metadatos y tabla se capturaron por separado desde `work/S02/review.xlsx` sin guardar; `A3:AA3` y 19 combinadas intactas. Capturas r2: mapa, encabezado KPI y tabla KPI, todas legibles y sin truncamiento; PPTX y PDF conservan las capturas y hashes de la ronda 1. **19/19 controles XF01–XF19 pasan** en `validation/results/S02/t09_fix_checks.json`; XLSX final 39.510 bytes y SHA-256 `31C7E81FE2A21C2BD9DDE76C01B25198DEADA0283F28A46AA4015AFA0734B24D`; 12 hojas, 50 fórmulas, 11 DV, 1 rango de CF, 19 combinadas y anchos sin cambios. Evidencia: `evidence/S02/review.md`, sección 11. T10 no se inició.
 
-- [ ] **T10 — Conciliación final.**
+- [x] **T10 — Conciliación final.**
   - Requisitos: RF-S02-03, RF-S02-06, RF-S02-07, RF-S02-09, RF-S02-11; RNF-S02-01, RNF-S02-02, RNF-S02-03; CA-S02-03, CA-S02-06, CA-S02-07, CA-S02-09, CA-S02-10.
   - Depende de: T09.
-  - Artefactos: `validation/checks/s02_concile.py`, `validation/results/S02/conciliation.json`, `evidence/S02/conciliation.md`.
+  - Artefactos: `validation/checks/s02_concile.py`, `validation/results/S02/conciliation.json`, `evidence/S02/conciliation.md`, `evidence/S02/pendientes.md`, `evidence/S02/session.md`, `evidence/S02/authorizations.md`.
   - Puede modificar: los archivos indicados.
   - Debe preservar: todos los entregables.
   - Verificación y evidencia: comparar cadenas normalizadas y el reparto de filas por diapositiva/página; no corregir aquí.
   - Hecho cuando: 5/5 fuentes, 5/5 KPI, 5/5 niveles tácticos y 0 diferencias materiales; cada fila del mapa aparece una sola vez y completa en PPTX y PDF.
+  - Estado: **completada el 2026-10-27**. 39/39 controles PASS, 0 FAIL y `all_pass: true` en `validation/results/S02/conciliation.json`; 0 diferencias materiales. Se conservaron los hashes de spec, contrato, XLSX, PPTX y PDF, y las huellas de Silver, referencias clave, PBIP y `references/`. El mapa conserva 5 filas × 7 campos, reparto 3+2, cada fuente una vez; los KPI son 5/5 tácticos; WMS queda fuera. No se usó COM, no se generaron capturas y no se modificó ningún entregable. Evidencia: `evidence/S02/conciliation.md`, `pendientes.md`, `session.md` y `authorizations.md`. T11 no se inició; Audit, Fix y Close siguen sin autorización.
 
 - [ ] **T11 — Auditoría independiente (ronda 01).**
   - Requisitos: **RF-S02-01 a RF-S02-11 (11), RNF-S02-01 a RNF-S02-09 (9) y CA-S02-01 a CA-S02-10 (10)**.
