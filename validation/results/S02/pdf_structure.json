@@ -1,0 +1,195 @@
+{
+  "task": "T08",
+  "checked_at_utc": "2026-10-27T21:46:43.598442+00:00",
+  "pdf": {
+    "path": "deliverables\\S02\\M4_Equipo06_S02_Arquitectura.pdf",
+    "size_bytes": 237204,
+    "sha256": "07516A56C643334AD59F8AEBD6FB67757E954196D736181BCE771ABFCB201A42",
+    "page_count": 3
+  },
+  "tool": {
+    "name": "pypdfium2",
+    "version": "5.14.0"
+  },
+  "tolerance": {
+    "page_width_pt": 0.5,
+    "page_height_pt": 0.5,
+    "aspect_ratio": 0.001,
+    "expected_width_pt": 960.0,
+    "expected_height_pt": 540.0,
+    "expected_ratio": 1.777777778
+  },
+  "pages": [
+    {
+      "page": 1,
+      "width_pt": 960.0,
+      "height_pt": 540.0,
+      "ratio": 1.777777778,
+      "text_length": 1651,
+      "raw_text_length": 1708,
+      "render": {
+        "page": 1,
+        "path": "work\\S02\\t08_pdf_page_1.png",
+        "size_bytes": 225699,
+        "sha256": "2BA65D78DD8258B04FA42894455C4A23E75ACBD2393B101337F593C60C830FBB",
+        "width_px": 1920,
+        "height_px": 1080,
+        "thumbnail": [
+          480,
+          270
+        ],
+        "non_white_fraction": 0.400718,
+        "render_ok": true
+      }
+    },
+    {
+      "page": 2,
+      "width_pt": 960.0,
+      "height_pt": 540.0,
+      "ratio": 1.777777778,
+      "text_length": 925,
+      "raw_text_length": 977,
+      "render": {
+        "page": 2,
+        "path": "work\\S02\\t08_pdf_page_2.png",
+        "size_bytes": 142669,
+        "sha256": "8094DF7068551EB93258F119DB397EF5B09366347A5620B48E63D3B9ADFCC158",
+        "width_px": 1920,
+        "height_px": 1080,
+        "thumbnail": [
+          480,
+          270
+        ],
+        "non_white_fraction": 0.348002,
+        "render_ok": true
+      }
+    },
+    {
+      "page": 3,
+      "width_pt": 960.0,
+      "height_pt": 540.0,
+      "ratio": 1.777777778,
+      "text_length": 754,
+      "raw_text_length": 801,
+      "render": {
+        "page": 3,
+        "path": "work\\S02\\t08_pdf_page_3.png",
+        "size_bytes": 109462,
+        "sha256": "2559E44836E3887666A92D814AF0D7E7DD4936C79E8B4004D46C6EB0C7ABAE06",
+        "width_px": 1920,
+        "height_px": 1080,
+        "thumbnail": [
+          480,
+          270
+        ],
+        "non_white_fraction": 0.433495,
+        "render_ok": true
+      }
+    }
+  ],
+  "checks": {
+    "pdf_opens": {
+      "pass": true,
+      "evidence": "pypdfium2 abrió el PDF"
+    },
+    "page_count_3": {
+      "pass": true,
+      "evidence": 3
+    },
+    "architecture_on_page_1": {
+      "pass": true,
+      "evidence": {
+        "title": true,
+        "decision": true,
+        "origin_box": true
+      }
+    },
+    "map_pages_2_3": {
+      "pass": true,
+      "evidence": {
+        "page_2": "PROYECTO INTEGRADOR · HITO S02 · EQUIPO 06 Mapa Silver — 1/2 Archivo / tabla Granularidad Identificador único Frecuencia Propietario Riesgo Control propuesto an",
+        "page_3": "PROYECTO INTEGRADOR · HITO S02 · EQUIPO 06 Mapa Silver — 2/2 Archivo / tabla Granularidad Identificador único Frecuencia Propietario Riesgo Control propuesto an"
+      }
+    },
+    "page_dimensions_16_9": {
+      "pass": true,
+      "evidence": {
+        "tolerance_pt": 0.5,
+        "tolerance_ratio": 0.001,
+        "pages": [
+          {
+            "page": 1,
+            "width_ok": true,
+            "height_ok": true,
+            "ratio_ok": true
+          },
+          {
+            "page": 2,
+            "width_ok": true,
+            "height_ok": true,
+            "ratio_ok": true
+          },
+          {
+            "page": 3,
+            "width_ok": true,
+            "height_ok": true,
+            "ratio_ok": true
+          }
+        ]
+      }
+    },
+    "no_empty_pages": {
+      "pass": true,
+      "evidence": [
+        {
+          "page": 1,
+          "text_length": 1651,
+          "non_white_fraction": 0.400718
+        },
+        {
+          "page": 2,
+          "text_length": 925,
+          "non_white_fraction": 0.348002
+        },
+        {
+          "page": 3,
+          "text_length": 754,
+          "non_white_fraction": 0.433495
+        }
+      ]
+    },
+    "renderable_pages": {
+      "pass": true,
+      "evidence": [
+        {
+          "page": 1,
+          "width_px": 1920,
+          "height_px": 1080
+        },
+        {
+          "page": 2,
+          "width_px": 1920,
+          "height_px": 1080
+        },
+        {
+          "page": 3,
+          "width_px": 1920,
+          "height_px": 1080
+        }
+      ]
+    },
+    "no_example_content": {
+      "pass": true,
+      "evidence": {
+        "ACERÍA": 0,
+        "ACERIA": 0,
+        "EJEMPLO": 0,
+        "Laminación": 0,
+        "LAM-01": 0,
+        "OEE": 0,
+        "SCADA": 0
+      }
+    }
+  },
+  "status": "PASS"
+}

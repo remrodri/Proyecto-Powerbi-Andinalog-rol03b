@@ -1,7 +1,7 @@
 # Tareas — S02 Decisión, arquitectura y mapa Silver
 
 Spec y plan aprobados: `specs/002-s02-architecture/spec.md` v0.4 (2026-10-27) y `specs/002-s02-architecture/plan.md` v0.1 (2026-10-27).
-Estado: **Build en curso. T01–T07 completadas; T08–T13 pendientes.** Audit, Fix y Close no están autorizados.
+Estado: **Build en curso. T01–T08 completadas; T09–T13 pendientes.** Audit, Fix y Close no están autorizados.
 
 - [x] **T01 — Inventario inicial, cuatro huellas y calificación separada de COM.**
   - Requisitos: RNF-S02-03, RNF-S02-06, RNF-S02-07; base de RF-S02-08 y RF-S02-09; CA-S02-08 y CA-S02-09.
@@ -93,7 +93,7 @@ Estado: **Build en curso. T01–T07 completadas; T08–T13 pendientes.** Audit, 
   - Hecho cuando: 5/5 filas con C–E completas, A–B sin cambios, sin merma por valor y sin columnas posteriores modificadas.
   - Estado: **completada el 2026-10-27**. C7:C11=`Táctico`; D7:D11 con la fórmula en palabras aprobada y E7:E10=`Porcentaje`, E11=`Días`. Se conservaron A7:B11, F–AA, estilos, 12 hojas, 50 fórmulas, 11 DV, 1 rango de CF con 4 reglas, 19 combinadas, S01 y S02 sin cambios; solo cambiaron 15 valores. **25/25 controles pasan** en `kpi_checks.json` y `xlsx_invariants.json`; XLSX final: 34.584 bytes y SHA-256 `C2F691F4CD5EDD47AD5E900A593740A9CD5EC11A197B5D5703DF9963E0C7D0D4`; ZIP/CRC/XML válidos y reabribles. No se añadieron metas, umbrales, DAX, responsables, referencias globales, merma por valor ni medida de apoyo. SRC-201 y PPTX intactos; no se creó PDF ni se usó Excel COM. Evidencia: `evidence/S02/t07_fichas_kpi.md`. T08 no se inició.
 
-- [ ] **T08 — Exportar el PDF con diagrama y mapa.**
+- [x] **T08 — Exportar el PDF con diagrama y mapa.**
   - Requisitos: RF-S02-09; CA-S02-02, CA-S02-03, CA-S02-09.
   - Depende de: T04, T05 y V02A.
   - Artefactos: `work/S02/export.pptx`, `deliverables/S02/M4_Equipo06_S02_Arquitectura.pdf`, `evidence/S02/pdf_treatment.md`, `validation/results/S02/pdf_structure.json`, `validation/results/S02/pdf_text.json`.
@@ -101,6 +101,7 @@ Estado: **Build en curso. T01–T07 completadas; T08–T13 pendientes.** Audit, 
   - Debe preservar: PPTX entregable, XLSX, SRC-203 y SRC-201.
   - Verificación y evidencia: leer la guía SRC-102 y registrar por escrito que la diapositiva 1 es un ejemplo excluido del PDF; copiar el PPTX a `work/S02/export.pptx`; eliminar en esa copia solo la diapositiva 1; exportar con PowerPoint COM; contar páginas y extraer texto.
   - Hecho cuando: el PDF tiene 1 página de diagrama + N de mapa; tamaño 16:9; aparecen los 5 archivos y «Por acordar»; no aparece «ACERÍA» ni WMS dentro del mapa; el PDF abre en `pypdfium2`.
+  - Estado: **completada el 2026-10-27**. SRC-102 registra que la diapositiva 1 es un ejemplo; se excluyó solo de `work/S02/export.pptx`. La copia quedó con 3 diapositivas y el PPTX editable conserva 4. PDF: 237.204 bytes, SHA-256 `07516A56C643334AD59F8AEBD6FB67757E954196D736181BCE771ABFCB201A42`, 3 páginas de 960 x 540 pt. Estructura 8/8 PASS y texto 10/10 PASS; los cinco archivos aparecen una vez en el mapa, sin WMS ni contenido de Acería. PPTX, XLSX, SRC-201, SRC-203, spec, PBIP, referencias, Silver y S01 conservan sus huellas. Evidencia: `evidence/S02/pdf_treatment.md`, `pdf_structure.json` y `pdf_text.json`. T09 no se inició.
 
 - [ ] **T09 — Revisión visual de PPTX, XLSX y PDF.**
   - Requisitos: CA-S02-02, CA-S02-03, CA-S02-06, CA-S02-09; RNF-S02-07, RNF-S02-09.
