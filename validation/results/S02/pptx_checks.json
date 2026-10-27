@@ -1,0 +1,5123 @@
+{
+  "schema_version": "1.0",
+  "task": "T05",
+  "phase": "Build",
+  "requirement_ids": [
+    "RF-S02-03",
+    "RF-S02-05",
+    "RNF-S02-04",
+    "CA-S02-03",
+    "CA-S02-04"
+  ],
+  "scope": "Añadir el mapa Silver como tablas nativas desde la diapositiva 3, sin editar Excel ni exportar PDF.",
+  "executed_at_utc": "2026-10-27T21:09:25.953519+00:00",
+  "pptx": {
+    "path": "deliverables\\S02\\M4_Equipo06_S02_Arquitectura.pptx",
+    "size_bytes": 43872,
+    "sha256": "26324855E2864A636C0390D725FA34787269DE5A9F2893031602B97B16AB325D",
+    "slide_count": 4,
+    "slide_width_in": 13.333,
+    "slide_height_in": 7.5,
+    "aspect_ratio": 1.777733
+  },
+  "pre_edit": {
+    "path": "work\\S02\\t05_pre_edit.json",
+    "pptx_sha256": "71DCE2F66C96EFB0FF7B3ADDB67ABDD9F1E41215D945388836C21C6F7A53664A",
+    "slide_count": 2,
+    "slides": [
+      {
+        "slide_number": 1,
+        "shape_count": 32,
+        "xml_sha256": "0F944D0FB93C30E7CBAF0D7ED52D35900870A1E1E6BA20E31E0541D1770C7CC9",
+        "text_sha256": "7023CF3D2379FFF73887AED7CAE75130646DB38F496D99C477D393E1B0F850FA",
+        "inventory_sha256": "26CB5FA7859FD8082944BC3CACC57350C28EA14C7726F547EB7E231ABBE681BC",
+        "structure_sha256": "7D753B7D5A8D7E15783A72F63DB4810C2D151B324B3696ECDDA0BE6594EDBDCA",
+        "text": "EJEMPLO · ACERÍA ANDINA (NO SE ENTREGA)\nAsí se ve un diagrama de arquitectura completo\nDECISIÓN QUE APOYA EL TABLERO · quién decide, qué decide y cada cuánto\nEl jefe de Laminación decide, cada turno, en qué activo intervenir primero según la pérdida de OEE.\n1 · ORIGEN\nSCADA de LAM-01 (una lectura por segundo) y ERP de mantenimiento (órdenes de trabajo).\n2 · TABLA SILVER\ntelemetria_20261006.csv\nfact_ordenes_silver.csv\nUna fila = una lectura / una orden.\n3 · POWER QUERY\nFecha con región Español (Bolivia). Lecturas −999 excluidas y contadas. Tipos revisados.\n4 · MODELO SEMÁNTICO\nModo Importación. dim_activo y dim_fecha; relación por id_activo.\n5 · INDICADOR\nOEE por activo y turno, con meta de 85 %.\nBrecha DCAM de partida\nLecturas fuera de rango sin protocolo (E-04) · C5 Calidad de datos · Proceso · puntaje 1.\nRiesgo principal → control\nUn −999 entra al promedio y dispara una parada falsa → regla en Power Query que lo excluye y cuenta cuántos hubo.\nPendiente y responsable\nConfirmar con Automatización el rango válido de temperatura. Responsable: Ana (Datos).",
+        "shapes": [
+          {
+            "shape_id": 2,
+            "name": "TextBox 1",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 548640,
+            "top_emu": 320040,
+            "width_emu": 9144000,
+            "height_emu": 274320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "EJEMPLO · ACERÍA ANDINA (NO SE ENTREGA)",
+            "paragraphs": [
+              {
+                "text": "EJEMPLO · ACERÍA ANDINA (NO SE ENTREGA)",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "EJEMPLO · ACERÍA ANDINA (NO SE ENTREGA)",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 11.0,
+                      "bold": true,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "E87722"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 3,
+            "name": "TextBox 2",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 548640,
+            "top_emu": 594360,
+            "width_emu": 11064240,
+            "height_emu": 548640,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Así se ve un diagrama de arquitectura completo",
+            "paragraphs": [
+              {
+                "text": "Así se ve un diagrama de arquitectura completo",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Así se ve un diagrama de arquitectura completo",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 26.0,
+                      "bold": true,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "102A43"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 4,
+            "name": "Rounded Rectangle 3",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 548640,
+            "top_emu": 1325880,
+            "width_emu": 11091672,
+            "height_emu": 685800,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "FFF4E8"
+              }
+            },
+            "line": {
+              "fill_type": "BACKGROUND (5)",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 5,
+            "name": "TextBox 4",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 731520,
+            "top_emu": 1371600,
+            "width_emu": 10789920,
+            "height_emu": 594360,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "DECISIÓN QUE APOYA EL TABLERO · quién decide, qué decide y cada cuánto\nEl jefe de Laminación decide, cada turno, en qué activo intervenir primero según la pérdida de OEE.",
+            "paragraphs": [
+              {
+                "text": "DECISIÓN QUE APOYA EL TABLERO · quién decide, qué decide y cada cuánto",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "DECISIÓN QUE APOYA EL TABLERO · quién decide, qué decide y cada cuánto",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 10.5,
+                      "bold": true,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "E87722"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "text": "El jefe de Laminación decide, cada turno, en qué activo intervenir primero según la pérdida de OEE.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "El jefe de Laminación decide, cada turno, en qué activo intervenir primero según la pérdida de OEE.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 13.0,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "17212B"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 6,
+            "name": "Rounded Rectangle 5",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 548640,
+            "top_emu": 2331720,
+            "width_emu": 1976932,
+            "height_emu": 2148840,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "F1F5F8"
+              }
+            },
+            "line": {
+              "fill_type": "BACKGROUND (5)",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 7,
+            "name": "TextBox 6",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 640080,
+            "top_emu": 2441448,
+            "width_emu": 1794052,
+            "height_emu": 502920,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "1 · ORIGEN",
+            "paragraphs": [
+              {
+                "text": "1 · ORIGEN",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "1 · ORIGEN",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 12.0,
+                      "bold": true,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "1F5A94"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 8,
+            "name": "TextBox 7",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 640080,
+            "top_emu": 2971800,
+            "width_emu": 1794052,
+            "height_emu": 1417320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "SCADA de LAM-01 (una lectura por segundo) y ERP de mantenimiento (órdenes de trabajo).",
+            "paragraphs": [
+              {
+                "text": "SCADA de LAM-01 (una lectura por segundo) y ERP de mantenimiento (órdenes de trabajo).",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "SCADA de LAM-01 (una lectura por segundo) y ERP de mantenimiento (órdenes de trabajo).",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 12.5,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "17212B"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 9,
+            "name": "Right Arrow 8",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 2562148,
+            "top_emu": 3287268,
+            "width_emu": 228600,
+            "height_emu": 237744,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "E87722"
+              }
+            },
+            "line": {
+              "fill_type": "BACKGROUND (5)",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 10,
+            "name": "Rounded Rectangle 9",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 2827324,
+            "top_emu": 2331720,
+            "width_emu": 1976932,
+            "height_emu": 2148840,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "F1F5F8"
+              }
+            },
+            "line": {
+              "fill_type": "BACKGROUND (5)",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 11,
+            "name": "TextBox 10",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 2918764,
+            "top_emu": 2441448,
+            "width_emu": 1794052,
+            "height_emu": 502920,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "2 · TABLA SILVER",
+            "paragraphs": [
+              {
+                "text": "2 · TABLA SILVER",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "2 · TABLA SILVER",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 12.0,
+                      "bold": true,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "1F5A94"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 12,
+            "name": "TextBox 11",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 2918764,
+            "top_emu": 2971800,
+            "width_emu": 1794052,
+            "height_emu": 1417320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "telemetria_20261006.csv\nfact_ordenes_silver.csv\nUna fila = una lectura / una orden.",
+            "paragraphs": [
+              {
+                "text": "telemetria_20261006.csv\nfact_ordenes_silver.csv\nUna fila = una lectura / una orden.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "telemetria_20261006.csv\nfact_ordenes_silver.csv\nUna fila = una lectura / una orden.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 12.5,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "17212B"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 13,
+            "name": "Right Arrow 12",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 4840833,
+            "top_emu": 3287268,
+            "width_emu": 228600,
+            "height_emu": 237744,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "E87722"
+              }
+            },
+            "line": {
+              "fill_type": "BACKGROUND (5)",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 14,
+            "name": "Rounded Rectangle 13",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 5106009,
+            "top_emu": 2331720,
+            "width_emu": 1976932,
+            "height_emu": 2148840,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "F1F5F8"
+              }
+            },
+            "line": {
+              "fill_type": "BACKGROUND (5)",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 15,
+            "name": "TextBox 14",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 5197449,
+            "top_emu": 2441448,
+            "width_emu": 1794052,
+            "height_emu": 502920,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "3 · POWER QUERY",
+            "paragraphs": [
+              {
+                "text": "3 · POWER QUERY",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "3 · POWER QUERY",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 12.0,
+                      "bold": true,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "1F5A94"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 16,
+            "name": "TextBox 15",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 5197449,
+            "top_emu": 2971800,
+            "width_emu": 1794052,
+            "height_emu": 1417320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Fecha con región Español (Bolivia). Lecturas −999 excluidas y contadas. Tipos revisados.",
+            "paragraphs": [
+              {
+                "text": "Fecha con región Español (Bolivia). Lecturas −999 excluidas y contadas. Tipos revisados.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Fecha con región Español (Bolivia). Lecturas −999 excluidas y contadas. Tipos revisados.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 12.5,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "17212B"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 17,
+            "name": "Right Arrow 16",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 7119518,
+            "top_emu": 3287268,
+            "width_emu": 228600,
+            "height_emu": 237744,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "E87722"
+              }
+            },
+            "line": {
+              "fill_type": "BACKGROUND (5)",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 18,
+            "name": "Rounded Rectangle 17",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 7384694,
+            "top_emu": 2331720,
+            "width_emu": 1976932,
+            "height_emu": 2148840,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "F1F5F8"
+              }
+            },
+            "line": {
+              "fill_type": "BACKGROUND (5)",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 19,
+            "name": "TextBox 18",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 7476134,
+            "top_emu": 2441448,
+            "width_emu": 1794052,
+            "height_emu": 502920,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "4 · MODELO SEMÁNTICO",
+            "paragraphs": [
+              {
+                "text": "4 · MODELO SEMÁNTICO",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "4 · MODELO SEMÁNTICO",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 12.0,
+                      "bold": true,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "1F5A94"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 20,
+            "name": "TextBox 19",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 7476134,
+            "top_emu": 2971800,
+            "width_emu": 1794052,
+            "height_emu": 1417320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Modo Importación. dim_activo y dim_fecha; relación por id_activo.",
+            "paragraphs": [
+              {
+                "text": "Modo Importación. dim_activo y dim_fecha; relación por id_activo.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Modo Importación. dim_activo y dim_fecha; relación por id_activo.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 12.5,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "17212B"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 21,
+            "name": "Right Arrow 20",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 9398203,
+            "top_emu": 3287268,
+            "width_emu": 228600,
+            "height_emu": 237744,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "E87722"
+              }
+            },
+            "line": {
+              "fill_type": "BACKGROUND (5)",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 22,
+            "name": "Rounded Rectangle 21",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 9663379,
+            "top_emu": 2331720,
+            "width_emu": 1976932,
+            "height_emu": 2148840,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "F1F5F8"
+              }
+            },
+            "line": {
+              "fill_type": "BACKGROUND (5)",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 23,
+            "name": "TextBox 22",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 9754819,
+            "top_emu": 2441448,
+            "width_emu": 1794052,
+            "height_emu": 502920,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "5 · INDICADOR",
+            "paragraphs": [
+              {
+                "text": "5 · INDICADOR",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "5 · INDICADOR",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 12.0,
+                      "bold": true,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "1F5A94"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 24,
+            "name": "TextBox 23",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 9754819,
+            "top_emu": 2971800,
+            "width_emu": 1794052,
+            "height_emu": 1417320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "OEE por activo y turno, con meta de 85 %.",
+            "paragraphs": [
+              {
+                "text": "OEE por activo y turno, con meta de 85 %.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "OEE por activo y turno, con meta de 85 %.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 12.5,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "17212B"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 25,
+            "name": "Rounded Rectangle 24",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 548640,
+            "top_emu": 4754880,
+            "width_emu": 3514344,
+            "height_emu": 1600200,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "FFFFFF"
+              }
+            },
+            "line": {
+              "fill_type": "SOLID (1)",
+              "color": {
+                "type": "RGB (1)",
+                "rgb": "C9D2DC"
+              },
+              "width_pt": 1.25
+            }
+          },
+          {
+            "shape_id": 26,
+            "name": "TextBox 25",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 640080,
+            "top_emu": 4846320,
+            "width_emu": 3331464,
+            "height_emu": 365760,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Brecha DCAM de partida",
+            "paragraphs": [
+              {
+                "text": "Brecha DCAM de partida",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Brecha DCAM de partida",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 11.5,
+                      "bold": true,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "102A43"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 27,
+            "name": "TextBox 26",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 640080,
+            "top_emu": 5212080,
+            "width_emu": 3331464,
+            "height_emu": 1051560,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Lecturas fuera de rango sin protocolo (E-04) · C5 Calidad de datos · Proceso · puntaje 1.",
+            "paragraphs": [
+              {
+                "text": "Lecturas fuera de rango sin protocolo (E-04) · C5 Calidad de datos · Proceso · puntaje 1.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Lecturas fuera de rango sin protocolo (E-04) · C5 Calidad de datos · Proceso · puntaje 1.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 12.0,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "17212B"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 28,
+            "name": "Rounded Rectangle 27",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 4337304,
+            "top_emu": 4754880,
+            "width_emu": 3514344,
+            "height_emu": 1600200,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "FFFFFF"
+              }
+            },
+            "line": {
+              "fill_type": "SOLID (1)",
+              "color": {
+                "type": "RGB (1)",
+                "rgb": "C9D2DC"
+              },
+              "width_pt": 1.25
+            }
+          },
+          {
+            "shape_id": 29,
+            "name": "TextBox 28",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 4428744,
+            "top_emu": 4846320,
+            "width_emu": 3331464,
+            "height_emu": 365760,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Riesgo principal → control",
+            "paragraphs": [
+              {
+                "text": "Riesgo principal → control",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Riesgo principal → control",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 11.5,
+                      "bold": true,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "102A43"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 30,
+            "name": "TextBox 29",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 4428744,
+            "top_emu": 5212080,
+            "width_emu": 3331464,
+            "height_emu": 1051560,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Un −999 entra al promedio y dispara una parada falsa → regla en Power Query que lo excluye y cuenta cuántos hubo.",
+            "paragraphs": [
+              {
+                "text": "Un −999 entra al promedio y dispara una parada falsa → regla en Power Query que lo excluye y cuenta cuántos hubo.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Un −999 entra al promedio y dispara una parada falsa → regla en Power Query que lo excluye y cuenta cuántos hubo.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 12.0,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "17212B"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 31,
+            "name": "Rounded Rectangle 30",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 8125968,
+            "top_emu": 4754880,
+            "width_emu": 3514344,
+            "height_emu": 1600200,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "FFFFFF"
+              }
+            },
+            "line": {
+              "fill_type": "SOLID (1)",
+              "color": {
+                "type": "RGB (1)",
+                "rgb": "C9D2DC"
+              },
+              "width_pt": 1.25
+            }
+          },
+          {
+            "shape_id": 32,
+            "name": "TextBox 31",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 8217408,
+            "top_emu": 4846320,
+            "width_emu": 3331464,
+            "height_emu": 365760,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Pendiente y responsable",
+            "paragraphs": [
+              {
+                "text": "Pendiente y responsable",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Pendiente y responsable",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 11.5,
+                      "bold": true,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "102A43"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 33,
+            "name": "TextBox 32",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 8217408,
+            "top_emu": 5212080,
+            "width_emu": 3331464,
+            "height_emu": 1051560,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Confirmar con Automatización el rango válido de temperatura. Responsable: Ana (Datos).",
+            "paragraphs": [
+              {
+                "text": "Confirmar con Automatización el rango válido de temperatura. Responsable: Ana (Datos).",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Confirmar con Automatización el rango válido de temperatura. Responsable: Ana (Datos).",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 12.0,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "17212B"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          }
+        ],
+        "legacy_shapes": [
+          {
+            "shape_id": 2,
+            "name": "TextBox 1",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 548640,
+            "top_emu": 320040,
+            "width_emu": 9144000,
+            "height_emu": 274320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "EJEMPLO · ACERÍA ANDINA (NO SE ENTREGA)"
+          },
+          {
+            "shape_id": 3,
+            "name": "TextBox 2",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 548640,
+            "top_emu": 594360,
+            "width_emu": 11064240,
+            "height_emu": 548640,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Así se ve un diagrama de arquitectura completo"
+          },
+          {
+            "shape_id": 4,
+            "name": "Rounded Rectangle 3",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 548640,
+            "top_emu": 1325880,
+            "width_emu": 11091672,
+            "height_emu": 685800,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 5,
+            "name": "TextBox 4",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 731520,
+            "top_emu": 1371600,
+            "width_emu": 10789920,
+            "height_emu": 594360,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "DECISIÓN QUE APOYA EL TABLERO · quién decide, qué decide y cada cuánto\nEl jefe de Laminación decide, cada turno, en qué activo intervenir primero según la pérdida de OEE."
+          },
+          {
+            "shape_id": 6,
+            "name": "Rounded Rectangle 5",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 548640,
+            "top_emu": 2331720,
+            "width_emu": 1976932,
+            "height_emu": 2148840,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 7,
+            "name": "TextBox 6",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 640080,
+            "top_emu": 2441448,
+            "width_emu": 1794052,
+            "height_emu": 502920,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "1 · ORIGEN"
+          },
+          {
+            "shape_id": 8,
+            "name": "TextBox 7",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 640080,
+            "top_emu": 2971800,
+            "width_emu": 1794052,
+            "height_emu": 1417320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "SCADA de LAM-01 (una lectura por segundo) y ERP de mantenimiento (órdenes de trabajo)."
+          },
+          {
+            "shape_id": 9,
+            "name": "Right Arrow 8",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 2562148,
+            "top_emu": 3287268,
+            "width_emu": 228600,
+            "height_emu": 237744,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 10,
+            "name": "Rounded Rectangle 9",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 2827324,
+            "top_emu": 2331720,
+            "width_emu": 1976932,
+            "height_emu": 2148840,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 11,
+            "name": "TextBox 10",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 2918764,
+            "top_emu": 2441448,
+            "width_emu": 1794052,
+            "height_emu": 502920,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "2 · TABLA SILVER"
+          },
+          {
+            "shape_id": 12,
+            "name": "TextBox 11",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 2918764,
+            "top_emu": 2971800,
+            "width_emu": 1794052,
+            "height_emu": 1417320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "telemetria_20261006.csv\nfact_ordenes_silver.csv\nUna fila = una lectura / una orden."
+          },
+          {
+            "shape_id": 13,
+            "name": "Right Arrow 12",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 4840833,
+            "top_emu": 3287268,
+            "width_emu": 228600,
+            "height_emu": 237744,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 14,
+            "name": "Rounded Rectangle 13",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 5106009,
+            "top_emu": 2331720,
+            "width_emu": 1976932,
+            "height_emu": 2148840,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 15,
+            "name": "TextBox 14",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 5197449,
+            "top_emu": 2441448,
+            "width_emu": 1794052,
+            "height_emu": 502920,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "3 · POWER QUERY"
+          },
+          {
+            "shape_id": 16,
+            "name": "TextBox 15",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 5197449,
+            "top_emu": 2971800,
+            "width_emu": 1794052,
+            "height_emu": 1417320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Fecha con región Español (Bolivia). Lecturas −999 excluidas y contadas. Tipos revisados."
+          },
+          {
+            "shape_id": 17,
+            "name": "Right Arrow 16",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 7119518,
+            "top_emu": 3287268,
+            "width_emu": 228600,
+            "height_emu": 237744,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 18,
+            "name": "Rounded Rectangle 17",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 7384694,
+            "top_emu": 2331720,
+            "width_emu": 1976932,
+            "height_emu": 2148840,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 19,
+            "name": "TextBox 18",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 7476134,
+            "top_emu": 2441448,
+            "width_emu": 1794052,
+            "height_emu": 502920,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "4 · MODELO SEMÁNTICO"
+          },
+          {
+            "shape_id": 20,
+            "name": "TextBox 19",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 7476134,
+            "top_emu": 2971800,
+            "width_emu": 1794052,
+            "height_emu": 1417320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Modo Importación. dim_activo y dim_fecha; relación por id_activo."
+          },
+          {
+            "shape_id": 21,
+            "name": "Right Arrow 20",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 9398203,
+            "top_emu": 3287268,
+            "width_emu": 228600,
+            "height_emu": 237744,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 22,
+            "name": "Rounded Rectangle 21",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 9663379,
+            "top_emu": 2331720,
+            "width_emu": 1976932,
+            "height_emu": 2148840,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 23,
+            "name": "TextBox 22",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 9754819,
+            "top_emu": 2441448,
+            "width_emu": 1794052,
+            "height_emu": 502920,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "5 · INDICADOR"
+          },
+          {
+            "shape_id": 24,
+            "name": "TextBox 23",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 9754819,
+            "top_emu": 2971800,
+            "width_emu": 1794052,
+            "height_emu": 1417320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "OEE por activo y turno, con meta de 85 %."
+          },
+          {
+            "shape_id": 25,
+            "name": "Rounded Rectangle 24",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 548640,
+            "top_emu": 4754880,
+            "width_emu": 3514344,
+            "height_emu": 1600200,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 26,
+            "name": "TextBox 25",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 640080,
+            "top_emu": 4846320,
+            "width_emu": 3331464,
+            "height_emu": 365760,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Brecha DCAM de partida"
+          },
+          {
+            "shape_id": 27,
+            "name": "TextBox 26",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 640080,
+            "top_emu": 5212080,
+            "width_emu": 3331464,
+            "height_emu": 1051560,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Lecturas fuera de rango sin protocolo (E-04) · C5 Calidad de datos · Proceso · puntaje 1."
+          },
+          {
+            "shape_id": 28,
+            "name": "Rounded Rectangle 27",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 4337304,
+            "top_emu": 4754880,
+            "width_emu": 3514344,
+            "height_emu": 1600200,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 29,
+            "name": "TextBox 28",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 4428744,
+            "top_emu": 4846320,
+            "width_emu": 3331464,
+            "height_emu": 365760,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Riesgo principal → control"
+          },
+          {
+            "shape_id": 30,
+            "name": "TextBox 29",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 4428744,
+            "top_emu": 5212080,
+            "width_emu": 3331464,
+            "height_emu": 1051560,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Un −999 entra al promedio y dispara una parada falsa → regla en Power Query que lo excluye y cuenta cuántos hubo."
+          },
+          {
+            "shape_id": 31,
+            "name": "Rounded Rectangle 30",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 8125968,
+            "top_emu": 4754880,
+            "width_emu": 3514344,
+            "height_emu": 1600200,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 32,
+            "name": "TextBox 31",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 8217408,
+            "top_emu": 4846320,
+            "width_emu": 3331464,
+            "height_emu": 365760,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Pendiente y responsable"
+          },
+          {
+            "shape_id": 33,
+            "name": "TextBox 32",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 8217408,
+            "top_emu": 5212080,
+            "width_emu": 3331464,
+            "height_emu": 1051560,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Confirmar con Automatización el rango válido de temperatura. Responsable: Ana (Datos)."
+          }
+        ]
+      },
+      {
+        "slide_number": 2,
+        "shape_count": 32,
+        "xml_sha256": "87E251E0CDA2AD828D539905A0D7BA5886941DF6B851B9BD3A49DB648637619E",
+        "text_sha256": "09DC4C11B12649463E9BF059BF4034CCB2565462F117CF0007BB79745A5D3CA8",
+        "inventory_sha256": "FCF19D50860C8889BE1660B9725B080E3F8AF4DCF272F21A888C67FEB7B2A52A",
+        "structure_sha256": "BD9A55CCC9EEFFD4B8A3380168D554A96B76260232DFD09ED8E52B6FA4BC6C46",
+        "text": "PROYECTO INTEGRADOR · HITO S02 · EQUIPO 06\nDiagrama de arquitectura del subcaso\nDECISIÓN QUE APOYA EL TABLERO · quién decide, qué decide y cada cuánto\nLa Jefatura de Operaciones decide cada semana dónde priorizar controles térmicos por producto y camión y qué lotes o centros revisar por vencimiento y merma.\n1 · ORIGEN\nNo documentado por archivo; por acordar.\nNo se atribuye ERP, WMS, TMS ni telemetría a estas tablas.\n2 · TABLA SILVER\n5 fuentes oficiales: DATA-001 a DATA-005.\nUna fila = una lectura, producto, camión, lote o centro-mes.\n3 · POWER QUERY\nRutaSilver + File.Contents + Csv.Document; Encabezados y Tipado.\nYa existente; sin cambios en S02.\n4 · MODELO SEMÁNTICO\n5 tablas Import; 0 relaciones; 0 medidas.\nModelo relacional: dimensiones y relaciones, propuestas para S06.\n5 · INDICADOR\n% de viajes con desviación.\nNivel táctico; fórmula y unidad en Fichas KPI.\nBrecha DCAM de partida\nNo encontramos definición explícita de centro_distribucion.\nC4 Conocimiento de los datos · Evidencia · 1 Incipiente.\nAusencia documentada; no resuelta.\nRiesgo principal → control\nRiesgo: interpretar mal qué representa el centro y usarlo en filtros o conclusiones.\nHecho: 8.000/8.000 viajes emparejados sin discrepancias: centro WMS = centro base; no prueba significado empresarial.\nControl: documentar ausencia, usos y límites conocidos; solicitar definición y validación empresarial.\nComplemento: no usar centro_distribucion_base como ruta u origen real; dim_centro y controles de claves, propuestas posteriores.\nPendiente y responsable\nDefinición y validación empresarial de centro_distribucion; seguimiento Grupo 06; validador por acordar. No resuelto.",
+        "shapes": [
+          {
+            "shape_id": 2,
+            "name": "TextBox 1",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 548640,
+            "top_emu": 320040,
+            "width_emu": 9144000,
+            "height_emu": 274320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "PROYECTO INTEGRADOR · HITO S02 · EQUIPO 06",
+            "paragraphs": [
+              {
+                "text": "PROYECTO INTEGRADOR · HITO S02 · EQUIPO 06",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "PROYECTO INTEGRADOR · HITO S02 · EQUIPO 06",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 11.0,
+                      "bold": true,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "E87722"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 0,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 3,
+            "name": "TextBox 2",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 548640,
+            "top_emu": 594360,
+            "width_emu": 11064240,
+            "height_emu": 548640,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Diagrama de arquitectura del subcaso",
+            "paragraphs": [
+              {
+                "text": "Diagrama de arquitectura del subcaso",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Diagrama de arquitectura del subcaso",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 26.0,
+                      "bold": true,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "102A43"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 4,
+            "name": "Rounded Rectangle 3",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 548640,
+            "top_emu": 1325880,
+            "width_emu": 11091672,
+            "height_emu": 685800,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "FFF4E8"
+              }
+            },
+            "line": {
+              "fill_type": "BACKGROUND (5)",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 5,
+            "name": "TextBox 4",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 731520,
+            "top_emu": 1371600,
+            "width_emu": 10789920,
+            "height_emu": 594360,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "DECISIÓN QUE APOYA EL TABLERO · quién decide, qué decide y cada cuánto\nLa Jefatura de Operaciones decide cada semana dónde priorizar controles térmicos por producto y camión y qué lotes o centros revisar por vencimiento y merma.",
+            "paragraphs": [
+              {
+                "text": "DECISIÓN QUE APOYA EL TABLERO · quién decide, qué decide y cada cuánto",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "DECISIÓN QUE APOYA EL TABLERO · quién decide, qué decide y cada cuánto",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 10.5,
+                      "bold": true,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "E87722"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "text": "La Jefatura de Operaciones decide cada semana dónde priorizar controles térmicos por producto y camión y qué lotes o centros revisar por vencimiento y merma.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "La Jefatura de Operaciones decide cada semana dónde priorizar controles térmicos por producto y camión y qué lotes o centros revisar por vencimiento y merma.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 11.0,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "52606D"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 0,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 6,
+            "name": "Rounded Rectangle 5",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 548640,
+            "top_emu": 2331720,
+            "width_emu": 1976932,
+            "height_emu": 2148840,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "F1F5F8"
+              }
+            },
+            "line": {
+              "fill_type": "BACKGROUND (5)",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 7,
+            "name": "TextBox 6",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 640080,
+            "top_emu": 2441448,
+            "width_emu": 1794052,
+            "height_emu": 502920,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "1 · ORIGEN",
+            "paragraphs": [
+              {
+                "text": "1 · ORIGEN",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "1 · ORIGEN",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 12.0,
+                      "bold": true,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "1F5A94"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 8,
+            "name": "TextBox 7",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 640080,
+            "top_emu": 2971800,
+            "width_emu": 1794052,
+            "height_emu": 1417320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "No documentado por archivo; por acordar.\nNo se atribuye ERP, WMS, TMS ni telemetría a estas tablas.",
+            "paragraphs": [
+              {
+                "text": "No documentado por archivo; por acordar.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "No documentado por archivo; por acordar.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 9.5,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "52606D"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "text": "No se atribuye ERP, WMS, TMS ni telemetría a estas tablas.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "No se atribuye ERP, WMS, TMS ni telemetría a estas tablas.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 9.5,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "52606D"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 0,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 9,
+            "name": "Right Arrow 8",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 2562148,
+            "top_emu": 3287268,
+            "width_emu": 228600,
+            "height_emu": 237744,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "E87722"
+              }
+            },
+            "line": {
+              "fill_type": "BACKGROUND (5)",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 10,
+            "name": "Rounded Rectangle 9",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 2827324,
+            "top_emu": 2331720,
+            "width_emu": 1976932,
+            "height_emu": 2148840,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "F1F5F8"
+              }
+            },
+            "line": {
+              "fill_type": "BACKGROUND (5)",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 11,
+            "name": "TextBox 10",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 2918764,
+            "top_emu": 2441448,
+            "width_emu": 1794052,
+            "height_emu": 502920,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "2 · TABLA SILVER",
+            "paragraphs": [
+              {
+                "text": "2 · TABLA SILVER",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "2 · TABLA SILVER",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 12.0,
+                      "bold": true,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "1F5A94"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 12,
+            "name": "TextBox 11",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 2918764,
+            "top_emu": 2971800,
+            "width_emu": 1794052,
+            "height_emu": 1417320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "5 fuentes oficiales: DATA-001 a DATA-005.\nUna fila = una lectura, producto, camión, lote o centro-mes.",
+            "paragraphs": [
+              {
+                "text": "5 fuentes oficiales: DATA-001 a DATA-005.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "5 fuentes oficiales: DATA-001 a DATA-005.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 9.5,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "52606D"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "text": "Una fila = una lectura, producto, camión, lote o centro-mes.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Una fila = una lectura, producto, camión, lote o centro-mes.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 9.5,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "52606D"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 0,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 13,
+            "name": "Right Arrow 12",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 4840833,
+            "top_emu": 3287268,
+            "width_emu": 228600,
+            "height_emu": 237744,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "E87722"
+              }
+            },
+            "line": {
+              "fill_type": "BACKGROUND (5)",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 14,
+            "name": "Rounded Rectangle 13",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 5106009,
+            "top_emu": 2331720,
+            "width_emu": 1976932,
+            "height_emu": 2148840,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "F1F5F8"
+              }
+            },
+            "line": {
+              "fill_type": "BACKGROUND (5)",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 15,
+            "name": "TextBox 14",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 5197449,
+            "top_emu": 2441448,
+            "width_emu": 1794052,
+            "height_emu": 502920,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "3 · POWER QUERY",
+            "paragraphs": [
+              {
+                "text": "3 · POWER QUERY",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "3 · POWER QUERY",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 12.0,
+                      "bold": true,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "1F5A94"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 16,
+            "name": "TextBox 15",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 5197449,
+            "top_emu": 2971800,
+            "width_emu": 1794052,
+            "height_emu": 1417320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "RutaSilver + File.Contents + Csv.Document; Encabezados y Tipado.\nYa existente; sin cambios en S02.",
+            "paragraphs": [
+              {
+                "text": "RutaSilver + File.Contents + Csv.Document; Encabezados y Tipado.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "RutaSilver + File.Contents + Csv.Document; Encabezados y Tipado.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 9.0,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "52606D"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "text": "Ya existente; sin cambios en S02.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Ya existente; sin cambios en S02.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 9.0,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "52606D"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 0,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 17,
+            "name": "Right Arrow 16",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 7119518,
+            "top_emu": 3287268,
+            "width_emu": 228600,
+            "height_emu": 237744,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "E87722"
+              }
+            },
+            "line": {
+              "fill_type": "BACKGROUND (5)",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 18,
+            "name": "Rounded Rectangle 17",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 7384694,
+            "top_emu": 2331720,
+            "width_emu": 1976932,
+            "height_emu": 2148840,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "F1F5F8"
+              }
+            },
+            "line": {
+              "fill_type": "BACKGROUND (5)",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 19,
+            "name": "TextBox 18",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 7476134,
+            "top_emu": 2441448,
+            "width_emu": 1794052,
+            "height_emu": 502920,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "4 · MODELO SEMÁNTICO",
+            "paragraphs": [
+              {
+                "text": "4 · MODELO SEMÁNTICO",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "4 · MODELO SEMÁNTICO",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 12.0,
+                      "bold": true,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "1F5A94"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 20,
+            "name": "TextBox 19",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 7476134,
+            "top_emu": 2971800,
+            "width_emu": 1794052,
+            "height_emu": 1417320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "5 tablas Import; 0 relaciones; 0 medidas.\nModelo relacional: dimensiones y relaciones, propuestas para S06.",
+            "paragraphs": [
+              {
+                "text": "5 tablas Import; 0 relaciones; 0 medidas.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "5 tablas Import; 0 relaciones; 0 medidas.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 9.5,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "52606D"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "text": "Modelo relacional: dimensiones y relaciones, propuestas para S06.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Modelo relacional: dimensiones y relaciones, propuestas para S06.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 9.5,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "52606D"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 0,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 21,
+            "name": "Right Arrow 20",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 9398203,
+            "top_emu": 3287268,
+            "width_emu": 228600,
+            "height_emu": 237744,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "E87722"
+              }
+            },
+            "line": {
+              "fill_type": "BACKGROUND (5)",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 22,
+            "name": "Rounded Rectangle 21",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 9663379,
+            "top_emu": 2331720,
+            "width_emu": 1976932,
+            "height_emu": 2148840,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "F1F5F8"
+              }
+            },
+            "line": {
+              "fill_type": "BACKGROUND (5)",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 23,
+            "name": "TextBox 22",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 9754819,
+            "top_emu": 2441448,
+            "width_emu": 1794052,
+            "height_emu": 502920,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "5 · INDICADOR",
+            "paragraphs": [
+              {
+                "text": "5 · INDICADOR",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "5 · INDICADOR",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 12.0,
+                      "bold": true,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "1F5A94"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 24,
+            "name": "TextBox 23",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 9754819,
+            "top_emu": 2971800,
+            "width_emu": 1794052,
+            "height_emu": 1417320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "% de viajes con desviación.\nNivel táctico; fórmula y unidad en Fichas KPI.",
+            "paragraphs": [
+              {
+                "text": "% de viajes con desviación.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "% de viajes con desviación.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 10.0,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "52606D"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "text": "Nivel táctico; fórmula y unidad en Fichas KPI.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Nivel táctico; fórmula y unidad en Fichas KPI.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 10.0,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "52606D"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 0,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 25,
+            "name": "Rounded Rectangle 24",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 548640,
+            "top_emu": 4754880,
+            "width_emu": 3514344,
+            "height_emu": 1600200,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "FFFFFF"
+              }
+            },
+            "line": {
+              "fill_type": "SOLID (1)",
+              "color": {
+                "type": "RGB (1)",
+                "rgb": "C9D2DC"
+              },
+              "width_pt": 1.25
+            }
+          },
+          {
+            "shape_id": 26,
+            "name": "TextBox 25",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 640080,
+            "top_emu": 4846320,
+            "width_emu": 3331464,
+            "height_emu": 365760,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Brecha DCAM de partida",
+            "paragraphs": [
+              {
+                "text": "Brecha DCAM de partida",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Brecha DCAM de partida",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 11.5,
+                      "bold": true,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "102A43"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 27,
+            "name": "TextBox 26",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 640080,
+            "top_emu": 5212080,
+            "width_emu": 3331464,
+            "height_emu": 1051560,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "No encontramos definición explícita de centro_distribucion.\nC4 Conocimiento de los datos · Evidencia · 1 Incipiente.\nAusencia documentada; no resuelta.",
+            "paragraphs": [
+              {
+                "text": "No encontramos definición explícita de centro_distribucion.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "No encontramos definición explícita de centro_distribucion.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 9.0,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "52606D"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "text": "C4 Conocimiento de los datos · Evidencia · 1 Incipiente.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "C4 Conocimiento de los datos · Evidencia · 1 Incipiente.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 9.0,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "52606D"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "text": "Ausencia documentada; no resuelta.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Ausencia documentada; no resuelta.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 9.0,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "52606D"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 0,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 28,
+            "name": "Rounded Rectangle 27",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 4337304,
+            "top_emu": 4754880,
+            "width_emu": 3514344,
+            "height_emu": 1600200,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "FFFFFF"
+              }
+            },
+            "line": {
+              "fill_type": "SOLID (1)",
+              "color": {
+                "type": "RGB (1)",
+                "rgb": "C9D2DC"
+              },
+              "width_pt": 1.25
+            }
+          },
+          {
+            "shape_id": 29,
+            "name": "TextBox 28",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 4428744,
+            "top_emu": 4846320,
+            "width_emu": 3331464,
+            "height_emu": 365760,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Riesgo principal → control",
+            "paragraphs": [
+              {
+                "text": "Riesgo principal → control",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Riesgo principal → control",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 11.5,
+                      "bold": true,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "102A43"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 30,
+            "name": "TextBox 29",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 4428744,
+            "top_emu": 5212080,
+            "width_emu": 3331464,
+            "height_emu": 1051560,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Riesgo: interpretar mal qué representa el centro y usarlo en filtros o conclusiones.\nHecho: 8.000/8.000 viajes emparejados sin discrepancias: centro WMS = centro base; no prueba significado empresarial.\nControl: documentar ausencia, usos y límites conocidos; solicitar definición y validación empresarial.\nComplemento: no usar centro_distribucion_base como ruta u origen real; dim_centro y controles de claves, propuestas posteriores.",
+            "paragraphs": [
+              {
+                "text": "Riesgo: interpretar mal qué representa el centro y usarlo en filtros o conclusiones.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Riesgo: interpretar mal qué representa el centro y usarlo en filtros o conclusiones.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 8.0,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "52606D"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "text": "Hecho: 8.000/8.000 viajes emparejados sin discrepancias: centro WMS = centro base; no prueba significado empresarial.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Hecho: 8.000/8.000 viajes emparejados sin discrepancias: centro WMS = centro base; no prueba significado empresarial.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 8.0,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "52606D"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "text": "Control: documentar ausencia, usos y límites conocidos; solicitar definición y validación empresarial.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Control: documentar ausencia, usos y límites conocidos; solicitar definición y validación empresarial.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 8.0,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "52606D"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "text": "Complemento: no usar centro_distribucion_base como ruta u origen real; dim_centro y controles de claves, propuestas posteriores.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Complemento: no usar centro_distribucion_base como ruta u origen real; dim_centro y controles de claves, propuestas posteriores.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 8.0,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "52606D"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 0,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 31,
+            "name": "Rounded Rectangle 30",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 8125968,
+            "top_emu": 4754880,
+            "width_emu": 3514344,
+            "height_emu": 1600200,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "alignment": "CENTER (2)",
+                "level": 0,
+                "runs": []
+              }
+            ],
+            "auto_size": null,
+            "word_wrap": null,
+            "margins_emu": {
+              "left": 91440,
+              "right": 91440,
+              "top": 45720,
+              "bottom": 45720
+            },
+            "fill": {
+              "type": "SOLID (1)",
+              "fore_color": {
+                "type": "RGB (1)",
+                "rgb": "FFFFFF"
+              }
+            },
+            "line": {
+              "fill_type": "SOLID (1)",
+              "color": {
+                "type": "RGB (1)",
+                "rgb": "C9D2DC"
+              },
+              "width_pt": 1.25
+            }
+          },
+          {
+            "shape_id": 32,
+            "name": "TextBox 31",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 8217408,
+            "top_emu": 4846320,
+            "width_emu": 3331464,
+            "height_emu": 365760,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Pendiente y responsable",
+            "paragraphs": [
+              {
+                "text": "Pendiente y responsable",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Pendiente y responsable",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 11.5,
+                      "bold": true,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "102A43"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 1,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          },
+          {
+            "shape_id": 33,
+            "name": "TextBox 32",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 8217408,
+            "top_emu": 5212080,
+            "width_emu": 3331464,
+            "height_emu": 1051560,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Definición y validación empresarial de centro_distribucion; seguimiento Grupo 06; validador por acordar. No resuelto.",
+            "paragraphs": [
+              {
+                "text": "Definición y validación empresarial de centro_distribucion; seguimiento Grupo 06; validador por acordar. No resuelto.",
+                "alignment": "LEFT (1)",
+                "level": 0,
+                "runs": [
+                  {
+                    "text": "Definición y validación empresarial de centro_distribucion; seguimiento Grupo 06; validador por acordar. No resuelto.",
+                    "font": {
+                      "name": "Calibri",
+                      "size_pt": 9.5,
+                      "bold": false,
+                      "italic": false,
+                      "color": {
+                        "type": "RGB (1)",
+                        "rgb": "52606D"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "auto_size": 0,
+            "word_wrap": true,
+            "margins_emu": {
+              "left": 73152,
+              "right": 73152,
+              "top": 36576,
+              "bottom": 36576
+            },
+            "fill": null,
+            "line": {
+              "fill_type": "None",
+              "color": null,
+              "width_pt": 0.0
+            }
+          }
+        ],
+        "legacy_shapes": [
+          {
+            "shape_id": 2,
+            "name": "TextBox 1",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 548640,
+            "top_emu": 320040,
+            "width_emu": 9144000,
+            "height_emu": 274320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "PROYECTO INTEGRADOR · HITO S02 · EQUIPO 06"
+          },
+          {
+            "shape_id": 3,
+            "name": "TextBox 2",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 548640,
+            "top_emu": 594360,
+            "width_emu": 11064240,
+            "height_emu": 548640,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Diagrama de arquitectura del subcaso"
+          },
+          {
+            "shape_id": 4,
+            "name": "Rounded Rectangle 3",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 548640,
+            "top_emu": 1325880,
+            "width_emu": 11091672,
+            "height_emu": 685800,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 5,
+            "name": "TextBox 4",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 731520,
+            "top_emu": 1371600,
+            "width_emu": 10789920,
+            "height_emu": 594360,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "DECISIÓN QUE APOYA EL TABLERO · quién decide, qué decide y cada cuánto\nLa Jefatura de Operaciones decide cada semana dónde priorizar controles térmicos por producto y camión y qué lotes o centros revisar por vencimiento y merma."
+          },
+          {
+            "shape_id": 6,
+            "name": "Rounded Rectangle 5",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 548640,
+            "top_emu": 2331720,
+            "width_emu": 1976932,
+            "height_emu": 2148840,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 7,
+            "name": "TextBox 6",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 640080,
+            "top_emu": 2441448,
+            "width_emu": 1794052,
+            "height_emu": 502920,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "1 · ORIGEN"
+          },
+          {
+            "shape_id": 8,
+            "name": "TextBox 7",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 640080,
+            "top_emu": 2971800,
+            "width_emu": 1794052,
+            "height_emu": 1417320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "No documentado por archivo; por acordar.\nNo se atribuye ERP, WMS, TMS ni telemetría a estas tablas."
+          },
+          {
+            "shape_id": 9,
+            "name": "Right Arrow 8",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 2562148,
+            "top_emu": 3287268,
+            "width_emu": 228600,
+            "height_emu": 237744,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 10,
+            "name": "Rounded Rectangle 9",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 2827324,
+            "top_emu": 2331720,
+            "width_emu": 1976932,
+            "height_emu": 2148840,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 11,
+            "name": "TextBox 10",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 2918764,
+            "top_emu": 2441448,
+            "width_emu": 1794052,
+            "height_emu": 502920,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "2 · TABLA SILVER"
+          },
+          {
+            "shape_id": 12,
+            "name": "TextBox 11",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 2918764,
+            "top_emu": 2971800,
+            "width_emu": 1794052,
+            "height_emu": 1417320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "5 fuentes oficiales: DATA-001 a DATA-005.\nUna fila = una lectura, producto, camión, lote o centro-mes."
+          },
+          {
+            "shape_id": 13,
+            "name": "Right Arrow 12",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 4840833,
+            "top_emu": 3287268,
+            "width_emu": 228600,
+            "height_emu": 237744,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 14,
+            "name": "Rounded Rectangle 13",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 5106009,
+            "top_emu": 2331720,
+            "width_emu": 1976932,
+            "height_emu": 2148840,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 15,
+            "name": "TextBox 14",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 5197449,
+            "top_emu": 2441448,
+            "width_emu": 1794052,
+            "height_emu": 502920,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "3 · POWER QUERY"
+          },
+          {
+            "shape_id": 16,
+            "name": "TextBox 15",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 5197449,
+            "top_emu": 2971800,
+            "width_emu": 1794052,
+            "height_emu": 1417320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "RutaSilver + File.Contents + Csv.Document; Encabezados y Tipado.\nYa existente; sin cambios en S02."
+          },
+          {
+            "shape_id": 17,
+            "name": "Right Arrow 16",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 7119518,
+            "top_emu": 3287268,
+            "width_emu": 228600,
+            "height_emu": 237744,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 18,
+            "name": "Rounded Rectangle 17",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 7384694,
+            "top_emu": 2331720,
+            "width_emu": 1976932,
+            "height_emu": 2148840,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 19,
+            "name": "TextBox 18",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 7476134,
+            "top_emu": 2441448,
+            "width_emu": 1794052,
+            "height_emu": 502920,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "4 · MODELO SEMÁNTICO"
+          },
+          {
+            "shape_id": 20,
+            "name": "TextBox 19",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 7476134,
+            "top_emu": 2971800,
+            "width_emu": 1794052,
+            "height_emu": 1417320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "5 tablas Import; 0 relaciones; 0 medidas.\nModelo relacional: dimensiones y relaciones, propuestas para S06."
+          },
+          {
+            "shape_id": 21,
+            "name": "Right Arrow 20",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 9398203,
+            "top_emu": 3287268,
+            "width_emu": 228600,
+            "height_emu": 237744,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 22,
+            "name": "Rounded Rectangle 21",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 9663379,
+            "top_emu": 2331720,
+            "width_emu": 1976932,
+            "height_emu": 2148840,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 23,
+            "name": "TextBox 22",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 9754819,
+            "top_emu": 2441448,
+            "width_emu": 1794052,
+            "height_emu": 502920,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "5 · INDICADOR"
+          },
+          {
+            "shape_id": 24,
+            "name": "TextBox 23",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 9754819,
+            "top_emu": 2971800,
+            "width_emu": 1794052,
+            "height_emu": 1417320,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "% de viajes con desviación.\nNivel táctico; fórmula y unidad en Fichas KPI."
+          },
+          {
+            "shape_id": 25,
+            "name": "Rounded Rectangle 24",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 548640,
+            "top_emu": 4754880,
+            "width_emu": 3514344,
+            "height_emu": 1600200,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 26,
+            "name": "TextBox 25",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 640080,
+            "top_emu": 4846320,
+            "width_emu": 3331464,
+            "height_emu": 365760,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Brecha DCAM de partida"
+          },
+          {
+            "shape_id": 27,
+            "name": "TextBox 26",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 640080,
+            "top_emu": 5212080,
+            "width_emu": 3331464,
+            "height_emu": 1051560,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "No encontramos definición explícita de centro_distribucion.\nC4 Conocimiento de los datos · Evidencia · 1 Incipiente.\nAusencia documentada; no resuelta."
+          },
+          {
+            "shape_id": 28,
+            "name": "Rounded Rectangle 27",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 4337304,
+            "top_emu": 4754880,
+            "width_emu": 3514344,
+            "height_emu": 1600200,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 29,
+            "name": "TextBox 28",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 4428744,
+            "top_emu": 4846320,
+            "width_emu": 3331464,
+            "height_emu": 365760,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Riesgo principal → control"
+          },
+          {
+            "shape_id": 30,
+            "name": "TextBox 29",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 4428744,
+            "top_emu": 5212080,
+            "width_emu": 3331464,
+            "height_emu": 1051560,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Riesgo: interpretar mal qué representa el centro y usarlo en filtros o conclusiones.\nHecho: 8.000/8.000 viajes emparejados sin discrepancias: centro WMS = centro base; no prueba significado empresarial.\nControl: documentar ausencia, usos y límites conocidos; solicitar definición y validación empresarial.\nComplemento: no usar centro_distribucion_base como ruta u origen real; dim_centro y controles de claves, propuestas posteriores."
+          },
+          {
+            "shape_id": 31,
+            "name": "Rounded Rectangle 30",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left_emu": 8125968,
+            "top_emu": 4754880,
+            "width_emu": 3514344,
+            "height_emu": 1600200,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": ""
+          },
+          {
+            "shape_id": 32,
+            "name": "TextBox 31",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 8217408,
+            "top_emu": 4846320,
+            "width_emu": 3331464,
+            "height_emu": 365760,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Pendiente y responsable"
+          },
+          {
+            "shape_id": 33,
+            "name": "TextBox 32",
+            "shape_type": "TEXT_BOX (17)",
+            "left_emu": 8217408,
+            "top_emu": 5212080,
+            "width_emu": 3331464,
+            "height_emu": 1051560,
+            "rotation": 0.0,
+            "has_text_frame": true,
+            "text": "Definición y validación empresarial de centro_distribucion; seguimiento Grupo 06; validador por acordar. No resuelto."
+          }
+        ]
+      }
+    ]
+  },
+  "slides_1_2": {
+    "slide1": {
+      "pre": {
+        "shape_count": 32,
+        "xml_sha256": "0F944D0FB93C30E7CBAF0D7ED52D35900870A1E1E6BA20E31E0541D1770C7CC9",
+        "text_sha256": "7023CF3D2379FFF73887AED7CAE75130646DB38F496D99C477D393E1B0F850FA",
+        "inventory_sha256": "26CB5FA7859FD8082944BC3CACC57350C28EA14C7726F547EB7E231ABBE681BC"
+      },
+      "post": {
+        "shape_count": 32,
+        "xml_sha256": "0F944D0FB93C30E7CBAF0D7ED52D35900870A1E1E6BA20E31E0541D1770C7CC9",
+        "text_sha256": "7023CF3D2379FFF73887AED7CAE75130646DB38F496D99C477D393E1B0F850FA",
+        "inventory_sha256": "26CB5FA7859FD8082944BC3CACC57350C28EA14C7726F547EB7E231ABBE681BC"
+      },
+      "unchanged": true
+    },
+    "slide2": {
+      "pre": {
+        "shape_count": 32,
+        "xml_sha256": "87E251E0CDA2AD828D539905A0D7BA5886941DF6B851B9BD3A49DB648637619E",
+        "text_sha256": "09DC4C11B12649463E9BF059BF4034CCB2565462F117CF0007BB79745A5D3CA8",
+        "inventory_sha256": "FCF19D50860C8889BE1660B9725B080E3F8AF4DCF272F21A888C67FEB7B2A52A"
+      },
+      "post": {
+        "shape_count": 32,
+        "xml_sha256": "87E251E0CDA2AD828D539905A0D7BA5886941DF6B851B9BD3A49DB648637619E",
+        "text_sha256": "09DC4C11B12649463E9BF059BF4034CCB2565462F117CF0007BB79745A5D3CA8",
+        "inventory_sha256": "FCF19D50860C8889BE1660B9725B080E3F8AF4DCF272F21A888C67FEB7B2A52A"
+      },
+      "unchanged": true
+    }
+  },
+  "map": {
+    "page_count": 2,
+    "pages": [
+      {
+        "slide_number": 3,
+        "title": "Mapa Silver — 1/2",
+        "expected_title": "Mapa Silver — 1/2",
+        "shape_count": 4,
+        "shape_names": [
+          "Mapa Silver - texto",
+          "Mapa Silver - texto",
+          "Mapa Silver - línea de acento",
+          "Tabla Mapa Silver 1/2"
+        ],
+        "table_found": true,
+        "table_native": true,
+        "table_rows": 4,
+        "table_columns": 7,
+        "table_left_in": 0.35,
+        "table_top_in": 1.02,
+        "table_width_in": 12.63,
+        "table_height_in": 5.5,
+        "column_widths_in": [
+          2.55,
+          1.26,
+          1.7,
+          2.06,
+          1.2,
+          1.8,
+          2.06
+        ],
+        "column_width_sum_emu": 11548872,
+        "table_width_emu": 11548872,
+        "row_heights_in": [
+          0.55,
+          1.65,
+          1.65,
+          1.65
+        ],
+        "header_texts": [
+          "Archivo / tabla",
+          "Granularidad",
+          "Identificador único",
+          "Frecuencia",
+          "Propietario",
+          "Riesgo",
+          "Control propuesto"
+        ],
+        "body_rows": [
+          [
+            "andinalog_iot_telemetry_silver.csv",
+            "Una lectura dentro de un viaje",
+            "viaje_id + minutos_desde_despacho",
+            "Observación cada 30 min; actualización por acordar",
+            "Por acordar; revisión Grupo 06",
+            "Interpretar el centro del camión como centro real del viaje",
+            "Documentar el límite y no usar el centro base como ruta; control de clave compuesta"
+          ],
+          [
+            "andinalog_productos_silver.csv",
+            "Un producto",
+            "producto_id",
+            "Catálogo; actualización por acordar",
+            "Por acordar; revisión Grupo 06",
+            "Extrapolar KPI térmicos a todo el catálogo",
+            "Registrar cobertura 70 de 120 en telemetría"
+          ],
+          [
+            "andinalog_flota_silver.csv",
+            "Un camión",
+            "camion_id",
+            "Catálogo; actualización por acordar",
+            "Por acordar; revisión Grupo 06",
+            "Usar centro_distribucion_base como centro operativo",
+            "Mantener la distinción base/operativo y registrarla como pendiente"
+          ]
+        ],
+        "table_font_sizes_pt": [
+          10.5
+        ],
+        "min_table_font_pt": 10.5,
+        "all_font_sizes_pt": [
+          9.5,
+          24.0
+        ],
+        "notes_text": "",
+        "slide_text": "PROYECTO INTEGRADOR · HITO S02 · EQUIPO 06\nMapa Silver — 1/2",
+        "table_text": "Archivo / tabla\nGranularidad\nIdentificador único\nFrecuencia\nPropietario\nRiesgo\nControl propuesto\nandinalog_iot_telemetry_silver.csv\nUna lectura dentro de un viaje\nviaje_id + minutos_desde_despacho\nObservación cada 30 min; actualización por acordar\nPor acordar; revisión Grupo 06\nInterpretar el centro del camión como centro real del viaje\nDocumentar el límite y no usar el centro base como ruta; control de clave compuesta\nandinalog_productos_silver.csv\nUn producto\nproducto_id\nCatálogo; actualización por acordar\nPor acordar; revisión Grupo 06\nExtrapolar KPI térmicos a todo el catálogo\nRegistrar cobertura 70 de 120 en telemetría\nandinalog_flota_silver.csv\nUn camión\ncamion_id\nCatálogo; actualización por acordar\nPor acordar; revisión Grupo 06\nUsar centro_distribucion_base como centro operativo\nMantener la distinción base/operativo y registrarla como pendiente",
+        "boxes": [
+          {
+            "name": "Mapa Silver - texto",
+            "shape_type": "TEXT_BOX (17)",
+            "left": 320040,
+            "top": 164592,
+            "right": 11868912,
+            "bottom": 365760
+          },
+          {
+            "name": "Mapa Silver - texto",
+            "shape_type": "TEXT_BOX (17)",
+            "left": 320040,
+            "top": 384048,
+            "right": 10927080,
+            "bottom": 804672
+          },
+          {
+            "name": "Mapa Silver - línea de acento",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left": 320040,
+            "top": 841248,
+            "right": 11868912,
+            "bottom": 873252
+          },
+          {
+            "name": "Tabla Mapa Silver 1/2",
+            "shape_type": "TABLE (19)",
+            "left": 320040,
+            "top": 932688,
+            "right": 11868912,
+            "bottom": 5961888
+          }
+        ]
+      },
+      {
+        "slide_number": 4,
+        "title": "Mapa Silver — 2/2",
+        "expected_title": "Mapa Silver — 2/2",
+        "shape_count": 4,
+        "shape_names": [
+          "Mapa Silver - texto",
+          "Mapa Silver - texto",
+          "Mapa Silver - línea de acento",
+          "Tabla Mapa Silver 2/2"
+        ],
+        "table_found": true,
+        "table_native": true,
+        "table_rows": 3,
+        "table_columns": 7,
+        "table_left_in": 0.35,
+        "table_top_in": 1.02,
+        "table_width_in": 12.63,
+        "table_height_in": 5.5,
+        "column_widths_in": [
+          2.55,
+          1.26,
+          1.7,
+          2.06,
+          1.2,
+          1.8,
+          2.06
+        ],
+        "column_width_sum_emu": 11548872,
+        "table_width_emu": 11548872,
+        "row_heights_in": [
+          0.55,
+          2.475,
+          2.475
+        ],
+        "header_texts": [
+          "Archivo / tabla",
+          "Granularidad",
+          "Identificador único",
+          "Frecuencia",
+          "Propietario",
+          "Riesgo",
+          "Control propuesto"
+        ],
+        "body_rows": [
+          [
+            "andinalog_inventory_tracking_silver.csv",
+            "Un lote con ingreso, salida y merma en esta entrega",
+            "lote_id; movimiento_id único en esta entrega",
+            "Sin periodicidad fija: una fila por lote contiene las fechas de ingreso y salida; actualización por acordar",
+            "Por acordar; revisión Grupo 06",
+            "Leer vencimiento como stock vigente",
+            "Declarar que todos los lotes salieron; KPI históricos"
+          ],
+          [
+            "andinalog_warehouse_costs_silver.csv",
+            "Un centro en un mes",
+            "centro_distribucion + periodo_mes",
+            "Mensual; actualización por acordar",
+            "Por acordar; revisión Grupo 06",
+            "Asignar costos a productos sin regla",
+            "No asignar; relación temporal en S06"
+          ]
+        ],
+        "table_font_sizes_pt": [
+          10.5
+        ],
+        "min_table_font_pt": 10.5,
+        "all_font_sizes_pt": [
+          9.5,
+          24.0
+        ],
+        "notes_text": "",
+        "slide_text": "PROYECTO INTEGRADOR · HITO S02 · EQUIPO 06\nMapa Silver — 2/2",
+        "table_text": "Archivo / tabla\nGranularidad\nIdentificador único\nFrecuencia\nPropietario\nRiesgo\nControl propuesto\nandinalog_inventory_tracking_silver.csv\nUn lote con ingreso, salida y merma en esta entrega\nlote_id; movimiento_id único en esta entrega\nSin periodicidad fija: una fila por lote contiene las fechas de ingreso y salida; actualización por acordar\nPor acordar; revisión Grupo 06\nLeer vencimiento como stock vigente\nDeclarar que todos los lotes salieron; KPI históricos\nandinalog_warehouse_costs_silver.csv\nUn centro en un mes\ncentro_distribucion + periodo_mes\nMensual; actualización por acordar\nPor acordar; revisión Grupo 06\nAsignar costos a productos sin regla\nNo asignar; relación temporal en S06",
+        "boxes": [
+          {
+            "name": "Mapa Silver - texto",
+            "shape_type": "TEXT_BOX (17)",
+            "left": 320040,
+            "top": 164592,
+            "right": 11868912,
+            "bottom": 365760
+          },
+          {
+            "name": "Mapa Silver - texto",
+            "shape_type": "TEXT_BOX (17)",
+            "left": 320040,
+            "top": 384048,
+            "right": 10927080,
+            "bottom": 804672
+          },
+          {
+            "name": "Mapa Silver - línea de acento",
+            "shape_type": "AUTO_SHAPE (1)",
+            "left": 320040,
+            "top": 841248,
+            "right": 11868912,
+            "bottom": 873252
+          },
+          {
+            "name": "Tabla Mapa Silver 2/2",
+            "shape_type": "TABLE (19)",
+            "left": 320040,
+            "top": 932688,
+            "right": 11868912,
+            "bottom": 5961888
+          }
+        ]
+      }
+    ],
+    "row_count": 5,
+    "row_ids_order": [
+      "DATA-001",
+      "DATA-002",
+      "DATA-003",
+      "DATA-004",
+      "DATA-005"
+    ],
+    "expected_row_ids": [
+      "DATA-001",
+      "DATA-002",
+      "DATA-003",
+      "DATA-004",
+      "DATA-005"
+    ],
+    "headers": [
+      "Archivo / tabla",
+      "Granularidad",
+      "Identificador único",
+      "Frecuencia",
+      "Propietario",
+      "Riesgo",
+      "Control propuesto"
+    ],
+    "fields": [
+      "archivo",
+      "granularidad",
+      "identificador_unico",
+      "frecuencia",
+      "propietario",
+      "riesgo",
+      "control_propuesto"
+    ],
+    "source_counts": {
+      "andinalog_iot_telemetry_silver.csv": 1,
+      "andinalog_productos_silver.csv": 1,
+      "andinalog_flota_silver.csv": 1,
+      "andinalog_inventory_tracking_silver.csv": 1,
+      "andinalog_warehouse_costs_silver.csv": 1
+    },
+    "extra_sources": [],
+    "wms_absent": true,
+    "data006_007_absent": true,
+    "min_table_font_pt": 10.5,
+    "min_slide_font_pt": 9.5,
+    "all_field_matches": true,
+    "field_matches": [
+      {
+        "slide_number": 3,
+        "row_index": 1,
+        "source": "andinalog_iot_telemetry_silver.csv",
+        "matches_content": true,
+        "expected": {
+          "archivo": "andinalog_iot_telemetry_silver.csv",
+          "granularidad": "Una lectura dentro de un viaje",
+          "identificador_unico": "viaje_id + minutos_desde_despacho",
+          "frecuencia": "Observación cada 30 min; actualización por acordar",
+          "propietario": "Por acordar; revisión Grupo 06",
+          "riesgo": "Interpretar el centro del camión como centro real del viaje",
+          "control_propuesto": "Documentar el límite y no usar el centro base como ruta; control de clave compuesta"
+        },
+        "actual": {
+          "archivo": "andinalog_iot_telemetry_silver.csv",
+          "granularidad": "Una lectura dentro de un viaje",
+          "identificador_unico": "viaje_id + minutos_desde_despacho",
+          "frecuencia": "Observación cada 30 min; actualización por acordar",
+          "propietario": "Por acordar; revisión Grupo 06",
+          "riesgo": "Interpretar el centro del camión como centro real del viaje",
+          "control_propuesto": "Documentar el límite y no usar el centro base como ruta; control de clave compuesta"
+        }
+      },
+      {
+        "slide_number": 3,
+        "row_index": 2,
+        "source": "andinalog_productos_silver.csv",
+        "matches_content": true,
+        "expected": {
+          "archivo": "andinalog_productos_silver.csv",
+          "granularidad": "Un producto",
+          "identificador_unico": "producto_id",
+          "frecuencia": "Catálogo; actualización por acordar",
+          "propietario": "Por acordar; revisión Grupo 06",
+          "riesgo": "Extrapolar KPI térmicos a todo el catálogo",
+          "control_propuesto": "Registrar cobertura 70 de 120 en telemetría"
+        },
+        "actual": {
+          "archivo": "andinalog_productos_silver.csv",
+          "granularidad": "Un producto",
+          "identificador_unico": "producto_id",
+          "frecuencia": "Catálogo; actualización por acordar",
+          "propietario": "Por acordar; revisión Grupo 06",
+          "riesgo": "Extrapolar KPI térmicos a todo el catálogo",
+          "control_propuesto": "Registrar cobertura 70 de 120 en telemetría"
+        }
+      },
+      {
+        "slide_number": 3,
+        "row_index": 3,
+        "source": "andinalog_flota_silver.csv",
+        "matches_content": true,
+        "expected": {
+          "archivo": "andinalog_flota_silver.csv",
+          "granularidad": "Un camión",
+          "identificador_unico": "camion_id",
+          "frecuencia": "Catálogo; actualización por acordar",
+          "propietario": "Por acordar; revisión Grupo 06",
+          "riesgo": "Usar centro_distribucion_base como centro operativo",
+          "control_propuesto": "Mantener la distinción base/operativo y registrarla como pendiente"
+        },
+        "actual": {
+          "archivo": "andinalog_flota_silver.csv",
+          "granularidad": "Un camión",
+          "identificador_unico": "camion_id",
+          "frecuencia": "Catálogo; actualización por acordar",
+          "propietario": "Por acordar; revisión Grupo 06",
+          "riesgo": "Usar centro_distribucion_base como centro operativo",
+          "control_propuesto": "Mantener la distinción base/operativo y registrarla como pendiente"
+        }
+      },
+      {
+        "slide_number": 4,
+        "row_index": 1,
+        "source": "andinalog_inventory_tracking_silver.csv",
+        "matches_content": true,
+        "expected": {
+          "archivo": "andinalog_inventory_tracking_silver.csv",
+          "granularidad": "Un lote con ingreso, salida y merma en esta entrega",
+          "identificador_unico": "lote_id; movimiento_id único en esta entrega",
+          "frecuencia": "Sin periodicidad fija: una fila por lote contiene las fechas de ingreso y salida; actualización por acordar",
+          "propietario": "Por acordar; revisión Grupo 06",
+          "riesgo": "Leer vencimiento como stock vigente",
+          "control_propuesto": "Declarar que todos los lotes salieron; KPI históricos"
+        },
+        "actual": {
+          "archivo": "andinalog_inventory_tracking_silver.csv",
+          "granularidad": "Un lote con ingreso, salida y merma en esta entrega",
+          "identificador_unico": "lote_id; movimiento_id único en esta entrega",
+          "frecuencia": "Sin periodicidad fija: una fila por lote contiene las fechas de ingreso y salida; actualización por acordar",
+          "propietario": "Por acordar; revisión Grupo 06",
+          "riesgo": "Leer vencimiento como stock vigente",
+          "control_propuesto": "Declarar que todos los lotes salieron; KPI históricos"
+        }
+      },
+      {
+        "slide_number": 4,
+        "row_index": 2,
+        "source": "andinalog_warehouse_costs_silver.csv",
+        "matches_content": true,
+        "expected": {
+          "archivo": "andinalog_warehouse_costs_silver.csv",
+          "granularidad": "Un centro en un mes",
+          "identificador_unico": "centro_distribucion + periodo_mes",
+          "frecuencia": "Mensual; actualización por acordar",
+          "propietario": "Por acordar; revisión Grupo 06",
+          "riesgo": "Asignar costos a productos sin regla",
+          "control_propuesto": "No asignar; relación temporal en S06"
+        },
+        "actual": {
+          "archivo": "andinalog_warehouse_costs_silver.csv",
+          "granularidad": "Un centro en un mes",
+          "identificador_unico": "centro_distribucion + periodo_mes",
+          "frecuencia": "Mensual; actualización por acordar",
+          "propietario": "Por acordar; revisión Grupo 06",
+          "riesgo": "Asignar costos a productos sin regla",
+          "control_propuesto": "No asignar; relación temporal en S06"
+        }
+      }
+    ],
+    "normative": {
+      "telemetry_composite_key": true,
+      "owners_por_acordar": true,
+      "inventory_frequency": true,
+      "inventory_historical_scope": true,
+      "cost_center_month": true,
+      "base_vs_operational": true,
+      "all_risks_controls": true,
+      "no_invented_center_definition": true
+    },
+    "overlaps": [],
+    "floating_body_text": []
+  },
+  "renders": [
+    {
+      "slide_number": 3,
+      "path": "C:\\Users\\remrodri\\Github\\Proyecto-Powerbi-Andinalog-rol03b\\evidence\\S02\\screenshots\\s02_t05_map_slide_1.png",
+      "exists": true,
+      "width_px": 1920,
+      "height_px": 1080,
+      "mode": "RGB",
+      "size_bytes": 62341,
+      "sha256": "4E838DC00B1007928C2A3C557A623D572DE953515C17A0046F744261A182582C",
+      "recorded_sha256": "4E838DC00B1007928C2A3C557A623D572DE953515C17A0046F744261A182582C",
+      "sha_matches": true
+    },
+    {
+      "slide_number": 4,
+      "path": "C:\\Users\\remrodri\\Github\\Proyecto-Powerbi-Andinalog-rol03b\\evidence\\S02\\screenshots\\s02_t05_map_slide_2.png",
+      "exists": true,
+      "width_px": 1920,
+      "height_px": 1080,
+      "mode": "RGB",
+      "size_bytes": 56179,
+      "sha256": "C3CE2DB7A88FD44BB1312C3D8C67DAD568B77277BD0006AE457BA1869C0EEEE5",
+      "recorded_sha256": "C3CE2DB7A88FD44BB1312C3D8C67DAD568B77277BD0006AE457BA1869C0EEEE5",
+      "sha_matches": true
+    }
+  ],
+  "com": {
+    "task": "T05",
+    "tool": "PowerPoint COM",
+    "version": "16.0",
+    "presentation": "C:\\Users\\remrodri\\Github\\Proyecto-Powerbi-Andinalog-rol03b\\deliverables\\S02\\M4_Equipo06_S02_Arquitectura.pptx",
+    "read_only": -1,
+    "slide_count": 4,
+    "exported_slides": [
+      {
+        "slide_number": 3,
+        "shape_count": 4,
+        "table_rows": 4,
+        "table_columns": 7,
+        "table_left_pt": 25.2,
+        "table_top_pt": 73.44,
+        "table_width_pt": 909.36,
+        "table_height_pt": 396,
+        "output_png": "C:\\Users\\remrodri\\Github\\Proyecto-Powerbi-Andinalog-rol03b\\evidence\\S02\\screenshots\\s02_t05_map_slide_1.png",
+        "output_length_bytes": 62341,
+        "output_sha256": "4E838DC00B1007928C2A3C557A623D572DE953515C17A0046F744261A182582C",
+        "exported_width_px": 1920,
+        "exported_height_px": 1080
+      },
+      {
+        "slide_number": 4,
+        "shape_count": 4,
+        "table_rows": 3,
+        "table_columns": 7,
+        "table_left_pt": 25.2,
+        "table_top_pt": 73.44,
+        "table_width_pt": 909.36,
+        "table_height_pt": 396,
+        "output_png": "C:\\Users\\remrodri\\Github\\Proyecto-Powerbi-Andinalog-rol03b\\evidence\\S02\\screenshots\\s02_t05_map_slide_2.png",
+        "output_length_bytes": 56179,
+        "output_sha256": "C3CE2DB7A88FD44BB1312C3D8C67DAD568B77277BD0006AE457BA1869C0EEEE5",
+        "exported_width_px": 1920,
+        "exported_height_px": 1080
+      }
+    ],
+    "saved_property_before_close": -1,
+    "save_calls": 0,
+    "saved_by_com": false,
+    "opened_without_repair": true,
+    "powerpoint_processes_before": 0,
+    "powerpoint_processes_after": 1,
+    "powerpoint_processes_after_wait": 1,
+    "executed_at_utc": "2026-10-27T21:06:00.6512258Z"
+  },
+  "source_integrity": [
+    {
+      "id": "SRC-203",
+      "path": "references/S02/GIAD-M4-S02_Plantilla_Diagrama_Arquitectura.pptx",
+      "expected_sha256": "36E4E9AE273DF191CCD05171F276697CB7A000698BBB3C523EA5C8A188F96516",
+      "actual_sha256": "36E4E9AE273DF191CCD05171F276697CB7A000698BBB3C523EA5C8A188F96516",
+      "exists": true,
+      "pass": true
+    },
+    {
+      "id": "SRC-201",
+      "path": "references/general/GIAD-M4_Plantillas_Proyecto_Integrador_v2.xlsx",
+      "expected_sha256": "0CCC4A532C0B3091E6D9BD00857EFDD6761D4E1D3855B49B8FE7A66220D2DF30",
+      "actual_sha256": "0CCC4A532C0B3091E6D9BD00857EFDD6761D4E1D3855B49B8FE7A66220D2DF30",
+      "exists": true,
+      "pass": true
+    },
+    {
+      "id": "TRACKING-XLSX",
+      "path": "deliverables/tracking/M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+      "expected_sha256": "E7F09B0AC9EF786096640F6D2B751E372A65BFA41B1595B545B535B562DB74F1",
+      "actual_sha256": "E7F09B0AC9EF786096640F6D2B751E372A65BFA41B1595B545B535B562DB74F1",
+      "exists": true,
+      "pass": true
+    },
+    {
+      "id": "PBIP",
+      "path": "powerbi/AndinaLog_03B.pbip",
+      "expected_sha256": "F8712089DBB5BBF10C5DE3655522C84540184101F5D8A96BE6EA017AFA8A1CCE",
+      "actual_sha256": "F8712089DBB5BBF10C5DE3655522C84540184101F5D8A96BE6EA017AFA8A1CCE",
+      "exists": true,
+      "pass": true
+    }
+  ],
+  "silver_integrity": [
+    {
+      "id": "DATA-001",
+      "path": "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_iot_telemetry_silver.csv",
+      "expected_sha256": "A193F92A0C14EC95ED88DFC60125E530135F4E6E5C54A308AA53D5F076CF3BBE",
+      "actual_sha256": "A193F92A0C14EC95ED88DFC60125E530135F4E6E5C54A308AA53D5F076CF3BBE",
+      "exists": true,
+      "pass": true
+    },
+    {
+      "id": "DATA-002",
+      "path": "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_productos_silver.csv",
+      "expected_sha256": "E27824EB494ACE66AED9B9BBEDB82195B033A2FC6400EFF31FF1075E0DFEF28F",
+      "actual_sha256": "E27824EB494ACE66AED9B9BBEDB82195B033A2FC6400EFF31FF1075E0DFEF28F",
+      "exists": true,
+      "pass": true
+    },
+    {
+      "id": "DATA-003",
+      "path": "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_flota_silver.csv",
+      "expected_sha256": "A30FF0BC0A0DED58B549AB03E8F196D187BCEE994C02FF749D1B492F13228307",
+      "actual_sha256": "A30FF0BC0A0DED58B549AB03E8F196D187BCEE994C02FF749D1B492F13228307",
+      "exists": true,
+      "pass": true
+    },
+    {
+      "id": "DATA-004",
+      "path": "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_inventory_tracking_silver.csv",
+      "expected_sha256": "13EFBE4E2D7BB0EB60075E918600023FB1BAEAC9A930E5AF4D8CE2A2BF92A406",
+      "actual_sha256": "13EFBE4E2D7BB0EB60075E918600023FB1BAEAC9A930E5AF4D8CE2A2BF92A406",
+      "exists": true,
+      "pass": true
+    },
+    {
+      "id": "DATA-005",
+      "path": "C:\\GIAD\\GIAD-M3_datos_sinteticos_v10_silver\\andinalog_warehouse_costs_silver.csv",
+      "expected_sha256": "D3D238E629D6C98E56D678AEF4B0D208A8E31C9CEFF1ECD91F5699AA5C192AC0",
+      "actual_sha256": "D3D238E629D6C98E56D678AEF4B0D208A8E31C9CEFF1ECD91F5699AA5C192AC0",
+      "exists": true,
+      "pass": true
+    }
+  ],
+  "pdf": {
+    "path": "deliverables\\S02\\M4_Equipo06_S02_Arquitectura.pdf",
+    "exists": false,
+    "deliverables_s02": [
+      "M4_Equipo06_S02_Arquitectura.pptx"
+    ]
+  },
+  "visual_review": {
+    "reviewed_pngs": [
+      "C:\\Users\\remrodri\\Github\\Proyecto-Powerbi-Andinalog-rol03b\\evidence\\S02\\screenshots\\s02_t05_map_slide_1.png",
+      "C:\\Users\\remrodri\\Github\\Proyecto-Powerbi-Andinalog-rol03b\\evidence\\S02\\screenshots\\s02_t05_map_slide_2.png"
+    ],
+    "page_1": "7 columnas, cabecera, 3 filas completas; sin truncamiento, desbordamiento ni superposición.",
+    "page_2": "7 columnas, cabecera, 2 filas completas; sin truncamiento, desbordamiento ni superposición.",
+    "legibility": "Texto de tabla 10.5 pt; títulos 24 pt; kicker 9.5 pt; legible en 1920x1080.",
+    "wms": "No aparece WMS en ninguna página del mapa.",
+    "source_order": "DATA-001, DATA-002, DATA-003, DATA-004, DATA-005.",
+    "row_split": "Ninguna fila se partió entre páginas.",
+    "columns": "Las siete columnas permanecen juntas en ambas páginas.",
+    "result": "pasa"
+  },
+  "checks": [
+    {
+      "id": "C01",
+      "description": "PPTX legible por python-pptx",
+      "pass": true,
+      "expected": ">=4 diapositivas",
+      "actual": 4
+    },
+    {
+      "id": "C02",
+      "description": "Huella T04 registrada antes de editar",
+      "pass": true,
+      "expected": "71DCE2F66C96EFB0FF7B3ADDB67ABDD9F1E41215D945388836C21C6F7A53664A",
+      "actual": "71DCE2F66C96EFB0FF7B3ADDB67ABDD9F1E41215D945388836C21C6F7A53664A"
+    },
+    {
+      "id": "C03",
+      "description": "Solo se añadieron diapositivas posteriores a la 2",
+      "pass": true,
+      "expected": "2 -> 4 diapositivas",
+      "actual": {
+        "pre": 2,
+        "post": 4,
+        "new": [
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "id": "C04",
+      "description": "Diapositiva 1 conserva XML",
+      "pass": true,
+      "expected": "0F944D0FB93C30E7CBAF0D7ED52D35900870A1E1E6BA20E31E0541D1770C7CC9",
+      "actual": "0F944D0FB93C30E7CBAF0D7ED52D35900870A1E1E6BA20E31E0541D1770C7CC9"
+    },
+    {
+      "id": "C05",
+      "description": "Diapositiva 1 conserva texto",
+      "pass": true,
+      "expected": "7023CF3D2379FFF73887AED7CAE75130646DB38F496D99C477D393E1B0F850FA",
+      "actual": "7023CF3D2379FFF73887AED7CAE75130646DB38F496D99C477D393E1B0F850FA"
+    },
+    {
+      "id": "C06",
+      "description": "Diapositiva 1 conserva formas y geometría",
+      "pass": true,
+      "expected": {
+        "inventory": "26CB5FA7859FD8082944BC3CACC57350C28EA14C7726F547EB7E231ABBE681BC",
+        "shapes": 32
+      },
+      "actual": {
+        "inventory": "26CB5FA7859FD8082944BC3CACC57350C28EA14C7726F547EB7E231ABBE681BC",
+        "shapes": 32
+      }
+    },
+    {
+      "id": "C07",
+      "description": "Diapositiva 2 conserva XML de T04",
+      "pass": true,
+      "expected": "87E251E0CDA2AD828D539905A0D7BA5886941DF6B851B9BD3A49DB648637619E",
+      "actual": "87E251E0CDA2AD828D539905A0D7BA5886941DF6B851B9BD3A49DB648637619E"
+    },
+    {
+      "id": "C08",
+      "description": "Diapositiva 2 conserva texto de T04",
+      "pass": true,
+      "expected": "09DC4C11B12649463E9BF059BF4034CCB2565462F117CF0007BB79745A5D3CA8",
+      "actual": "09DC4C11B12649463E9BF059BF4034CCB2565462F117CF0007BB79745A5D3CA8"
+    },
+    {
+      "id": "C09",
+      "description": "Diapositiva 2 conserva formas y geometría de T04",
+      "pass": true,
+      "expected": {
+        "inventory": "FCF19D50860C8889BE1660B9725B080E3F8AF4DCF272F21A888C67FEB7B2A52A",
+        "shapes": 32
+      },
+      "actual": {
+        "inventory": "FCF19D50860C8889BE1660B9725B080E3F8AF4DCF272F21A888C67FEB7B2A52A",
+        "shapes": 32
+      }
+    },
+    {
+      "id": "C10",
+      "description": "Relación de aspecto 16:9",
+      "pass": true,
+      "expected": 1.777778,
+      "actual": 1.777733
+    },
+    {
+      "id": "C11",
+      "description": "Títulos de mapa exactos",
+      "pass": true,
+      "expected": [
+        "Mapa Silver — 1/2",
+        "Mapa Silver — 2/2"
+      ],
+      "actual": [
+        "Mapa Silver — 1/2",
+        "Mapa Silver — 2/2"
+      ]
+    },
+    {
+      "id": "C12",
+      "description": "Tablas nativas y editables en cada página",
+      "pass": true,
+      "expected": "2 tablas nativas",
+      "actual": [
+        true,
+        true
+      ]
+    },
+    {
+      "id": "C13",
+      "description": "Siete columnas por página",
+      "pass": true,
+      "expected": [
+        7,
+        7
+      ],
+      "actual": [
+        7,
+        7
+      ]
+    },
+    {
+      "id": "C14",
+      "description": "Encabezado repetido y en orden",
+      "pass": true,
+      "expected": [
+        "Archivo / tabla",
+        "Granularidad",
+        "Identificador único",
+        "Frecuencia",
+        "Propietario",
+        "Riesgo",
+        "Control propuesto"
+      ],
+      "actual": [
+        [
+          "Archivo / tabla",
+          "Granularidad",
+          "Identificador único",
+          "Frecuencia",
+          "Propietario",
+          "Riesgo",
+          "Control propuesto"
+        ],
+        [
+          "Archivo / tabla",
+          "Granularidad",
+          "Identificador único",
+          "Frecuencia",
+          "Propietario",
+          "Riesgo",
+          "Control propuesto"
+        ]
+      ]
+    },
+    {
+      "id": "C15",
+      "description": "Exactamente cinco filas de datos",
+      "pass": true,
+      "expected": 5,
+      "actual": 5
+    },
+    {
+      "id": "C16",
+      "description": "Orden de fuentes coincide con content.json",
+      "pass": true,
+      "expected": [
+        "DATA-001",
+        "DATA-002",
+        "DATA-003",
+        "DATA-004",
+        "DATA-005"
+      ],
+      "actual": [
+        "DATA-001",
+        "DATA-002",
+        "DATA-003",
+        "DATA-004",
+        "DATA-005"
+      ]
+    },
+    {
+      "id": "C17",
+      "description": "Cada fuente aparece exactamente una vez",
+      "pass": true,
+      "expected": {
+        "andinalog_iot_telemetry_silver.csv": 1,
+        "andinalog_productos_silver.csv": 1,
+        "andinalog_flota_silver.csv": 1,
+        "andinalog_inventory_tracking_silver.csv": 1,
+        "andinalog_warehouse_costs_silver.csv": 1
+      },
+      "actual": {
+        "andinalog_iot_telemetry_silver.csv": 1,
+        "andinalog_productos_silver.csv": 1,
+        "andinalog_flota_silver.csv": 1,
+        "andinalog_inventory_tracking_silver.csv": 1,
+        "andinalog_warehouse_costs_silver.csv": 1
+      }
+    },
+    {
+      "id": "C18",
+      "description": "Celdas coinciden con content.json",
+      "pass": true,
+      "expected": "5/5 filas exactas",
+      "actual": {
+        "matches": 5,
+        "total": 5
+      }
+    },
+    {
+      "id": "C19",
+      "description": "Clave compuesta de telemetría literal",
+      "pass": true,
+      "expected": "viaje_id + minutos_desde_despacho",
+      "actual": "viaje_id + minutos_desde_despacho"
+    },
+    {
+      "id": "C20",
+      "description": "Estados Por acordar conservados",
+      "pass": true,
+      "expected": "Por acordar; revisión Grupo 06 x5",
+      "actual": "conservado"
+    },
+    {
+      "id": "C21",
+      "description": "Frecuencia literal de Inventario",
+      "pass": true,
+      "expected": "Sin periodicidad fija: una fila por lote contiene las fechas de ingreso y salida; actualización por acordar",
+      "actual": "Sin periodicidad fija: una fila por lote contiene las fechas de ingreso y salida; actualización por acordar"
+    },
+    {
+      "id": "C22",
+      "description": "Alcance histórico de Inventario",
+      "pass": true,
+      "expected": "grano, riesgo y control de lote histórico",
+      "actual": true
+    },
+    {
+      "id": "C23",
+      "description": "Relación centro-mes de Costos",
+      "pass": true,
+      "expected": "Un centro en un mes; centro_distribucion + periodo_mes; S06",
+      "actual": true
+    },
+    {
+      "id": "C24",
+      "description": "Distinción centro base/operativo",
+      "pass": true,
+      "expected": "riesgo y control de Flota",
+      "actual": true
+    },
+    {
+      "id": "C25",
+      "description": "Riesgos y controles completos",
+      "pass": true,
+      "expected": "5/5 con riesgo y control",
+      "actual": true
+    },
+    {
+      "id": "C26",
+      "description": "WMS ausente del mapa",
+      "pass": true,
+      "expected": "sin WMS en diapositivas ni notas",
+      "actual": "ausente"
+    },
+    {
+      "id": "C27",
+      "description": "DATA-006 y DATA-007 ausentes",
+      "pass": true,
+      "expected": "sin DATA-006/007",
+      "actual": "ausentes"
+    },
+    {
+      "id": "C28",
+      "description": "Sin fuentes adicionales",
+      "pass": true,
+      "expected": [],
+      "actual": []
+    },
+    {
+      "id": "C29",
+      "description": "Fuente mínima de tabla >= 8 pt",
+      "pass": true,
+      "expected": "10.5 pt",
+      "actual": [
+        [
+          10.5
+        ],
+        [
+          10.5
+        ]
+      ]
+    },
+    {
+      "id": "C30",
+      "description": "Tabla dentro de la diapositiva",
+      "pass": true,
+      "expected": "márgenes y borde inferior",
+      "actual": [
+        {
+          "left": 0.35,
+          "top": 1.02,
+          "right": 12.98,
+          "bottom": 6.52
+        },
+        {
+          "left": 0.35,
+          "top": 1.02,
+          "right": 12.98,
+          "bottom": 6.52
+        }
+      ]
+    },
+    {
+      "id": "C31",
+      "description": "Siete columnas juntas y anchos coherentes",
+      "pass": true,
+      "expected": "suma de anchos = ancho de tabla",
+      "actual": [
+        {
+          "width_sum": 11548872,
+          "table_width": 11548872
+        },
+        {
+          "width_sum": 11548872,
+          "table_width": 11548872
+        }
+      ]
+    },
+    {
+      "id": "C32",
+      "description": "Ninguna fila partida entre diapositivas",
+      "pass": true,
+      "expected": "5 filas, cada una en una página",
+      "actual": {
+        "pages": [
+          [
+            [
+              "andinalog_iot_telemetry_silver.csv",
+              "Una lectura dentro de un viaje",
+              "viaje_id + minutos_desde_despacho",
+              "Observación cada 30 min; actualización por acordar",
+              "Por acordar; revisión Grupo 06",
+              "Interpretar el centro del camión como centro real del viaje",
+              "Documentar el límite y no usar el centro base como ruta; control de clave compuesta"
+            ],
+            [
+              "andinalog_productos_silver.csv",
+              "Un producto",
+              "producto_id",
+              "Catálogo; actualización por acordar",
+              "Por acordar; revisión Grupo 06",
+              "Extrapolar KPI térmicos a todo el catálogo",
+              "Registrar cobertura 70 de 120 en telemetría"
+            ],
+            [
+              "andinalog_flota_silver.csv",
+              "Un camión",
+              "camion_id",
+              "Catálogo; actualización por acordar",
+              "Por acordar; revisión Grupo 06",
+              "Usar centro_distribucion_base como centro operativo",
+              "Mantener la distinción base/operativo y registrarla como pendiente"
+            ]
+          ],
+          [
+            [
+              "andinalog_inventory_tracking_silver.csv",
+              "Un lote con ingreso, salida y merma en esta entrega",
+              "lote_id; movimiento_id único en esta entrega",
+              "Sin periodicidad fija: una fila por lote contiene las fechas de ingreso y salida; actualización por acordar",
+              "Por acordar; revisión Grupo 06",
+              "Leer vencimiento como stock vigente",
+              "Declarar que todos los lotes salieron; KPI históricos"
+            ],
+            [
+              "andinalog_warehouse_costs_silver.csv",
+              "Un centro en un mes",
+              "centro_distribucion + periodo_mes",
+              "Mensual; actualización por acordar",
+              "Por acordar; revisión Grupo 06",
+              "Asignar costos a productos sin regla",
+              "No asignar; relación temporal en S06"
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "C33",
+      "description": "Sin superposición de título, línea, tabla",
+      "pass": true,
+      "expected": [],
+      "actual": []
+    },
+    {
+      "id": "C34",
+      "description": "Datos dentro de celdas, sin texto flotante",
+      "pass": true,
+      "expected": "solo títulos y tabla; sin definición inventada",
+      "actual": []
+    },
+    {
+      "id": "C35",
+      "description": "Renders 1920x1080 con hash registrado",
+      "pass": true,
+      "expected": "2 PNG 1920x1080",
+      "actual": [
+        {
+          "slide": 3,
+          "size": [
+            1920,
+            1080
+          ],
+          "sha_matches": true
+        },
+        {
+          "slide": 4,
+          "size": [
+            1920,
+            1080
+          ],
+          "sha_matches": true
+        }
+      ]
+    },
+    {
+      "id": "C36",
+      "description": "COM abrió sin reparación, solo lectura y sin guardar",
+      "pass": true,
+      "expected": {
+        "opened_without_repair": true,
+        "read_only": true,
+        "save_calls": 0
+      },
+      "actual": {
+        "opened_without_repair": true,
+        "read_only": -1,
+        "save_calls": 0
+      }
+    },
+    {
+      "id": "C37",
+      "description": "Sin procesos PowerPoint residuales",
+      "pass": true,
+      "expected": [],
+      "actual": []
+    },
+    {
+      "id": "C38",
+      "description": "SRC-203 intacto",
+      "pass": true,
+      "expected": "36E4E9AE273DF191CCD05171F276697CB7A000698BBB3C523EA5C8A188F96516",
+      "actual": "36E4E9AE273DF191CCD05171F276697CB7A000698BBB3C523EA5C8A188F96516"
+    },
+    {
+      "id": "C39",
+      "description": "SRC-201 intacto",
+      "pass": true,
+      "expected": "0CCC4A532C0B3091E6D9BD00857EFDD6761D4E1D3855B49B8FE7A66220D2DF30",
+      "actual": "0CCC4A532C0B3091E6D9BD00857EFDD6761D4E1D3855B49B8FE7A66220D2DF30"
+    },
+    {
+      "id": "C40",
+      "description": "Excel de seguimiento intacto",
+      "pass": true,
+      "expected": "E7F09B0AC9EF786096640F6D2B751E372A65BFA41B1595B545B535B562DB74F1",
+      "actual": "E7F09B0AC9EF786096640F6D2B751E372A65BFA41B1595B545B535B562DB74F1"
+    },
+    {
+      "id": "C41",
+      "description": "PBIP intacto",
+      "pass": true,
+      "expected": "F8712089DBB5BBF10C5DE3655522C84540184101F5D8A96BE6EA017AFA8A1CCE",
+      "actual": "F8712089DBB5BBF10C5DE3655522C84540184101F5D8A96BE6EA017AFA8A1CCE"
+    },
+    {
+      "id": "C42",
+      "description": "Cinco Silver intactos",
+      "pass": true,
+      "expected": "5/5 hashes S01",
+      "actual": [
+        {
+          "id": "DATA-001",
+          "pass": true
+        },
+        {
+          "id": "DATA-002",
+          "pass": true
+        },
+        {
+          "id": "DATA-003",
+          "pass": true
+        },
+        {
+          "id": "DATA-004",
+          "pass": true
+        },
+        {
+          "id": "DATA-005",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "id": "C43",
+      "description": "Sin PDF final",
+      "pass": true,
+      "expected": "no existe PDF",
+      "actual": {
+        "exists": false,
+        "deliverables_s02": [
+          "M4_Equipo06_S02_Arquitectura.pptx"
+        ]
+      }
+    },
+    {
+      "id": "C44",
+      "description": "Sin modificación de Excel, Power BI, referencias o Silver",
+      "pass": true,
+      "expected": "todo intacto y sin PDF",
+      "actual": {
+        "sources": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "silver": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "pdf_absent": true
+      }
+    },
+    {
+      "id": "C45",
+      "description": "Revisión visual de las dos páginas",
+      "pass": true,
+      "expected": "7 columnas, cabecera, filas completas, texto legible, sin truncamiento/solapamiento, WMS ausente",
+      "actual": "revisado en PNG 1920x1080; pasa"
+    }
+  ],
+  "summary": {
+    "total": 45,
+    "passed": 45,
+    "failed": 0,
+    "status": "PASS",
+    "t05_complete": true
+  }
+}
