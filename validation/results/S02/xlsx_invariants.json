@@ -1,0 +1,480 @@
+{
+  "task": "T06",
+  "hit": "S02",
+  "scope": "S02 Build T06",
+  "executed_at_utc": "2026-10-27T21:26:01.488420+00:00",
+  "files": {
+    "before": {
+      "path": "deliverables\\tracking\\M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+      "size": 33844,
+      "sha256": "E7F09B0AC9EF786096640F6D2B751E372A65BFA41B1595B545B535B562DB74F1"
+    },
+    "after": {
+      "path": "deliverables\\tracking\\M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+      "size": 34402,
+      "sha256": "D677C305BBD4C1AFA4B2A912E849DC822E78E3F90EE8AF96C1334AACB141BB5F"
+    },
+    "sha_changed": true,
+    "size_delta": 558,
+    "src201": {
+      "path": "references\\general\\GIAD-M4_Plantillas_Proyecto_Integrador_v2.xlsx",
+      "sha256": "0CCC4A532C0B3091E6D9BD00857EFDD6761D4E1D3855B49B8FE7A66220D2DF30",
+      "size": 36907
+    },
+    "pptx": {
+      "path": "deliverables\\S02\\M4_Equipo06_S02_Arquitectura.pptx",
+      "sha256": "26324855E2864A636C0390D725FA34787269DE5A9F2893031602B97B16AB325D",
+      "expected_t05_sha256": "26324855E2864A636C0390D725FA34787269DE5A9F2893031602B97B16AB325D",
+      "unchanged": true
+    },
+    "pdf": {
+      "path": "deliverables\\S02\\M4_Equipo06_S02_Arquitectura.pdf",
+      "exists": false
+    }
+  },
+  "workbook": {
+    "sheetnames": [
+      "Instrucciones",
+      "Fichas KPI",
+      "Campos ficha KPI",
+      "S01 Inventario",
+      "S02 Mapa Silver",
+      "S03 Linaje",
+      "S04 Antes-después",
+      "S05-S06 Modelo",
+      "S07 KPI",
+      "S10 Supuestos",
+      "S11 Pruebas RLS",
+      "S12 Mejoras"
+    ],
+    "sheet_count": 12,
+    "formula_count_before": 50,
+    "formula_count_after": 50,
+    "formulas_equal": true,
+    "data_validations_total": 11,
+    "conditional_formatting_total": 1,
+    "merged_total": 19
+  },
+  "authorized_changes": {
+    "values": {
+      "sheet": "S02 Mapa Silver",
+      "coordinates": [
+        "A10",
+        "A11",
+        "A7",
+        "A8",
+        "A9",
+        "B10",
+        "B11",
+        "B4",
+        "B7",
+        "B8",
+        "B9",
+        "C10",
+        "C11",
+        "C7",
+        "C8",
+        "C9",
+        "D10",
+        "D11",
+        "D4",
+        "D7",
+        "D8",
+        "D9",
+        "E10",
+        "E11",
+        "E7",
+        "E8",
+        "E9",
+        "F10",
+        "F11",
+        "F4",
+        "F7",
+        "F8",
+        "F9",
+        "G10",
+        "G11",
+        "G7",
+        "G8",
+        "G9"
+      ],
+      "count": 38
+    },
+    "styles": {
+      "sheet": "S02 Mapa Silver",
+      "coordinates": [
+        "A7",
+        "B7",
+        "C7",
+        "D7",
+        "E7",
+        "F7",
+        "G7"
+      ],
+      "count": 7,
+      "reason": "Normalización de la fila de ejemplo gris al estilo de datos de A8:G8; sin cambios de dimensiones."
+    },
+    "raw_style_diff": {
+      "sheet": "S02 Mapa Silver",
+      "coordinates": [
+        "A7",
+        "B4",
+        "B7",
+        "C7",
+        "D4",
+        "D7",
+        "E7",
+        "F4",
+        "F7",
+        "G7"
+      ],
+      "count": 10
+    },
+    "default_alignment_normalization": {
+      "coordinates": [
+        "B4",
+        "D4",
+        "F4"
+      ],
+      "from": {
+        "horizontal": null,
+        "vertical": null
+      },
+      "to": {
+        "horizontal": "general",
+        "vertical": "bottom"
+      },
+      "material_equivalent": true,
+      "reason": "openpyxl normaliza la alineación por omisión al escribir valores en B4, D4 y F4; fuente, relleno, borde y formato numérico no cambian."
+    }
+  },
+  "unexpected": {
+    "values": {},
+    "styles": {},
+    "meta": {}
+  },
+  "zip": {
+    "exists": true,
+    "testzip": null,
+    "members": 23,
+    "required_parts": {
+      "[Content_Types].xml": true,
+      "_rels/.rels": true,
+      "xl/workbook.xml": true,
+      "xl/_rels/workbook.xml.rels": true,
+      "xl/worksheets/sheet1.xml": true,
+      "xl/styles.xml": true
+    },
+    "optional_parts": {
+      "xl/sharedStrings.xml": false,
+      "xl/calcChain.xml": false
+    },
+    "crc_errors": []
+  },
+  "checks": [
+    {
+      "id": "X01",
+      "description": "El XLSX previo coincide con el snapshot pre-edición",
+      "ok": true,
+      "detail": {
+        "path": "deliverables\\tracking\\M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+        "size": 33844,
+        "sha256": "E7F09B0AC9EF786096640F6D2B751E372A65BFA41B1595B545B535B562DB74F1"
+      }
+    },
+    {
+      "id": "X02",
+      "description": "El XLSX posterior existe y cambió de SHA/tamaño de forma esperada",
+      "ok": true,
+      "detail": {
+        "before": {
+          "path": "deliverables\\tracking\\M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+          "size": 33844,
+          "sha256": "E7F09B0AC9EF786096640F6D2B751E372A65BFA41B1595B545B535B562DB74F1"
+        },
+        "after": {
+          "path": "deliverables\\tracking\\M4_Equipo06_Proyecto_Integrador_v2.xlsx",
+          "size": 34402,
+          "sha256": "D677C305BBD4C1AFA4B2A912E849DC822E78E3F90EE8AF96C1334AACB141BB5F"
+        },
+        "size_delta": 558
+      }
+    },
+    {
+      "id": "X03",
+      "description": "Se conservan 12 hojas en el mismo orden",
+      "ok": true,
+      "detail": [
+        "Instrucciones",
+        "Fichas KPI",
+        "Campos ficha KPI",
+        "S01 Inventario",
+        "S02 Mapa Silver",
+        "S03 Linaje",
+        "S04 Antes-después",
+        "S05-S06 Modelo",
+        "S07 KPI",
+        "S10 Supuestos",
+        "S11 Pruebas RLS",
+        "S12 Mejoras"
+      ]
+    },
+    {
+      "id": "X04",
+      "description": "Se conservan las 50 fórmulas con la misma coordenada y expresión",
+      "ok": true,
+      "detail": {
+        "before": 50,
+        "after": 50
+      }
+    },
+    {
+      "id": "X05",
+      "description": "Se conservan las validaciones de datos",
+      "ok": true,
+      "detail": {
+        "Instrucciones": 0,
+        "Fichas KPI": 4,
+        "Campos ficha KPI": 0,
+        "S01 Inventario": 0,
+        "S02 Mapa Silver": 0,
+        "S03 Linaje": 1,
+        "S04 Antes-después": 1,
+        "S05-S06 Modelo": 3,
+        "S07 KPI": 0,
+        "S10 Supuestos": 0,
+        "S11 Pruebas RLS": 0,
+        "S12 Mejoras": 2
+      }
+    },
+    {
+      "id": "X06",
+      "description": "Se conserva el formato condicional",
+      "ok": true,
+      "detail": {
+        "Instrucciones": 0,
+        "Fichas KPI": 1,
+        "Campos ficha KPI": 0,
+        "S01 Inventario": 0,
+        "S02 Mapa Silver": 0,
+        "S03 Linaje": 0,
+        "S04 Antes-después": 0,
+        "S05-S06 Modelo": 0,
+        "S07 KPI": 0,
+        "S10 Supuestos": 0,
+        "S11 Pruebas RLS": 0,
+        "S12 Mejoras": 0
+      }
+    },
+    {
+      "id": "X07",
+      "description": "Se conservan las combinaciones de celdas",
+      "ok": true,
+      "detail": {
+        "Instrucciones": [
+          "A2:C2",
+          "A3:C3"
+        ],
+        "Fichas KPI": [
+          "A3:AA3",
+          "A5:K5",
+          "L5:V5",
+          "W5:AA5"
+        ],
+        "Campos ficha KPI": [
+          "A15:F15",
+          "A21:F21",
+          "A3:F3",
+          "A7:F7"
+        ],
+        "S01 Inventario": [
+          "A3:G3"
+        ],
+        "S02 Mapa Silver": [
+          "A3:G3"
+        ],
+        "S03 Linaje": [
+          "A3:G3"
+        ],
+        "S04 Antes-después": [
+          "A3:G3"
+        ],
+        "S05-S06 Modelo": [
+          "A3:H3"
+        ],
+        "S07 KPI": [
+          "A3:G3"
+        ],
+        "S10 Supuestos": [
+          "A3:H3"
+        ],
+        "S11 Pruebas RLS": [
+          "A3:G3"
+        ],
+        "S12 Mejoras": [
+          "A3:G3"
+        ]
+      }
+    },
+    {
+      "id": "X08",
+      "description": "S01 Inventario conserva dimensiones, valores y estilos",
+      "ok": true,
+      "detail": {
+        "dimensions": "A1:G22",
+        "values_sha256": "EE3534EA648BA324E835628879EFE97CDF601BFEC5BC978639A446E347BF2F43",
+        "styles_sha256": "8977845EAAC3A006740C67B7143691B91A9B76D419BFEAC8812D2B0BDECB623A"
+      }
+    },
+    {
+      "id": "X09",
+      "description": "Las hojas ajenas a S02 conservan valores, estilos y metadatos",
+      "ok": true,
+      "detail": {
+        "unexpected_values": {},
+        "unexpected_styles": {},
+        "unexpected_meta": {}
+      }
+    },
+    {
+      "id": "X10",
+      "description": "S02 Mapa Silver conserva dimensiones, combinaciones, DV, CF y configuración de hoja",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "X11",
+      "description": "S02 Mapa Silver solo cambia estilos en A7:G7 y los normaliza al estilo de datos",
+      "ok": true,
+      "detail": {
+        "style_diff": [
+          "A7",
+          "B7",
+          "C7",
+          "D7",
+          "E7",
+          "F7",
+          "G7"
+        ],
+        "row7_matches_row8": true
+      }
+    },
+    {
+      "id": "X12",
+      "description": "S02 Mapa Silver solo cambia valores en B4, D4, F4 y A7:G11",
+      "ok": true,
+      "detail": {
+        "value_diff_count": 38,
+        "value_diff": [
+          "A10",
+          "A11",
+          "A7",
+          "A8",
+          "A9",
+          "B10",
+          "B11",
+          "B4",
+          "B7",
+          "B8",
+          "B9",
+          "C10",
+          "C11",
+          "C7",
+          "C8",
+          "C9",
+          "D10",
+          "D11",
+          "D4",
+          "D7",
+          "D8",
+          "D9",
+          "E10",
+          "E11",
+          "E7",
+          "E8",
+          "E9",
+          "F10",
+          "F11",
+          "F4",
+          "F7",
+          "F8",
+          "F9",
+          "G10",
+          "G11",
+          "G7",
+          "G8",
+          "G9"
+        ]
+      }
+    },
+    {
+      "id": "X13",
+      "description": "Las celdas B4, D4 y F4 conservan su estilo material previo",
+      "ok": true,
+      "detail": {
+        "B4": true,
+        "D4": true,
+        "F4": true,
+        "raw_default_alignment_normalized": true
+      }
+    },
+    {
+      "id": "X14",
+      "description": "El archivo es un ZIP válido, con partes requeridas, sin errores CRC y reabrible",
+      "ok": true,
+      "detail": {
+        "exists": true,
+        "testzip": null,
+        "required_parts": {
+          "[Content_Types].xml": true,
+          "_rels/.rels": true,
+          "xl/workbook.xml": true,
+          "xl/_rels/workbook.xml.rels": true,
+          "xl/worksheets/sheet1.xml": true,
+          "xl/styles.xml": true
+        },
+        "optional_parts": {
+          "xl/sharedStrings.xml": false,
+          "xl/calcChain.xml": false
+        },
+        "crc_errors": []
+      }
+    },
+    {
+      "id": "X15",
+      "description": "Todos los XML del paquete son parseables",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "id": "X16",
+      "description": "SRC-201 no cambió",
+      "ok": true,
+      "detail": {
+        "path": "references\\general\\GIAD-M4_Plantillas_Proyecto_Integrador_v2.xlsx",
+        "sha256": "0CCC4A532C0B3091E6D9BD00857EFDD6761D4E1D3855B49B8FE7A66220D2DF30",
+        "size": 36907
+      }
+    },
+    {
+      "id": "X17",
+      "description": "PowerPoint y PDF de S02 no cambiaron",
+      "ok": true,
+      "detail": {
+        "pptx_sha256": "26324855E2864A636C0390D725FA34787269DE5A9F2893031602B97B16AB325D",
+        "pdf_exists": false
+      }
+    },
+    {
+      "id": "X18",
+      "description": "No hay diferencias no autorizadas de valores, estilos o metadatos",
+      "ok": true,
+      "detail": {
+        "unexpected_values": {},
+        "unexpected_styles": {},
+        "unexpected_meta": {}
+      }
+    }
+  ],
+  "status": "PASS"
+}

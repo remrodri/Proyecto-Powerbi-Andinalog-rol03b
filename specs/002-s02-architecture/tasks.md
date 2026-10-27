@@ -1,7 +1,7 @@
 # Tareas — S02 Decisión, arquitectura y mapa Silver
 
 Spec y plan aprobados: `specs/002-s02-architecture/spec.md` v0.4 (2026-10-27) y `specs/002-s02-architecture/plan.md` v0.1 (2026-10-27).
-Estado: **Build en curso. T01–T05 completadas; T06–T13 pendientes.** Audit, Fix y Close no están autorizados.
+Estado: **Build en curso. T01–T06 completadas; T07–T13 pendientes.** Audit, Fix y Close no están autorizados.
 
 - [x] **T01 — Inventario inicial, cuatro huellas y calificación separada de COM.**
   - Requisitos: RNF-S02-03, RNF-S02-06, RNF-S02-07; base de RF-S02-08 y RF-S02-09; CA-S02-08 y CA-S02-09.
@@ -73,7 +73,7 @@ Estado: **Build en curso. T01–T05 completadas; T06–T13 pendientes.** Audit, 
   - Hecho cuando: existen exactamente 5 filas de datos, 7 columnas por página, encabezado repetido, ninguna fila partida, ninguna columna separada, **WMS ausente de las cinco filas** y todas las celdas son legibles. Si WMS se menciona como contraste, va en una nota separada, nunca como sexta fila.
   - Estado: **completada el 2026-10-27**. Se añadieron 2 diapositivas 16:9 (3 y 4): `Mapa Silver — 1/2` con DATA-001 a DATA-003 y `Mapa Silver — 2/2` con DATA-004 y DATA-005. Tablas nativas de 7 columnas, cabeceras repetidas, fuente de tabla 10.5 pt y cero filas partidas. La identificación de archivo/tabla está en la primera columna; no se añadió texto flotante fuera de las celdas. **45/45 controles pasan** en `pptx_checks.json`; diapositivas 1 y 2 conservan XML, texto, inventario y geometría de T04; SRC-203, Excel, PBIP y los cinco Silver permanecen intactos; no se creó PDF ni se editó Excel. Evidencia: `evidence/S02/t05_silver_map.md` y las capturas de las diapositivas 3 y 4. T06 no se inició.
 
-- [ ] **T06 — Actualizar `S02 Mapa Silver`.**
+- [x] **T06 — Actualizar `S02 Mapa Silver`.**
   - Requisitos: RF-S02-03, RF-S02-08; CA-S02-03, CA-S02-08.
   - Depende de: T01, T02.
   - Artefactos: copia XLSX de seguimiento, `validation/results/S02/xlsx_invariants.json`, `validation/results/S02/map_checks.json`.
@@ -81,6 +81,7 @@ Estado: **Build en curso. T01–T05 completadas; T06–T13 pendientes.** Audit, 
   - Debe preservar: encabezados, formato, otras 11 hojas, S01, fórmulas, DV, CF y combinadas.
   - Verificación y evidencia: snapshot de invariantes y de `S01 Inventario`; escritura de identificación (`Grupo 06`, `03B`, fecha real de Build) y de las cinco filas del Anexo A; sustituir el ejemplo de Acería; no añadir WMS; comparación antes/después.
   - Hecho cuando: A7:G11 tiene 5 filas, sin WMS, con claves de S01 y frecuencia exacta; 50 fórmulas y 12 hojas se conservan; S01 no cambió.
+  - Estado: **completada el 2026-10-27**. B4=`Grupo 06`, D4=`03B`, F4=`2026-10-27` como texto ISO/General, igual que S01. A7:G11 contiene DATA-001 a DATA-005, sin WMS, con la frecuencia literal de Inventario; se sustituyó la fila de ejemplo y se normalizó A7:G7 al estilo de A8:G8. Se conservaron 12 hojas, 50 fórmulas, 11 DV, 1 rango de CF con 4 reglas, 19 combinadas y S01 sin cambios. `openpyxl` normalizó la alineación por omisión de B4/D4/F4, sin cambio material de fuente, relleno, borde o formato. **18/18 invariantes y 14/14 controles del mapa pasan**; ZIP/CRC/XML válidos y reabribles. SRC-201 y PPTX intactos; no se creó PDF ni se usó Excel COM. Evidencia: `xlsx_invariants.json`, `map_checks.json` y `evidence/S02/t06_tracking_update.md`. T07 no se inició.
 
 - [ ] **T07 — Completar `Fichas KPI` C7:E11.**
   - Requisitos: RF-S02-06, RF-S02-07; CA-S02-06, CA-S02-07.

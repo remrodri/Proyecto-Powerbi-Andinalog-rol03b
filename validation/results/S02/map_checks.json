@@ -1,0 +1,234 @@
+{
+  "task": "T06",
+  "hit": "S02",
+  "scope": "S02 Build T06",
+  "executed_at_utc": "2026-10-27T21:26:01.488420+00:00",
+  "source": {
+    "content_json": "work\\S02\\content.json",
+    "content_json_sha256": "A7C3A75D43841B72E542F7A05F7B6FC882F7DA8316EF8689B8A92205BF1C7882"
+  },
+  "map": {
+    "sheet": "S02 Mapa Silver",
+    "range": "A7:G11",
+    "row_ids": [
+      "DATA-001",
+      "DATA-002",
+      "DATA-003",
+      "DATA-004",
+      "DATA-005"
+    ],
+    "field_order": [
+      "archivo",
+      "granularidad",
+      "identificador_unico",
+      "frecuencia",
+      "propietario",
+      "riesgo",
+      "control_propuesto"
+    ],
+    "build_date": "2026-10-27",
+    "rows": [
+      [
+        "andinalog_iot_telemetry_silver.csv",
+        "Una lectura dentro de un viaje",
+        "viaje_id + minutos_desde_despacho",
+        "Observación cada 30 min; actualización por acordar",
+        "Por acordar; revisión Grupo 06",
+        "Interpretar el centro del camión como centro real del viaje",
+        "Documentar el límite y no usar el centro base como ruta; control de clave compuesta"
+      ],
+      [
+        "andinalog_productos_silver.csv",
+        "Un producto",
+        "producto_id",
+        "Catálogo; actualización por acordar",
+        "Por acordar; revisión Grupo 06",
+        "Extrapolar KPI térmicos a todo el catálogo",
+        "Registrar cobertura 70 de 120 en telemetría"
+      ],
+      [
+        "andinalog_flota_silver.csv",
+        "Un camión",
+        "camion_id",
+        "Catálogo; actualización por acordar",
+        "Por acordar; revisión Grupo 06",
+        "Usar centro_distribucion_base como centro operativo",
+        "Mantener la distinción base/operativo y registrarla como pendiente"
+      ],
+      [
+        "andinalog_inventory_tracking_silver.csv",
+        "Un lote con ingreso, salida y merma en esta entrega",
+        "lote_id; movimiento_id único en esta entrega",
+        "Sin periodicidad fija: una fila por lote contiene las fechas de ingreso y salida; actualización por acordar",
+        "Por acordar; revisión Grupo 06",
+        "Leer vencimiento como stock vigente",
+        "Declarar que todos los lotes salieron; KPI históricos"
+      ],
+      [
+        "andinalog_warehouse_costs_silver.csv",
+        "Un centro en un mes",
+        "centro_distribucion + periodo_mes",
+        "Mensual; actualización por acordar",
+        "Por acordar; revisión Grupo 06",
+        "Asignar costos a productos sin regla",
+        "No asignar; relación temporal en S06"
+      ]
+    ]
+  },
+  "checks": [
+    {
+      "id": "M01",
+      "description": "S02 contiene exactamente cinco filas y siete columnas de datos",
+      "ok": true,
+      "detail": {
+        "rows": 5,
+        "columns": 7
+      }
+    },
+    {
+      "id": "M02",
+      "description": "Orden DATA-001 a DATA-005 con los archivos aprobados",
+      "ok": true,
+      "detail": [
+        "andinalog_iot_telemetry_silver.csv",
+        "andinalog_productos_silver.csv",
+        "andinalog_flota_silver.csv",
+        "andinalog_inventory_tracking_silver.csv",
+        "andinalog_warehouse_costs_silver.csv"
+      ]
+    },
+    {
+      "id": "M03",
+      "description": "Encabezados y orden de columnas exactos",
+      "ok": true,
+      "detail": [
+        "Archivo / tabla",
+        "Granularidad",
+        "Identificador único",
+        "Frecuencia",
+        "Propietario",
+        "Riesgo",
+        "Control propuesto"
+      ]
+    },
+    {
+      "id": "M04",
+      "description": "B4, D4 y F4 tienen los valores autorizados",
+      "ok": true,
+      "detail": {
+        "B4": "Grupo 06",
+        "D4": "03B",
+        "F4": "2026-10-27"
+      }
+    },
+    {
+      "id": "M05",
+      "description": "F4 conserva tipo texto y formato General; S01 usa el mismo patrón ISO",
+      "ok": true,
+      "detail": {
+        "F4": "2026-10-27",
+        "number_format": "General",
+        "style_material_unchanged": true,
+        "S01_F4": "2026-10-20"
+      }
+    },
+    {
+      "id": "M06",
+      "description": "Las cinco filas están completas, sin celdas vacías",
+      "ok": true,
+      "detail": {
+        "blank_cells": []
+      }
+    },
+    {
+      "id": "M07",
+      "description": "No existe una sexta fila ni datos en A12:G22",
+      "ok": true,
+      "detail": {
+        "A12:G22": "vacío"
+      }
+    },
+    {
+      "id": "M08",
+      "description": "WMS y DATA-006/007 quedan fuera del mapa",
+      "ok": true,
+      "detail": {
+        "hits": []
+      }
+    },
+    {
+      "id": "M09",
+      "description": "La fila de ejemplo gris de Acería Andina fue reemplazada",
+      "ok": true,
+      "detail": {
+        "A7": "andinalog_iot_telemetry_silver.csv"
+      }
+    },
+    {
+      "id": "M10",
+      "description": "Frecuencia de Inventario literal y alcance histórico conservados",
+      "ok": true,
+      "detail": {
+        "frecuencia": "Sin periodicidad fija: una fila por lote contiene las fechas de ingreso y salida; actualización por acordar",
+        "control": "Declarar que todos los lotes salieron; KPI históricos"
+      }
+    },
+    {
+      "id": "M11",
+      "description": "Los cinco registros coinciden literalmente con content.json",
+      "ok": true,
+      "detail": {
+        "rows": [
+          "DATA-001",
+          "DATA-002",
+          "DATA-003",
+          "DATA-004",
+          "DATA-005"
+        ]
+      }
+    },
+    {
+      "id": "M12",
+      "description": "Propietarios y frecuencias sin respaldo permanecen por acordar",
+      "ok": true,
+      "detail": {
+        "owners": [
+          "Por acordar; revisión Grupo 06",
+          "Por acordar; revisión Grupo 06",
+          "Por acordar; revisión Grupo 06",
+          "Por acordar; revisión Grupo 06",
+          "Por acordar; revisión Grupo 06"
+        ]
+      }
+    },
+    {
+      "id": "M13",
+      "description": "Riesgos y controles conservan la distinción observación/actualización",
+      "ok": true,
+      "detail": {
+        "frequencies": [
+          "Observación cada 30 min; actualización por acordar",
+          "Catálogo; actualización por acordar",
+          "Catálogo; actualización por acordar",
+          "Sin periodicidad fija: una fila por lote contiene las fechas de ingreso y salida; actualización por acordar",
+          "Mensual; actualización por acordar"
+        ]
+      }
+    },
+    {
+      "id": "M14",
+      "description": "No se añadieron fuentes, filas ni IDs no aprobados",
+      "ok": true,
+      "detail": {
+        "row_files": [
+          "andinalog_iot_telemetry_silver.csv",
+          "andinalog_productos_silver.csv",
+          "andinalog_flota_silver.csv",
+          "andinalog_inventory_tracking_silver.csv",
+          "andinalog_warehouse_costs_silver.csv"
+        ]
+      }
+    }
+  ],
+  "status": "PASS"
+}
