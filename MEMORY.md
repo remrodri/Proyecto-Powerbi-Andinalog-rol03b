@@ -5,7 +5,7 @@ Actualizado: 2026-10-27.
 ## Estado actual
 
 - Hito activo: S02.
-- Fase: Audit completada; Fix pendiente de autorización.
+- Fase: Fix completada; nueva Audit pendiente de autorización.
 - S01: cerrado el 2026-10-22 con limitaciones documentadas.
 - S02: spec v0.4 y plan aprobados; Build completo; no cerrado.
 - S03–S11: no iniciados.
@@ -21,9 +21,9 @@ Actualizado: 2026-10-27.
 ## Auditoría S02
 
 - Resultado: 28 de 30 requisitos/criterios pasan, 1 falla y 1 queda pendiente de verificación.
-- `A-S02-001` abierto: la captura final muestra truncado `S02 Mapa Silver!D10`, aunque la celda conserva el texto completo.
+- `A-S02-001` corregido, pendiente de verificación: la altura de la fila 10 cambió de 45 a 150 pt y la nueva captura muestra D10 completa.
 - `RNF-S02-06` pendiente: revalidar las huellas de los cinco Silver externos.
-- S02 no puede cerrarse hasta corregir el hallazgo y ejecutar otra ronda de auditoría.
+- S02 no puede cerrarse hasta ejecutar otra ronda de auditoría y resolver RNF-S02-06.
 
 ## Decisiones activas
 
@@ -35,8 +35,8 @@ Actualizado: 2026-10-27.
 
 ## Pendientes principales
 
-- Corregir `A-S02-001` sin cambiar el contenido de la celda.
-- Revalidar huellas Silver y repetir la auditoría S02.
+- Verificar independientemente la corrección de `A-S02-001` en una nueva auditoría.
+- Revalidar huellas Silver durante esa auditoría para resolver RNF-S02-06.
 - Mantener abiertos origen, propietarios y frecuencia de actualización de fuentes.
 - Validar `centro_distribucion` / `centro_distribucion_base` antes de filtros y RLS.
 - Tratar lecturas límite, particiones/horizonte futuro y merma económica en sus hitos.
@@ -48,4 +48,4 @@ Por hito se conserva un solo `evidence.md`, un solo `validation.json` y un solo 
 
 ## Siguiente paso
 
-Solicitar autorización de Fix para `A-S02-001`. Después, nueva Audit y propuesta de cierre. No iniciar S03.
+Solicitar autorización de una nueva Audit para verificar `A-S02-001` y RNF-S02-06. No iniciar cierre ni S03.

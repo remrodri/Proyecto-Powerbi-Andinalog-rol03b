@@ -1,7 +1,7 @@
 {
   "hito": "S02",
   "fecha": "2026-10-27",
-  "estado": "requiere_correccion",
+  "estado": "corregido_pendiente_auditoria",
   "controles_automaticos": {
     "ejecutados": 39,
     "aprobados": 39,
@@ -13,16 +13,28 @@
     "fallan": 1,
     "pendientes_de_verificacion": 1
   },
+  "fix": {
+    "id": "A-S02-001",
+    "controles_ejecutados": 19,
+    "controles_aprobados": 19,
+    "cambio": "S02 Mapa Silver: altura de fila 10 de 45 a 150 pt",
+    "valor_d10_sin_cambios": true,
+    "wrap_text": true,
+    "ancho_columna_d_sin_cambios": true,
+    "diferencias_valores_formulas": 0,
+    "diferencias_estilos_celda": 0,
+    "estado": "corregido_pendiente_verificacion"
+  },
   "hallazgos_abiertos": [
     {
       "id": "A-S02-001",
       "criterio": "RNF-S02-07",
-      "descripcion": "La evidencia visual muestra truncado S02 Mapa Silver!D10 aunque la celda conserva el valor completo.",
-      "estado": "abierto"
+      "descripcion": "La ronda 01 mostró D10 truncada; el Fix generó evidencia corregida que aún requiere auditoría independiente.",
+      "estado": "corregido_pendiente_verificacion"
     }
   ],
   "pendientes": [
-    "Repetir la revisión visual después de corregir la presentación de D10.",
+    "Verificar independientemente la nueva evidencia visual de D10.",
     "Revalidar las huellas de los cinco Silver externos cuando estén accesibles."
   ],
   "nota": "Este archivo consolida los resultados que antes estaban fragmentados por microtarea. El detalle de auditoría permanece en specs/002-s02-architecture/AUDIT.md."
