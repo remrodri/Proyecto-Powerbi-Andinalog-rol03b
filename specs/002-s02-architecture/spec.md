@@ -7,14 +7,16 @@
 | Versión | 0.4 |
 | Fecha | 2026-10-27 |
 | Estado de la spec | Aprobada por el usuario el 2026-10-27 |
-| Cumplimiento de S02 | Specify, Plan y Build completados; auditoría ejecutada con un hallazgo abierto y una verificación pendiente; S02 no cerrado |
+| Cumplimiento de S02 | **Cerrado por aprobación explícita del usuario el 2026-10-27**; auditoría vigente 30/30, sin hallazgos ni verificaciones pendientes |
 | Entrada | Guía S02 (SRC-102), plantilla de diagrama (SRC-203), plantilla del Proyecto Integrador (SRC-201), catálogo KPI (SRC-005), modelo de referencia 03B (SRC-003), cinco Silver oficiales y traspaso de S01. |
 | Salida | Frase de decisión, diagrama de arquitectura, mapa Silver, cinco KPI con nivel táctico, fórmula y unidad, fichas KPI, riesgo/control y pendientes con hito de tratamiento. |
-| Fase | Fix pendiente de autorización para A-S02-001; después corresponde una nueva Audit. |
+| Fase | Close completada. S03 no iniciado. |
 
 **Aprobación:** el usuario aprobó esta especificación el **2026-10-27**. La aprobación se otorgó tras corregir la v0.3 y añadir una única precisión sobre la frecuencia de `andinalog_inventory_tracking_silver.csv`. Habilita la preparación del Plan de S02; no crea plan, tareas ni auditoría, y no inicia Build.
 
 **Historial de versiones:** v0.1 estableció la base; v0.2 resolvió DUD-S02-01 a DUD-S02-06; v0.3 (2026-10-27) incorporó las cinco correcciones acordadas —tres estados DCAM, nivel táctico de KPI, grano de inventario, columna «Hito de tratamiento» y reformulación del riesgo semántico—; v0.4 (2026-10-27) corrigió el resultado esperado, dejó el mapa con exactamente cinco filas, retiró el linaje inventado, ajustó los hitos de los pendientes y precisó la frecuencia de inventario. No altera las decisiones acordadas.
+
+**Cierre:** tras el Fix A-S02-001, la ronda 02 demostró 30/30 requisitos y criterios, cerró el hallazgo y verificó las cinco huellas Silver. El usuario aprobó explícitamente el cierre el 2026-10-27. Los pendientes trasladados a hitos posteriores permanecen abiertos.
 
 **Idioma y formato:** contenido en español; nombres de archivos y carpetas en inglés. Markdown es la fuente de verdad. Las plantillas se completan durante Build.
 

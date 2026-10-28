@@ -2,9 +2,11 @@
 
 ## Estado actual
 
-Ronda: 01. Fecha: 2026-10-27. Versión auditada: spec v0.4, SHA-256 `A91958C34BADCF6E5AAF3D0F063AC94C3FE458436A9C30AF6AE1362FD626598A`; XLSX `31C7E81FE2A21C2BD9DDE76C01B25198DEADA0283F28A46AA4015AFA0734B24D`; PPTX `26324855E2864A636C0390D725FA34787269DE5A9F2893031602B97B16AB325D`; PDF `07516A56C643334AD59F8AEBD6FB67757E954196D736181BCE771ABFCB201A42`.
+Ronda vigente: 02. Fecha: 2026-10-27. Versión auditada: spec v0.4, SHA-256 `6C1BDBF37D96D5FC3157C769F7AD9DDAB19A9FBE93F86A157551566AAB0C2DB6`; XLSX corregido `415A3C55F616E466E4072E3AE4E44E4E3C308FC62DDAB642B28740F367E9EF31`; PPTX `26324855E2864A636C0390D725FA34787269DE5A9F2893031602B97B16AB325D`; PDF `07516A56C643334AD59F8AEBD6FB67757E954196D736181BCE771ABFCB201A42`.
 
-Veredicto: **REQUIERE CORRECCIONES**.
+Veredicto: **CONFORME AL ALCANCE; APTO PARA PROPUESTA DE CIERRE**.
+
+**Cierre aprobado:** el usuario aprobó explícitamente el cierre de S02 el 2026-10-27 después de recibir el resultado de la ronda 02. S02 queda cerrado; esta aprobación no inicia S03 ni resuelve los pendientes trasladados a hitos posteriores.
 
 **Consolidación posterior (2026-10-27):** a solicitud del usuario se retiraron temporales y registros duplicados de Build. Sus resultados se condensaron en `evidence/S02/evidence.md` y `validation/results/S02/validation.json`; se conservó `evidence/S02/screenshots/s02_t09_xlsx_map_r2.png` porque prueba el hallazgo abierto. Las menciones inferiores a archivos auxiliares retirados describen la evidencia disponible durante la ronda 01 y no constituyen entregables vigentes. La consolidación no cambia el veredicto ni cierra hallazgos.
 
@@ -18,7 +20,7 @@ Método independiente: lectura directa de spec, decisiones, tareas y evidencias;
 | --- | --- | --- | --- | --- |
 | RF-S02-01 | Cotejo de la frase de decisión en spec §1.2, PPTX diapositiva 2, PDF página 1 y `content.json`: Jefatura de Operaciones, revisión semanal, controles térmicos y revisión de lotes/centros, sin causalidad. | PASA | `spec.md` §1.2; PPTX shape 3; PDF p.1; `work/S02/content.json` `decision`; T04/T09 | Ninguno |
 | RF-S02-02 | Verificación de las cinco cajas en la diapositiva 2 y PDF: origen, Silver, Power Query, modelo e indicador; origen no documentado; sin WMS en el modelo. | PASA | PPTX diapositiva 2; PDF p.1; TMDL `model.tmdl`; `content.json` `slide_blocks` | Ninguno |
-| RF-S02-03 | Lectura de `S02 Mapa Silver!A7:G11`: exactamente cinco filas DATA-001 a DATA-005 y siete campos; grano, claves, frecuencias y propietarios coinciden con spec §3.2/Anexo A; D10 contiene la frecuencia completa; WMS no ocupa fila; DATA-007 solo consta como contraste no cargado. | PASA | `S02 Mapa Silver!A7:G11`; `validation/results/S02/map_checks.json`; `spec.md` §3.2 y Anexo A; `content.json` `wms_note`; limitación visual A-S02-001 | A-S02-001 (presentación visual, no contenido) |
+| RF-S02-03 | Lectura de `S02 Mapa Silver!A7:G11`: exactamente cinco filas DATA-001 a DATA-005 y siete campos; grano, claves, frecuencias y propietarios coinciden con spec §3.2/Anexo A; D10 contiene la frecuencia completa y es visible; WMS no ocupa fila. | PASA | XLSX actual; `spec.md` §3.2 y Anexo A; captura corregida | Ninguno |
 | RF-S02-04 | Verificación de la brecha como «ausencia documentada», con usos, límites, solicitud de definición y seguimiento; `dim_centro` y controles de claves solo como propuestas; no se declara resuelta. | PASA | `spec.md` §8, §8.3 y Anexo C; PPTX diapositiva 2; `content.json` `dcam`; `docs/decisions.md` DEC-031 | Ninguno |
 | RF-S02-05 | Cotejo del riesgo principal y control propuesto en PPTX, mapa y spec; el control no se presenta como aplicado y el pendiente tiene responsable. | PASA | PPTX diapositiva 2; `S02 Mapa Silver!F7:G11`; `spec.md` §7; `evidence/S02/t04_architecture.md` | Ninguno |
 | RF-S02-06 | Verificación de exactamente cinco KPI, todos tácticos, con fórmula en palabras y unidad; nombres y orden conservados; no se añaden metas, umbrales ni DAX. | PASA | `Fichas KPI!C7:E11`; `spec.md` Anexo B; S01 `spec.md` Anexo B; `content.json` `kpis` | Ninguno |
@@ -32,13 +34,13 @@ Método independiente: lectura directa de spec, decisiones, tareas y evidencias;
 | RNF-S02-03 | Repetición de conteos XLSX/PPTX/PDF y rutas relativas en documentación; `RutaSilver` aparece una sola vez y las cinco tablas la consumen. El agregado de referencias tiene dos valores por métodos distintos (T08 `708F…`, T10 `62BC…`), aunque las 52 entradas individuales coinciden. | PASA | TMDL `expressions.tmdl`; `model.tmdl`; `map_checks.json`; `t08_precheck.json`; `conciliation.json` | Ninguno; limitación de método de agregado |
 | RNF-S02-04 | Revisión de idioma y términos: español en explicaciones, nombres propios en inglés y `dias_en_almacen` conservado sin tilde; nombres de archivo y columnas intactos. | PASA | `Fichas KPI`; `S02 Mapa Silver`; `content.json`; `spec.md` §Anexo B | Ninguno |
 | RNF-S02-05 | Verificación de Markdown como fuente de verdad y de que la plantilla se completó sin regenerarla; no se duplican informes completos. | PASA | `spec.md`; `work/S02/content.md`; `evidence/S02/`; `xlsx_invariants.json` | Ninguno |
-| RNF-S02-06 | Rehash de SRC-201, SRC-203 y PBIP; comparación de las 52 referencias contra las entradas T08: 0 diferencias, faltantes o nuevos. Los diez Silver externos no se rehasharon en esta ronda por la restricción de acceso; solo constan las huellas registradas por S01/T10. | PENDIENTE DE VERIFICACIÓN (referencias y plantillas verificadas; Silver externo no rehash) | `t08_precheck.json`; `initial_manifest.json`; hashes SRC-201, SRC-203 y PBIP; `validation/results/S01/source_manifest.json`; T10-H07 | Ninguno |
-| RNF-S02-07 | La captura final `s02_t09_xlsx_map_r2.png` muestra D10 incompleta; la evidencia visual no acredita el requisito de ausencia de truncamiento. | FALLA | `evidence/S02/screenshots/s02_t09_xlsx_map_r2.png`; `evidence/S02/evidence.md`; `S02 Mapa Silver` fila 10 | A-S02-001 |
+| RNF-S02-06 | Rehash independiente de DATA-001 a DATA-005 desde sus cinco rutas exactas: tamaños y SHA-256 coinciden con `source_manifest.json`. SRC-201, SRC-203, PPTX, PDF y PBIP conservan las huellas registradas. | PASA (ronda 02) | Cinco Silver externos; `validation/results/S01/source_manifest.json`; hashes de ronda 02 | Ninguno |
+| RNF-S02-07 | Inspección independiente del XLSX y de la nueva captura: D10 conserva sus 107 caracteres, `WrapText`, ancho D y estilos; la fila 10 mide 150 pt y el texto completo es visible con las siete columnas legibles. | PASA (ronda 02) | `evidence/S02/screenshots/s02_t12_xlsx_map_fixed.png`; XLSX `S02 Mapa Silver!D10` | A-S02-001 cerrado |
 | RNF-S02-08 | Búsqueda de credenciales, secretos, tokens y datos personales innecesarios en spec, evidencias y contrato: solo aparece la mención de política y el nombre designado Rodrigo Tucuman; no hay secretos ni credenciales. | PASA | `spec.md`; `evidence/S02/`; `work/S02/content.json`; búsqueda de patrones | Ninguno |
 | RNF-S02-09 | Verificación de que no se declara sesión, publicación, actualización, DAX ni RLS ejecutados; `session.md` y `content.json` lo mantienen como pendiente y el TMDL no contiene medidas, roles ni relaciones. | PASA | `session.md`; `content.json` `claims`; `model.tmdl`; TMDL de tablas | Ninguno |
 | CA-S02-01 | Cotejo de la decisión con DEC-016 y con los cinco soportes; una sola frase con quién, qué y cada cuánto. | PASA | `spec.md` §1.2; DEC-016; PPTX diapositiva 2; PDF p.1 | Ninguno |
 | CA-S02-02 | Cotejo visual y estructural de las cinco cajas de la cadena, la brecha DCAM y el origen no inventado en PPTX y PDF. | PASA | PPTX diapositiva 2; PDF p.1; `slide2_checks.json`; `pdf_text.json` | Ninguno |
-| CA-S02-03 | Verificación de cinco filas DATA-001 a DATA-005, siete campos y WMS fuera del mapa y del modelo; D10 conserva la frecuencia completa en la celda, aunque su presentación en la captura esté truncada. | PASA (contenido); limitación visual A-S02-001 | `S02 Mapa Silver!A7:G11`; `map_checks.json`; TMDL `model.tmdl`; `s02_t09_xlsx_map_r2.png` | A-S02-001 (presentación) |
+| CA-S02-03 | Verificación de cinco filas DATA-001 a DATA-005, siete campos y WMS fuera del mapa y del modelo; D10 conserva la frecuencia completa y su presentación corregida es legible. | PASA (ronda 02) | `S02 Mapa Silver!A7:G11`; TMDL `model.tmdl`; `s02_t12_xlsx_map_fixed.png` | Ninguno |
 | CA-S02-04 | Cotejo del riesgo y control propuestos con la brecha, y del pendiente con responsable; el control no se declara aplicado. | PASA | `spec.md` §7; PPTX diapositiva 2; `S02 Mapa Silver!F7:G11`; `pendientes.md` | Ninguno |
 | CA-S02-05 | Verificación de la brecha en estado «ausencia documentada», con estado de validación y seguimiento; no se inventa definición ni se declara resuelta. | PASA | `spec.md` §8; DEC-031; PPTX diapositiva 2; `content.json` `dcam` | Ninguno |
 | CA-S02-06 | Verificación de cinco KPI tácticos, fórmula y unidad, sin metas, umbrales ni DAX en el contenido S02. La diapositiva 1 del PPTX editable conserva el ejemplo de Acería, marcado «NO SE ENTREGA», y el PDF lo excluye. | PASA | `Fichas KPI!C7:E11`; `spec.md` Anexo B; PPTX diapositivas 1–2; PDF p.1; `content.json` `claims` | Ninguno |
@@ -47,17 +49,17 @@ Método independiente: lectura directa de spec, decisiones, tareas y evidencias;
 | CA-S02-09 | Verificación del PDF de 3 páginas, diagrama y mapa en páginas separadas, y existencia del PPTX editable. | PASA | PDF; PPTX; `pdf_structure.json`; `pdf_text.json` | Ninguno |
 | CA-S02-10 | Recuento y cotejo de los 13 pendientes, con estado documentado/trasladado, responsable e hito; «Por acordar» se conserva donde falta respaldo. | PASA | `spec.md` §8.3; `pendientes.md`; `content.json` `pending` | Ninguno |
 
-**Resumen de la matriz:** 28 PASA, 1 FALLA (RNF-S02-07) y 1 PENDIENTE DE VERIFICACIÓN (RNF-S02-06, únicamente por el Silver externo).
+**Resumen vigente de la matriz:** 30 PASA, 0 FALLA y 0 PENDIENTE DE VERIFICACIÓN.
 
 ## Registro acumulado de hallazgos
 
 | ID estable | Requisito | Evidencia e impacto | Corrección necesaria | Estado | Verificación de cierre |
 | --- | --- | --- | --- | --- | --- |
-| A-S02-001 | RNF-S02-07; criterio visual «no hay textos truncados» | **Severidad media.** La captura conservada muestra en `S02 Mapa Silver!D10` solo el inicio «Sin periodicidad fija: una fila». La celda contiene el texto completo, pero no es visible. El dato no se perdió y PPTX/PDF no están afectados. | Aumentar la altura de la fila 10 o el ancho de D sin cambiar el valor; generar una nueva captura final; actualizar `evidence.md` y `validation.json`. | Abierto | Pendiente de nueva auditoría |
+| A-S02-001 | RNF-S02-07; criterio visual «no hay textos truncados» | **Severidad media.** La ronda 01 demostró truncamiento visual de D10 sin pérdida del valor. | Aumentar solo la altura de la fila 10, conservar valor/ancho/estilo y generar evidencia fiel. | **Cerrado** | Ronda 02: altura 150 pt, D10 completo y siete columnas legibles; integridad estructural conforme |
 
 ## Observaciones y limitaciones
 
-- No se repitieron los hashes de los diez Silver externos de `C:\GIAD` por la restricción de acceso de T11. Las referencias docentes, SRC-201, SRC-203 y el PBIP sí se verificaron; la integridad de los Silver queda respaldada por las huellas registradas en S01/T10, pero no por un rehash independiente de esta ronda. Se registra como pendiente parcial de RNF-S02-06, no como fallo demostrado.
+- La ronda 01 no pudo repetir las huellas Silver. La ronda 02 rehasheó las cinco fuentes oficiales desde sus rutas exactas y resolvió RNF-S02-06. Las otras tablas del directorio no forman parte del mapa S02 y no se incluyeron.
 - El agregado de `references/` no es único entre T08 y T10: T08 usa un JSON de entradas con rutas Windows y obtiene `708F12A…`; T10 usa líneas `ruta|sha256` con barras normales y obtiene `62BCF5F…`. Las 52 entradas individuales coinciden y no hay archivos faltantes o nuevos. Se registra como limitación de reproducibilidad del agregado, sin diferencia material de contenido.
 - La introducción de `review.md` conserva la conclusión de la ronda 1 de que T09 no estaba completada; §11 la identifica expresamente como historial y registra la ronda 2. No se considera contradicción de estado, pero conviene que la corrección haga explícito el estado final junto con A-S02-001.
 - La diapositiva 1 del PPTX editable conserva el ejemplo de Acería, incluida su meta de 85 %, marcado «NO SE ENTREGA». El PDF excluye esa diapositiva y el contenido S02 no la usa; no se considera una meta de S02. Se deja como limitación de la plantilla, no como hallazgo.
@@ -65,6 +67,15 @@ Método independiente: lectura directa de spec, decisiones, tareas y evidencias;
 - No se identificaron defectos visuales en `Fichas KPI` r2 (tabla completa), en las diapositivas 3–4 del PPTX ni en las páginas 2–3 del PDF; el texto PDF y las tablas PPTX conservan la frecuencia completa de inventario.
 
 ## Historial de rondas
+
+### Ronda 02 — 2026-10-27
+
+- Alcance: verificación independiente del Fix A-S02-001 y de RNF-S02-06, sin modificar entregables, spec, plan, tareas, evidencia, validación, PBIP, referencias o Silver.
+- A-S02-001: D10 conserva 107 caracteres, `WrapText=true`, ancho D=13 y altura de fila 10=150 pt. El texto completo es visible y las siete columnas siguen legibles. El libro conserva 12 hojas, 50 fórmulas, 11 validaciones, 1 rango de formato condicional con 4 reglas y 19 combinaciones; ZIP/CRC válido. Hallazgo cerrado.
+- RNF-S02-06: DATA-001 a DATA-005 se rehashearon desde sus rutas exactas. Tamaños y SHA-256 coinciden con `validation/results/S01/source_manifest.json`: `A193F92A…3BBE`, `E27824EB…F28F`, `A30FF0BC…8307`, `13EFBE4E…A406` y `D3D238E6…2AC0`.
+- Integridad: PPTX `26324855…325D`, PDF `07516A56…1A42`, SRC-201 `0CCC4A53…DF30`, SRC-203 `36E4E9AE…6516` y PBIP `F8712089…1CCE` permanecen intactos.
+- Resultado: 30/30 requisitos y criterios pasan; 0 hallazgos abiertos y 0 verificaciones pendientes. Veredicto **CONFORME AL ALCANCE; APTO PARA PROPUESTA DE CIERRE**.
+- Límite: esta ronda no cierra S02 ni inicia S03. El cierre requiere aprobación explícita del usuario.
 
 ### Ronda 01 — 2026-10-27
 

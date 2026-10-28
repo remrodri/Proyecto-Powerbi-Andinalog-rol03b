@@ -17,8 +17,8 @@
   - Resultado: ronda 01 ejecutada con veredicto `REQUIERE CORRECCIONES`; `A-S02-001` abierto y `RNF-S02-06` pendiente.
 - [x] T06 · Corregir el hallazgo autorizado `A-S02-001`.
   - Resultado: fila 10 aumentada de 45 a 150 pt; D10 se lee completa sin cambiar su valor, ancho ni estilo. Corrección pendiente de verificación independiente. RNF-S02-06 queda fuera de este Fix.
-- [ ] T07 · Ejecutar nueva auditoría y proponer cierre.
-  - Hecho cuando: 30/30 pasan, no quedan hallazgos que impidan cierre y el usuario aprueba cerrar S02.
+- [x] T07 · Ejecutar nueva auditoría y cerrar con aprobación explícita.
+  - Resultado: ronda 02 con 30/30, 0 hallazgos y 0 pendientes de verificación; cierre aprobado por el usuario el 2026-10-27. S03 no iniciado.
 
 No crear tareas adicionales para pasos internos de una herramienta. Si aparece un requisito nuevo, actualizar primero la spec y este listado.
 

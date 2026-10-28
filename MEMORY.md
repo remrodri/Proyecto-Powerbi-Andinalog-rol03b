@@ -5,9 +5,9 @@ Actualizado: 2026-10-27.
 ## Estado actual
 
 - Hito activo: S02.
-- Fase: Fix completada; nueva Audit pendiente de autorización.
+- Fase: Close completada; S02 cerrado.
 - S01: cerrado el 2026-10-22 con limitaciones documentadas.
-- S02: spec v0.4 y plan aprobados; Build completo; no cerrado.
+- S02: cerrado por aprobación explícita del usuario el 2026-10-27.
 - S03–S11: no iniciados.
 
 ## Resultado disponible
@@ -20,10 +20,10 @@ Actualizado: 2026-10-27.
 
 ## Auditoría S02
 
-- Resultado: 28 de 30 requisitos/criterios pasan, 1 falla y 1 queda pendiente de verificación.
-- `A-S02-001` corregido, pendiente de verificación: la altura de la fila 10 cambió de 45 a 150 pt y la nueva captura muestra D10 completa.
-- `RNF-S02-06` pendiente: revalidar las huellas de los cinco Silver externos.
-- S02 no puede cerrarse hasta ejecutar otra ronda de auditoría y resolver RNF-S02-06.
+- Resultado vigente: 30 de 30 requisitos/criterios pasan, sin fallos ni verificaciones pendientes.
+- `A-S02-001` cerrado en la ronda 02: D10 se ve completa sin cambios de contenido, ancho ni estilo.
+- `RNF-S02-06` pasa: las cinco huellas Silver coinciden con el manifiesto de S01.
+- S02 cerrado; los pendientes trasladados continúan en sus hitos correspondientes.
 
 ## Decisiones activas
 
@@ -35,8 +35,7 @@ Actualizado: 2026-10-27.
 
 ## Pendientes principales
 
-- Verificar independientemente la corrección de `A-S02-001` en una nueva auditoría.
-- Revalidar huellas Silver durante esa auditoría para resolver RNF-S02-06.
+- Preparar S03 únicamente cuando el usuario lo autorice.
 - Mantener abiertos origen, propietarios y frecuencia de actualización de fuentes.
 - Validar `centro_distribucion` / `centro_distribucion_base` antes de filtros y RLS.
 - Tratar lecturas límite, particiones/horizonte futuro y merma económica en sus hitos.
@@ -48,4 +47,4 @@ Por hito se conserva un solo `evidence.md`, un solo `validation.json` y un solo 
 
 ## Siguiente paso
 
-Solicitar autorización de una nueva Audit para verificar `A-S02-001` y RNF-S02-06. No iniciar cierre ni S03.
+Esperar autorización explícita para iniciar Specify de S03. No iniciar trabajo de S03 por cuenta propia.

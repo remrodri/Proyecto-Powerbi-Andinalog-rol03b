@@ -42,8 +42,8 @@ La ronda 01 abrió `A-S02-001` por el truncamiento de D10. El Fix posterior est�
 - Revisión visual: las siete columnas permanecen legibles y D10 muestra completa la frecuencia de inventario.
 - Integridad: 0 diferencias de valores/fórmulas, 0 diferencias de estilos de celda y una sola diferencia de dimensión (fila 10); 12 hojas, 50 fórmulas, 11 validaciones, 1 rango condicional con 4 reglas y 19 combinaciones.
 - PPTX, PDF, SRC-201, SRC-203 y PBIP conservaron sus hashes.
-- Estado del hallazgo: **corregido, pendiente de verificación por nueva auditoría**.
+- Estado del hallazgo: **cerrado por la ronda 02**.
 
 ## Estado
 
-Build y Fix completados. A-S02-001 está corregido, pendiente de verificación independiente; RNF-S02-06 continúa pendiente. S02 no está cerrado y S03 no se inició.
+S02 cerrado por aprobación explícita del usuario el 2026-10-27. La ronda 02 verificó 30/30, cerró A-S02-001 y resolvió RNF-S02-06. Los pendientes trasladados permanecen abiertos y S03 no se inició.
