@@ -348,3 +348,33 @@ Este archivo registra decisiones relevantes y su fundamento. No sustituye el con
 - Consecuencia: se consolidó la evidencia de S02, se retiraron temporales, capturas duplicadas, resultados por microtarea y dependencias descargadas. `MEMORY.md` conserva solo el estado vigente.
 - Excepción: se permite otro artefacto únicamente si un criterio de aceptación identifica por qué no puede incorporarse a los archivos existentes. Las capturas Desktop indispensables de S01 se conservan.
 - Límite: la consolidación no altera los entregables ni cierra A-S02-001 o RNF-S02-06.
+
+### DEC-035 · Aprobación de la spec S03 v0.1
+
+- Fecha: 2026-10-27.
+- Estado: confirmada por el usuario.
+- Decisión: aprobar y guardar la spec S03 v0.1 con cinco fuentes oficiales, `RutaSilver`, región Inglés (Estados Unidos), privacidad Organizacional propuesta y sujeta a comprobación Desktop, perfil sobre todo el conjunto, cinco filas de linaje y tablas fuente de cinco KPI.
+- Consecuencia: Specify de S03 queda completada; Plan y Build permanecen sin iniciar. WMS sigue fuera del modelo y las excepciones se documentan sin tratarlas antes de S04.
+- Límite: la aprobación no acredita región, privacidad, perfil, actualización ni contenido del libro; esas comprobaciones corresponden a Build y Audit.
+
+- 2026-10-27: se añade DEC-035. La spec S03 v0.1 queda aprobada y guardada; no se autoriza Plan ni Build.
+
+### DEC-036 · Aprobación del Plan S03
+
+- Fecha: 2026-10-27.
+- Estado: confirmada por el usuario.
+- Decisión: aprobar el Plan S03 con tres tareas de Build orientadas a resultados y tres tareas para Audit, Fix y Close. Se mantienen un único `evidence.md`, un único `validation.json` y un único `AUDIT.md`.
+- Consecuencia: Specify y Plan quedan completados; T01–T06 permanecen pendientes. El siguiente alcance posible es Build T01, sujeto a autorización independiente.
+- Límite: la aprobación no autoriza abrir Desktop, modificar el PBIP o el libro, generar evidencia ni ejecutar Build.
+
+- 2026-10-27: se añade DEC-036. Plan y tareas S03 quedan aprobados y guardados; Build permanece sin iniciar.
+
+### DEC-037 · Cierre de S03
+
+- Fecha: 2026-10-28.
+- Estado: confirmado por autorización explícita del usuario para completar todas las tareas pendientes.
+- Decisión: cerrar S03 después de la ronda 02 con 21/21 requisitos y criterios conformes. Se conservan tres capturas indispensables: región, privacidad y Power Query con `RutaSilver` y perfil completo.
+- Consecuencia: T01–T06 quedan completadas y `A-S03-001` cerrado. S04 permanece sin iniciar.
+- Límite: la privacidad de cuatro fuentes se apoya en revisión directa y confirmación del usuario; la captura representativa conserva la quinta y la lista completa. No se resolvieron las excepciones trasladadas a S04.
+
+- 2026-10-28: se añade DEC-037. S03 queda cerrado; S04 requiere autorización independiente.

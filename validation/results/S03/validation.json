@@ -1,0 +1,67 @@
+{
+  "hito": "S03",
+  "updated": "2026-10-28",
+  "phase": "Close",
+  "task": "T06",
+  "status": "passed",
+  "checks": {
+    "pbip_model_culture_en_us": true,
+    "pbip_source_query_culture_en_us": true,
+    "ruta_silver_parameter_present": true,
+    "ruta_silver_trailing_backslash": true,
+    "five_official_tables": true,
+    "all_sources_use_ruta_silver": true,
+    "wms_absent": true,
+    "relationships_zero": true,
+    "measures_zero": true,
+    "roles_zero": true,
+    "diagram_layout_only_nonfunctional_metadata": true,
+    "csv_full_profile_completed": true,
+    "csv_expected_rows_and_columns": true,
+    "csv_null_cells_zero": true,
+    "csv_duplicate_rows_zero": true,
+    "silver_hashes_recorded": true,
+    "desktop_review_confirmed_by_user": true,
+    "desktop_region_artifact_verified": true,
+    "desktop_privacy_artifact_verified": true,
+    "desktop_full_profile_artifact_verified": true,
+    "desktop_refresh_confirmed_by_user": true,
+    "desktop_visual_evidence_captured": true,
+    "tracking_lineage_five_rows": true,
+    "tracking_wms_absent": true,
+    "tracking_kpi_sources_complete": true,
+    "tracking_formula_count_50": true,
+    "tracking_data_validations_11": true,
+    "tracking_conditional_format_ranges_1": true,
+    "tracking_merged_ranges_19": true,
+    "tracking_outside_scope_differences_zero": true,
+    "tracking_visual_review_pass": true,
+    "work_directory_empty": true
+  },
+  "table_counts": {
+    "Telemetria": {"rows": 191710, "columns": 15},
+    "Productos": {"rows": 120, "columns": 7},
+    "Flota": {"rows": 100, "columns": 6},
+    "Inventario": {"rows": 7782, "columns": 12},
+    "CostosAlmacen": {"rows": 144, "columns": 5}
+  },
+  "exceptions_confirmed": {
+    "telemetry_strict_boundary_mismatch": 26,
+    "products_referenced_by_telemetry": "70/120",
+    "fleet_referenced_by_telemetry": "100/100",
+    "inventory_fecha_salida_nulls": 0,
+    "inventory_dates_include_time": true,
+    "cost_center_month_duplicates": 0
+  },
+  "limitations": [
+    "Privacy Organizational was captured for one selected source; the user directly reviewed and confirmed the same level for the remaining four sources.",
+    "Windows click automation was unavailable, so the user navigated Desktop while screenshots were captured independently."
+  ],
+  "deliverables": {
+    "tracking_workbook_sha256": "B21D93E40DA8BC41AE6CE8511331E2E199953AA904F128C43E591A1EC91E7204",
+    "pbip_sha256": "F8712089DBB5BBF10C5DE3655522C84540184101F5D8A96BE6EA017AFA8A1CCE",
+    "region_screenshot_sha256": "D9FA343A71BDBF097D12E5EFDC904FD0BA8AE12FAF51B778244873DB02997A92",
+    "privacy_screenshot_sha256": "9ED42934DA7FD14E5F042D6F9B4515746E3587A742665DE9F3E958A580C17064",
+    "powerquery_screenshot_sha256": "CF4D989262EB5496465351297C966974383612CE1ED2582480A0EA64ADB22223"
+  }
+}

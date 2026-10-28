@@ -1,14 +1,15 @@
 # MEMORY · estado operativo
 
-Actualizado: 2026-10-27.
+Actualizado: 2026-10-28.
 
 ## Estado actual
 
-- Hito activo: S02.
-- Fase: Close completada; S02 cerrado.
+- Hito activo: ninguno.
+- Fase: Close de S03 completada.
 - S01: cerrado el 2026-10-22 con limitaciones documentadas.
 - S02: cerrado por aprobación explícita del usuario el 2026-10-27.
-- S03–S11: no iniciados.
+- S03: cerrado el 2026-10-28; T01–T06 completas; ronda 02 con 21/21 requisitos y criterios conformes.
+- S04–S11: no iniciados.
 
 ## Resultado disponible
 
@@ -17,6 +18,9 @@ Actualizado: 2026-10-27.
 - PPTX editable y PDF de arquitectura/mapa Silver de S02.
 - Evidencia S02 consolidada en `evidence/S02/evidence.md`.
 - Validación S02 consolidada en `validation/results/S02/validation.json`.
+- Perfil completo directo de los cinco CSV registrado en `evidence/S03/evidence.md` y `validation/results/S03/validation.json`: conteos esperados, 0 vacíos y 0 filas duplicadas.
+- PBIP en disco verificado con cultura `en-US`, `RutaSilver`, cinco tablas, WMS ausente y 0 relaciones/medidas/roles.
+- Libro S03 actualizado con cinco filas de linaje y cinco tablas fuente de KPI; revisión estructural y visual conforme.
 
 ## Auditoría S02
 
@@ -35,7 +39,8 @@ Actualizado: 2026-10-27.
 
 ## Pendientes principales
 
-- Preparar S03 únicamente cuando el usuario lo autorice.
+- Preparar S04 únicamente cuando el usuario lo autorice.
+- Completar `S03 Linaje` y la columna `Tabla(s) fuente (S03)` sin aplicar todavía reglas de S04.
 - Mantener abiertos origen, propietarios y frecuencia de actualización de fuentes.
 - Validar `centro_distribucion` / `centro_distribucion_base` antes de filtros y RLS.
 - Tratar lecturas límite, particiones/horizonte futuro y merma económica en sus hitos.
@@ -47,4 +52,4 @@ Por hito se conserva un solo `evidence.md`, un solo `validation.json` y un solo 
 
 ## Siguiente paso
 
-Esperar autorización explícita para iniciar Specify de S03. No iniciar trabajo de S03 por cuenta propia.
+Esperar autorización explícita para iniciar Specify de S04. No iniciar S04 por cuenta propia.
