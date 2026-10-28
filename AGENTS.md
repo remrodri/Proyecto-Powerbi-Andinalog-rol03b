@@ -117,6 +117,24 @@ Actualiza `MEMORY.md` tras cada avance significativo autorizado: estado, spec ac
 
 Antes de terminar informa brevemente qué cambió, qué se comprobó, qué falta y cuál sería el siguiente paso, sin ejecutarlo fuera del alcance autorizado.
 
+## Regla de mínimo artefacto
+
+La trazabilidad se demuestra con el menor número de archivos que permita comprobar la spec:
+
+- Cada hito usa únicamente `spec.md`, `plan.md`, `tasks.md` y un solo `AUDIT.md`.
+- `plan.md` agrupa trabajo por entregable o resultado; no crea una tarea por cada comprobación interna.
+- `evidence/SNN/evidence.md` es el registro único de ejecución. Solo se añade una captura cuando prueba una interacción de Desktop, un defecto visual o un requisito que no pueda verificarse leyendo el entregable.
+- `validation/results/SNN/validation.json` es el resultado consolidado. No crear un JSON, manifiesto o informe por microtarea.
+- Los scripts de validación solo se conservan si son necesarios para repetir un criterio de aceptación. Las comprobaciones puntuales no justifican un script permanente.
+- Los hashes se calculan solo para originales protegidos, entregables finales o cuando un requisito de integridad los exige. No rehashar todo el repositorio en cada tarea.
+- `work/`, exportaciones intermedias, copias de prueba, renders y archivos de calificación de herramientas se eliminan al terminar la comprobación. Nunca se citan como entregables permanentes.
+- No conservar `node_modules/`, cachés ni dependencias descargadas dentro del proyecto. Se reinstalan cuando la herramienta las necesite.
+- `MEMORY.md` contiene solo estado actual, decisiones activas, pendientes y siguiente paso. El historial detallado pertenece a Git y `AUDIT.md`.
+- No crear `authorizations.md`, `session.md`, `tooling.md`, `conciliation.md`, `pendientes.md`, informes por tarea ni capturas duplicadas. Si un dato es necesario, se incorpora al registro único de evidencia.
+- Un control aprobado se reutiliza mientras su entrada no haya cambiado. No repetirlo para producir más evidencia.
+
+Antes de crear un archivo auxiliar, responde: qué criterio exige, por qué no cabe en un archivo existente y si debe conservarse tras la tarea. Si alguna respuesta falta, no lo crees.
+
 
 ## Skill del flujo por hitos
 

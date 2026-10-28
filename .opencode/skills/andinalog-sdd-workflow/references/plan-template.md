@@ -1,26 +1,33 @@
 # Plan — <Spec e hito>
 
-Spec y versión aprobada: <ruta y aprobación>.
-Estado del plan: <borrador o aprobado con evidencia>.
+Spec aprobada: <ruta y versión>. Estado: <borrador/aprobado>.
 
-## Entradas y herramientas
-<Archivos, versiones, disponibilidad comprobada y limitaciones.>
+## Resultado
 
-## Implementación y trazabilidad
-| Requisito | Artefacto | Diseño o transformación | Prueba | Dependencia |
-| --- | --- | --- | --- | --- |
-| <RF> | <Consulta/modelo/medida/visual/documento> | <Cómo se consigue> | <Control> | <Entrada> |
+<Entregables y cambio observable, en un párrafo.>
 
-## Decisiones técnicas
-<Justificación y alternativa relevante. No resolver requisitos pendientes por suposición.>
+## Implementación mínima
 
-## Estrategia de validación
-| Prueba | Requisitos | Tipo: automático/Desktop/documental | Contexto y esperado | Evidencia |
-| --- | --- | --- | --- | --- |
-| <ID> | <RF> | <Tipo> | <Valor o conducta, precisión/tolerancia> | <Ruta prevista> |
+1. <Resultado o entregable 1>.
+2. <Resultado o entregable 2>.
+3. <Validación y conciliación final>.
 
-## Documentación y riesgos
-<Fichas, diccionario, informe y otros afectados; riesgos y tratamiento.>
+Mantener entre 3 y 7 pasos. No separar operaciones internas de una herramienta.
 
-## Orden y límites
-<Dependencias, tratamiento reversible y tareas bloqueadas.>
+## Correspondencia
+
+| Resultado | Requisitos | Artefacto | Verificación |
+| --- | --- | --- | --- |
+| <Resultado> | <IDs> | <Ruta final> | <Prueba necesaria> |
+
+## Evidencia y límites
+
+- Registro único: `evidence/SNN/evidence.md`.
+- Resultado único: `validation/results/SNN/validation.json`.
+- Capturas solo para requisitos visuales o Desktop no verificables desde el entregable.
+- Temporales en `work/`, eliminados al terminar.
+- <Dependencias, dudas o exclusiones reales>.
+
+## Gates
+
+Build → Audit → Fix → Audit → Close, cada uno con autorización independiente.

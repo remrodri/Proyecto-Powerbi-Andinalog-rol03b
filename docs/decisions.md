@@ -339,3 +339,12 @@ Este archivo registra decisiones relevantes y su fundamento. No sustituye el con
 - Fundamento: designación explícita del usuario; sustituye la referencia grupal anterior.
 - Consecuencia: se cubre la condición de persona identificada de T07. La calidad de la demostración y el contenido de S02 se verifican en la auditoría y en el hito correspondiente.
 - Límite: la designación no acredita que la pantalla haya sido compartida ni que S02 esté ejecutado.
+
+### DEC-034 · Presupuesto mínimo de artefactos
+
+- Fecha: 2026-10-27.
+- Estado: confirmada por solicitud del usuario y aplicada al repositorio.
+- Decisión: cada hito conserva un único `evidence.md`, un único `validation.json` y un único `AUDIT.md`; los planes agrupan trabajo por entregable y mantienen entre tres y siete tareas orientadas a resultados.
+- Consecuencia: se consolidó la evidencia de S02, se retiraron temporales, capturas duplicadas, resultados por microtarea y dependencias descargadas. `MEMORY.md` conserva solo el estado vigente.
+- Excepción: se permite otro artefacto únicamente si un criterio de aceptación identifica por qué no puede incorporarse a los archivos existentes. Las capturas Desktop indispensables de S01 se conservan.
+- Límite: la consolidación no altera los entregables ni cierra A-S02-001 o RNF-S02-06.

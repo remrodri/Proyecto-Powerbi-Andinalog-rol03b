@@ -7,10 +7,10 @@
 | Versión | 0.4 |
 | Fecha | 2026-10-27 |
 | Estado de la spec | Aprobada por el usuario el 2026-10-27 |
-| Cumplimiento de S02 | No iniciado; Specify completada; Plan, tareas, Build y auditoría pendientes |
+| Cumplimiento de S02 | Specify, Plan y Build completados; auditoría ejecutada con un hallazgo abierto y una verificación pendiente; S02 no cerrado |
 | Entrada | Guía S02 (SRC-102), plantilla de diagrama (SRC-203), plantilla del Proyecto Integrador (SRC-201), catálogo KPI (SRC-005), modelo de referencia 03B (SRC-003), cinco Silver oficiales y traspaso de S01. |
 | Salida | Frase de decisión, diagrama de arquitectura, mapa Silver, cinco KPI con nivel táctico, fórmula y unidad, fichas KPI, riesgo/control y pendientes con hito de tratamiento. |
-| Fase | Specify completada. La aprobación habilita la planificación; no autoriza Build ni modifica Power BI. |
+| Fase | Fix pendiente de autorización para A-S02-001; después corresponde una nueva Audit. |
 
 **Aprobación:** el usuario aprobó esta especificación el **2026-10-27**. La aprobación se otorgó tras corregir la v0.3 y añadir una única precisión sobre la frecuencia de `andinalog_inventory_tracking_silver.csv`. Habilita la preparación del Plan de S02; no crea plan, tareas ni auditoría, y no inicia Build.
 

@@ -604,4 +604,6 @@ Los cinco CSV de la sección 6, ubicados en `C:/GIAD/GIAD-M3_datos_sinteticos_v1
 
 Se revisaron los documentos listados y se realizaron comprobaciones de lectura sobre los cinco Silver. El PBIP existe con `RutaSilver`, cinco tablas, 0 relaciones, 0 medidas y sin visuales; su estructura y datos se verificaron en Desktop durante T05. No se transformaron archivos fuente, no se completó el libro docente original —la copia de seguimiento contiene solo campos de S01—, no se entrenó un modelo, no se publicó y no se probó Power BI Service.
 
-El contexto permanece abierto. La spec S01 v0.4 está aprobada y S01 se cerró con limitaciones documentadas el 2026-10-22; T01–T10 están completadas y S02 no se inició. Los pendientes de S02, S08 y S11 siguen abiertos y no se declaran resueltos. Esta versión conserva la revisión S01–S11 y del paquete final e incorpora el flujo SDD acordado, MEMORY.md y la convención inglesa de nombres. No se han aprobado specs de hitos posteriores.
+El contexto permanece abierto. S01 se cerró con limitaciones documentadas el 2026-10-22. S02 tiene Specify, Plan y Build completados; su auditoría requiere corregir A-S02-001 y revalidar las huellas Silver antes de una nueva auditoría y del cierre. S03–S11 no se iniciaron. Los pendientes trasladados a S02, S08 y S11 siguen abiertos y no se declaran resueltos.
+
+Desde el 2026-10-27 rige la estructura documental mínima: un `evidence.md`, un `validation.json` y un `AUDIT.md` por hito; no se conservan temporales, renders duplicados, dependencias descargadas ni informes por microtarea.

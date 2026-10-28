@@ -1,0 +1,29 @@
+{
+  "hito": "S02",
+  "fecha": "2026-10-27",
+  "estado": "requiere_correccion",
+  "controles_automaticos": {
+    "ejecutados": 39,
+    "aprobados": 39,
+    "fallidos": 0
+  },
+  "auditoria": {
+    "requisitos_y_criterios": 30,
+    "pasan": 28,
+    "fallan": 1,
+    "pendientes_de_verificacion": 1
+  },
+  "hallazgos_abiertos": [
+    {
+      "id": "A-S02-001",
+      "criterio": "RNF-S02-07",
+      "descripcion": "La evidencia visual muestra truncado S02 Mapa Silver!D10 aunque la celda conserva el valor completo.",
+      "estado": "abierto"
+    }
+  ],
+  "pendientes": [
+    "Repetir la revisión visual después de corregir la presentación de D10.",
+    "Revalidar las huellas de los cinco Silver externos cuando estén accesibles."
+  ],
+  "nota": "Este archivo consolida los resultados que antes estaban fragmentados por microtarea. El detalle de auditoría permanece en specs/002-s02-architecture/AUDIT.md."
+}

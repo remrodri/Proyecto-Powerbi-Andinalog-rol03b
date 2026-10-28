@@ -20,6 +20,7 @@ Usa andinalog-sdd-workflow en fase Plan para <ruta de spec aprobada>. Presenta p
 
 ```text
 Usa andinalog-sdd-workflow en fase Build para implementar solo <tarea o alcance> de <ruta/tasks.md>, con spec y plan aprobados. Ejecuta sus controles y detente al terminar ese alcance.
+Aplica la regla de mínimo artefacto: actualiza el entregable, evidence.md y validation.json existentes; no crees informes, manifiestos, capturas ni scripts adicionales salvo que un criterio de aceptación los exija expresamente. Elimina temporales al terminar.
 ```
 
 ```text

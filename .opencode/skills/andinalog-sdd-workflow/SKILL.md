@@ -56,3 +56,16 @@ Comprueba criterios, tareas y auditoría vigente, incluyendo requisitos dependie
 ## Salida de cada fase
 
 Informar alcance, cambios o propuesta, verificaciones, pendientes y siguiente paso sin ejecutarlo fuera de autorización. Actualizar MEMORY.md después de avances autorizados; registrar decisiones relevantes en docs/decisions.md y pruebas en su evidencia. No crear un informe de avance separado si la memoria y AUDIT.md ya cubren la necesidad.
+
+## Presupuesto de artefactos
+
+Aplica por defecto el mínimo documental del repositorio:
+
+- Un registro `evidence/SNN/evidence.md` y un resultado `validation/results/SNN/validation.json` por hito.
+- Capturas únicamente para pruebas visuales o de interfaz que no puedan reconstruirse desde el entregable.
+- Ningún informe por tarea, manifiesto separado, copia de revisión, render intermedio o archivo de autorización permanente.
+- `work/` es descartable y debe quedar vacío al finalizar una fase.
+- `MEMORY.md` se reemplaza con estado vigente; no acumula narración por tarea.
+- Planes con 3–7 tareas orientadas a resultados. Las verificaciones son condiciones de esas tareas, no tareas nuevas.
+
+Una excepción debe citar el requisito que obliga a conservar otro artefacto. La comodidad de la herramienta o una comprobación ya registrada no son justificación.
